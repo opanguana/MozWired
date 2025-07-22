@@ -12,7 +12,7 @@ export default function HomePage() {
           Osvaldo Panguana
         </h1>
         <p className="text-xl text-slate-300">
-          IT Systems Administrator • Cloud Enthusiast • Python & JavaScript Developer
+          IT Systems Administrator • PowerShel Expert • Cloud Enthusiast • Python & JavaScript Developer
         </p>
 
         <div className="flex gap-4">
@@ -20,7 +20,8 @@ export default function HomePage() {
             <Button className="text-lg px-6 py-4">View Projects</Button>
           </Link>
           <Link href="/resume">
-            <Button variant="outline" className="text-lg px-6 py-4 text-white border-white">
+            {/* <Button variant="outline" className="text-lg px-6 py-4 text-white border-white"> */}
+             <Button className="text-lg px-6 py-4">
               View Resume
             </Button>
           </Link>
@@ -34,6 +35,7 @@ export default function HomePage() {
             </p>
           </CardContent>
         </Card>
+      
 
         <Link href="/contact" className="inline-flex items-center gap-2 text-sky-400 hover:underline">
           Let’s connect <ArrowRight size={18} />
