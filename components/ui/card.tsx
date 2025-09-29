@@ -7,7 +7,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card"
       className={cn(
-        "bg-card text-card-foreground flex flex-col gap-6 rounded-2xl border border-border py-6 shadow-[0_2px_8px_0_rgba(0,0,0,0.15)] transition-colors duration-300",
+        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
         className
       )}
       {...props}
@@ -90,55 +90,3 @@ export {
   CardDescription,
   CardContent,
 }
-
-export interface HeroCardProps {
-  title: string
-  description: string
-  links?: { label: string; href: string }[]
-  variant?: "dark" | "light"
-  className?: string
-  children?: React.ReactNode
-}
-
-export function HeroCard({
-  title,
-  description,
-  links,
-  variant = "light",
-  className = "",
-  children,
-}: HeroCardProps) {
-  const baseStyles =
-    "flex flex-col items-center justify-center text-center py-20 px-6 h-[580px]"
-
-  const variantStyles =
-    variant === "dark"
-      ? "bg-black text-white"
-      : "bg-[#f5f5f7] text-black"
-
-  return (
-    <section className={`w-full ${variantStyles} ${className}`}>
-      <div className={baseStyles}>
-        <h2 className="text-5xl md:text-7xl font-bold tracking-tight">{title}</h2>
-        <p className="mt-4 text-lg md:text-xl text-gray-600">{description}</p>
-
-        {children ? (
-          <div>{children}</div>
-        ) : links && links.length > 0 ? (
-          <div className="mt-6 flex space-x-6">
-            {links.map(link => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-blue-600 hover:underline"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        ) : null}
-      </div>
-    </section>
-  )
-}
-
