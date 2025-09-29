@@ -1,7 +1,9 @@
-import * as React from "react"
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
-import { cn } from "@/lib/utils"
-
+/**
+ * Card component: base container for content with rounded corners and shadow.
+ */
 function Card({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -12,9 +14,12 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
       )}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * CardHeader: header section for card, supports grid layout.
+ */
 function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -25,9 +30,12 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
       )}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * CardTitle: title section for card.
+ */
 function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -35,9 +43,12 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
       className={cn("leading-none font-semibold", className)}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * CardDescription: description section for card.
+ */
 function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -45,9 +56,12 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
       className={cn("text-muted-foreground text-sm", className)}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * CardAction: action section for card (e.g., buttons).
+ */
 function CardAction({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -58,9 +72,12 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
       )}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * CardContent: main content area for card.
+ */
 function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -68,9 +85,12 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
       className={cn("px-6", className)}
       {...props}
     />
-  )
+  );
 }
 
+/**
+ * CardFooter: footer section for card.
+ */
 function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
@@ -78,7 +98,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
       className={cn("flex items-center px-6 [.border-t]:pt-6", className)}
       {...props}
     />
-  )
+  );
 }
 
 export {
@@ -89,17 +109,22 @@ export {
   CardAction,
   CardDescription,
   CardContent,
-}
+};
 
 export interface HeroCardProps {
-  title: string
-  description: string
-  links?: { label: string; href: string }[]
-  variant?: "dark" | "light"
-  className?: string
-  children?: React.ReactNode
+  title: string;
+  description: string;
+  links?: { label: string; href: string }[];
+  variant?: "dark" | "light";
+  className?: string;
+  children?: React.ReactNode;
 }
 
+/**
+ * HeroCard: large hero section for landing pages.
+ * - Supports dark/light variants
+ * - Displays title, description, and optional links or children
+ */
 export function HeroCard({
   title,
   description,
@@ -109,19 +134,18 @@ export function HeroCard({
   children,
 }: HeroCardProps) {
   const baseStyles =
-    "flex flex-col items-center justify-center text-center py-20 px-6 h-[580px]"
-
+    "flex flex-col items-center justify-center text-center py-20 px-6 h-[580px]";
   const variantStyles =
     variant === "dark"
       ? "bg-black text-white"
-      : "bg-[#f5f5f7] text-black"
+      : "bg-[#f5f5f7] text-black";
 
   return (
     <section className={`w-full ${variantStyles} ${className}`}>
       <div className={baseStyles}>
         <h2 className="text-5xl md:text-7xl font-bold tracking-tight">{title}</h2>
         <p className="mt-4 text-lg md:text-xl text-gray-600">{description}</p>
-
+        {/* Render children (e.g., actions) or links */}
         {children ? (
           <div>{children}</div>
         ) : links && links.length > 0 ? (
@@ -139,6 +163,6 @@ export function HeroCard({
         ) : null}
       </div>
     </section>
-  )
+  );
 }
 

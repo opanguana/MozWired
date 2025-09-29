@@ -1,7 +1,24 @@
 // File: app/page.tsx
-import { Button } from "@/components/ui/button";
-import { HeroCard } from "@/components/ui/card";
+"use client";
 
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+
+// Dynamically import HeroCard for performance
+const HeroCard = dynamic(
+	() => import("@/components/ui/card").then((mod) => mod.HeroCard),
+	{
+		loading: () => <div>Loading...</div>,
+		ssr: false,
+	}
+);
+
+/**
+ * Main homepage component
+ * - Displays hero sections and product cards
+ * - Demonstrates optimized image and environment variable usage
+ */
 export default function HomePage() {
 	// Product sections data
 	const productSections = [
@@ -27,7 +44,7 @@ export default function HomePage() {
 		],
 	];
 
-	// Apple-style card actions
+	// Card actions for product cards
 	function CardActions() {
 		return (
 			<div className="flex gap-4 mt-4">
@@ -37,9 +54,29 @@ export default function HomePage() {
 		);
 	}
 
+	// Get API key from environment variable (for demo only)
+	const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+
 	return (
 		<main>
-			{/* Top Hero */}
+			{/* Optimized Image Example */}
+			{/* <div className="flex justify-center my-8">
+				<Image
+					src="/vercel.svg"
+					alt="Vercel Logo"
+					width={200}
+					height={60}
+					priority
+					className="rounded shadow"
+				/>
+			</div> */}
+			{/* Show API Key from env for demonstration (remove in production) */}
+			{apiKey && (
+				<div className="text-xs text-gray-500 text-center my-2">
+					API Key: {apiKey}
+				</div>
+			)}
+			{/* Top Hero Section */}
 			<HeroCard
 				title="Structured Cabling"
 				description="Modern Stack. So strong. So light. So Pro."
@@ -48,7 +85,6 @@ export default function HomePage() {
 			>
 				<CardActions />
 			</HeroCard>
-
 			{/* Other hero sections */}
 			<HeroCard
 				title="Web Development"
@@ -57,7 +93,6 @@ export default function HomePage() {
 			>
 				<CardActions />
 			</HeroCard>
-
 			<HeroCard
 				title="Interior Design"
 				description="UTP and STP. So strong. So light. So Pro."
@@ -65,7 +100,6 @@ export default function HomePage() {
 			>
 				<CardActions />
 			</HeroCard>
-
 			{/* Product Sections */}
 			{productSections.map((section, idx) => (
 				<section
