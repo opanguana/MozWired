@@ -16,8 +16,8 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
-        primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
-        appleOutline: "border border-blue-600 text-blue-600 bg-white hover:bg-blue-50 focus:ring-blue-500",
+        primary: "bg-orange-600 text-white hover:bg-orange-700 focus:ring-orange-500",
+        appleOutline: "border border-orange-600 text-orange-600 bg-white hover:bg-orange-50 focus:ring-orange-500",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

@@ -24,22 +24,22 @@ export default function HomePage() {
 	const productSections = [
 		[
 			{
-				title: "AirPods Pro 3",
-				description: "The world's best in-ear Active Noise Cancellation.",
+				title: "Data migration",
+				description: "Migrate mail and files to Exchange Online, SharePoint, and OneDrive.",
 			},
 			{
-				title: "Apple Watch",
-				description: "The ultimate way to watch your health.",
+				title: "Microsoft Intune",
+				description: "Simplify app and device management across multiple devices.",
 			},
 		],
 		[
 			{
-				title: "MacBook Pro",
+				title: "Microsoft Purview",
 				description: "Powerful performance. Sleek design.",
 			},
 			{
-				title: "iPad Pro",
-				description: "Your next computer is not a computer.",
+				title: "Microsoft Entra",
+				description: "Secure access for every identity with unified protection.",
 			},
 		],
 	];
@@ -79,24 +79,24 @@ export default function HomePage() {
 			{/* Top Hero Section */}
 			<HeroCard
 				title="Structured Cabling"
-				description="Modern Stack. So strong. So light. So Pro."
+				description="LANs, Transport Networks, Access Networks."
 				variant="dark"
-				className=""
+				className="mx-auto mt-9 mb-2.5 bg-gray-100/80 dark:bg-black"
 			>
 				<CardActions />
 			</HeroCard>
 			{/* Other hero sections */}
 			<HeroCard
 				title="Web Development"
-				description="UTP and STP. So strong. So light. So Pro."
-				className="mx-auto mt-2.5 mb-2.5 bg-gray-100/80"
+				description="Modern, flexible, and scalable stack."
+				className="mx-auto mt-2.5 mb-2.5"
 			>
 				<CardActions />
 			</HeroCard>
 			<HeroCard
-				title="Interior Design"
-				description="UTP and STP. So strong. So light. So Pro."
-				className="mx-auto mt-2.5 mb-2.5 bg-gray-100/80"
+				title="Adopt Microsoft solutions"
+				description="Quickly and efficiently with MozWired."
+				className="mx-auto mt-2.5 mb-2.5"
 			>
 				<CardActions />
 			</HeroCard>

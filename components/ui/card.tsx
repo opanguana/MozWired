@@ -137,7 +137,7 @@ export function HeroCard({
     "flex flex-col items-center justify-center text-center py-20 px-6 h-[580px]";
   const variantStyles =
     variant === "dark"
-      ? "bg-black text-white"
+      ? "bg-[#e3e3e3] text-gray-150/80"
       : "bg-[#f5f5f7] text-black";
 
   return (
