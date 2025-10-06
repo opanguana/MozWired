@@ -38,7 +38,7 @@ export function CardActions({
     { label: "Learn more", variant: "primary" },
     { label: "Buy", variant: "appleOutline" },
   ],
-  className = "flex gap-4 mt-4",
+  className = "flex gap-3 mt-4",
 }: CardActionsProps) {
   return (
     <div className={className}>
@@ -49,7 +49,7 @@ export function CardActions({
           onClick={action.onClick}
           aria-label={action.ariaLabel || action.label}
           disabled={action.disabled}
-          className={action.className}
+          className={cn("transition-all duration-300", action.className)}
         >
           {action.icon && <span className="mr-2">{action.icon}</span>}
           {action.label}
@@ -58,3 +58,6 @@ export function CardActions({
     </div>
   );
 }
+
+// Re-import cn for CardActions
+import { cn } from "@/lib/utils";

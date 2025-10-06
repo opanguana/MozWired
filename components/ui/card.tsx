@@ -9,7 +9,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card"
       className={cn(
-        "bg-card text-card-foreground flex flex-col gap-6 rounded-2xl border border-border py-6 shadow-[0_2px_8px_0_rgba(0,0,0,0.15)] transition-colors duration-300",
+        "bg-white/90 dark:bg-gray-800 backdrop-blur-xl text-card-foreground flex flex-col gap-6 rounded-xl border border-gray-200/60 dark:border-gray-700 py-6 shadow-sm transition-all duration-300 hover:shadow-md",
         className
       )}
       {...props}
@@ -40,7 +40,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-title"
-      className={cn("leading-none font-semibold", className)}
+      className={cn("leading-none font-semibold text-gray-800 dark:text-gray-100", className)}
       {...props}
     />
   );
@@ -53,7 +53,7 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-description"
-      className={cn("text-muted-foreground text-sm", className)}
+      className={cn("text-gray-600 dark:text-gray-300 text-sm", className)}
       {...props}
     />
   );
@@ -134,17 +134,19 @@ export function HeroCard({
   children,
 }: HeroCardProps) {
   const baseStyles =
-    "flex flex-col items-center justify-center text-center py-20 px-6 h-[580px]";
+    "flex flex-col items-center justify-center text-center py-20 px-6 h-[580px] backdrop-blur-xl";
   const variantStyles =
     variant === "dark"
-      ? "bg-[#e3e3e3] text-gray-150/80"
-      : "bg-[#f5f5f7] text-black";
+      ? "bg-gray-800  dark:bg-gray-800 text-white"
+      : "bg-white/90 dark:bg-gray-800 text-black";
 
   return (
     <section className={`w-full ${variantStyles} ${className}`}>
       <div className={baseStyles}>
-        <h2 className="text-5xl md:text-7xl font-bold tracking-tight">{title}</h2>
-        <p className="mt-4 text-lg md:text-xl text-gray-600">{description}</p>
+        <h2 className="text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          {title}
+        </h2>
+        <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">{description}</p>
         {/* Render children (e.g., actions) or links */}
         {children ? (
           <div>{children}</div>
@@ -154,7 +156,7 @@ export function HeroCard({
               <a
                 key={link.label}
                 href={link.href}
-                className="text-blue-600 hover:underline"
+                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -165,4 +167,3 @@ export function HeroCard({
     </section>
   );
 }
-

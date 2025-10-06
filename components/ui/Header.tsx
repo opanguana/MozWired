@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 interface HeaderProps {
@@ -7,111 +7,130 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home");
+
+  const navItems = ["Home", "About", "Products", "Services", "Partners", "Support", "Contact"];
+
   return (
-    <header className="fixed top-0 w-full bg-[#e3e3e3]/80 dark:bg-black/80 backdrop-blur-md border-b dark:border-white/10 z-50">
-      <nav className="max-w-6xl mx-auto px-6 h-13 flex items-center justify-center" aria-label="Main navigation">
-        {/* Logo on the left */}
-        <div className="flex-shrink-0 w-1/3">
-          <Link href="#" className="text-lg font-bold">
+    <header className="fixed top-0 w-full bg-gray-100/80 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200/60 dark:border-white/10 z-50 shadow-sm">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Main navigation">
+        
+        {/* Logo - Enhanced */}
+        <div className="flex-shrink-0">
+          <Link 
+            href="#" 
+            className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
             MozWired
           </Link>
         </div>
 
-        {/* Navigation links: centered */}
-        <ul className="hidden dark:text-gray-100 md:flex flex-1 justify-center items-center space-x-8 text-sm font-semibold w-1/3 text-gray-600">
-          <li>
-            <Link href="#" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              Partners
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              Support
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              Contact
-            </Link>
-          </li>
-        </ul>
+        {/* Navigation Links - Improved */}
+        <div className="hidden lg:flex flex-1 justify-center">
+          <ul className="flex items-center space-x-1">
+            {navItems.map((item) => (
+              <li key={item}>
+                <Link
+                  href="#"
+                  onClick={() => setActiveLink(item)}
+                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    activeLink === item
+                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
+                      : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+                  }`}
+                >
+                  {item}
+                  {activeLink === item && (
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 dark:bg-blue-400 rounded-full" />
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        {/* Icons on the right */}
-        <div className="flex items-center justify-end space-x-4 w-1/3">
-          <button
-            aria-label="Search"
-            className="p-2 rounded dark:hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-          >
-            <Link href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="44"
-                viewBox="0 0 15 44"
-                className="fill-black dark:fill-white"
+        {/* Action Buttons - Enhanced */}
+        <div className="flex items-center justify-end space-x-3">
+          
+          {/* Search with Expandable Input */}
+          <div className="relative">
+            {isSearchOpen ? (
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-1">
+                <input
+                  type="text"
+                  placeholder="Search mozwired..."
+                  autoFocus
+                  className="w-200 pl-3 pr-10 py-2 bg-transparent border-none focus:outline-none text-sm text-gray-900 dark:text-white placeholder-gray-500"
+                  onBlur={() => setIsSearchOpen(false)}
+                />
+                <button
+                  onClick={() => setIsSearchOpen(false)}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                >
+                  ✕
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                aria-label="Search"
               >
-                <path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55
-                  c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.50,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87
-                  c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z 
-                  M1.55,20c0-2.454,1.997-4.45,4.45-4.45 
-                  c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
-              </svg>
-            </Link>
+                <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            )}
+          </div>
+
+          {/* Shopping Cart with Badge */}
+          <button
+            className="relative p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+            aria-label="Shopping cart"
+          >
+            <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+              3
+            </span>
           </button>
 
+          {/* Dark Mode Toggle - Enhanced */}
           <button
-            aria-label="Shopping Bag"
-            className="p-1.5 rounded-full hover:text-black/5 dark:hover:text-white/10focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-          >
-            <Link href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="44"
-                viewBox="0 0 14 44"
-                className="fill-black dark:fill-white"
-              >
-                <path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path>
-              </svg>
-            </Link>
-          </button>
-
-          <button
-            onClick={() => setDarkMode((prev) => !prev)}
+            onClick={() => setDarkMode(!darkMode)}
             onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") setDarkMode((prev) => !prev);
+              if (e.key === 'Enter' || e.key === ' ') setDarkMode(!darkMode);
             }}
+            className="relative p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 group"
             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-            aria-pressed={darkMode}
-            tabIndex={0}
-            className="ml-4 p-1.5 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
           >
-            <span aria-hidden="true" className="text-sm">
-              {darkMode ? "🌙" : "☀️"}
-            </span>
-            <span className="sr-only">
-              {darkMode ? "Dark mode enabled" : "Light mode enabled"}
-            </span>
+            <div className="w-6 h-6 flex items-center justify-center">
+              <span
+                className={`absolute transition-all duration-500 transform ${
+                  darkMode
+                    ? 'opacity-0 rotate-90 scale-0'
+                    : 'opacity-100 rotate-0 scale-100'
+                }`}
+              >
+                ☀️
+              </span>
+              <span
+                className={`absolute transition-all duration-500 transform ${
+                  darkMode
+                    ? 'opacity-100 rotate-0 scale-100'
+                    : 'opacity-0 -rotate-90 scale-0'
+                }`}
+              >
+                🌙
+              </span>
+            </div>
+          </button>
+
+          {/* User Profile/CTA */}
+          <button className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            <span className="text-sm font-medium">Get Started</span>
           </button>
         </div>
       </nav>
