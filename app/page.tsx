@@ -363,7 +363,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-blue-100 text-base md:text-lg mb-6 max-w-2xl mx-auto">
-            Let's discuss how our technology solutions can drive your business forward with innovation and reliability.
+            Lets discuss how our technology solutions can drive your business forward with innovation and reliability.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button 
