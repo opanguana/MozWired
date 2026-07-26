@@ -1,56 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MozWired
 
-## Getting Started
+A responsive service storefront built with Next.js, React, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Requirements
+
+- Node.js 20 or newer
+- npm 10 or newer
+
+## Local development
 
 ```bash
-    npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env.local
+npm ci
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## Testing
-
-To run tests, use:
+## Quality checks
 
 ```bash
+npm run lint
 npm test
+npm run format:check
+npm run build
 ```
 
-Tests are written using Jest and React Testing Library. Add your tests in the relevant component folders with the `.test.tsx` extension.
+Use `npm run format` to format supported source files.
 
-## Code Formatting
+## Environment and secrets
 
-This project uses Prettier for code formatting. To format your code, run:
+Copy `.env.example` to `.env.local` and keep local environment files untracked. Values prefixed
+with `NEXT_PUBLIC_` are shipped to the browser and must never contain secrets. Store production
+secrets in the deployment platform's encrypted secret manager.
+
+Before opening a pull request, inspect staged changes and run a secret scanner such as Gitleaks:
 
 ```bash
-npx prettier --write .
+git diff --cached
+gitleaks git --redact
 ```
 
-Prettier settings are defined in `.prettierrc`.
+## Git workflow
+
+Create a focused branch from the current default branch:
+
+```bash
+git switch -c feature/short-description
+```
+
+Use Conventional Commits and keep each commit limited to one concern. Push the branch and open a
+pull request describing the behavior change, verification performed, and rollback considerations.
+
+## Releases
+
+The project follows Semantic Versioning. Update `CHANGELOG.md`, then create an annotated release
+tag:
+
+```bash
+git tag -a v1.2.3 -m "Release v1.2.3"
+git push origin v1.2.3
+```
+
+## Rollback
+
+Prefer a new revert commit so shared history remains intact:
+
+```bash
+git revert <commit-sha>
+```
+
+To roll back a release, revert the release commits, run all quality checks, and publish a new patch
+version. Do not move or delete an already published release tag.
