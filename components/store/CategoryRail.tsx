@@ -1,45 +1,41 @@
-import {
-  Cable,
-  CloudCog,
-  Code2,
-  Database,
-  Headphones,
-  KeyRound,
-  Laptop,
-  Network,
-  ShieldCheck,
-  Smartphone,
-  type LucideIcon,
-} from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
-const categories: { label: string; href: string; Icon: LucideIcon }[] = [
-  { label: 'Networks', href: '#services', Icon: Network },
-  { label: 'Cloud', href: '#cloud', Icon: CloudCog },
-  { label: 'Devices', href: '#services', Icon: Smartphone },
-  { label: 'Security', href: '#services', Icon: ShieldCheck },
-  { label: 'Laptops', href: '#services', Icon: Laptop },
-  { label: 'Data', href: '#cloud', Icon: Database },
-  { label: 'Identity', href: '#services', Icon: KeyRound },
-  { label: 'Cabling', href: '#services', Icon: Cable },
-  { label: 'Web', href: '#cloud', Icon: Code2 },
-  { label: 'Support', href: '#support', Icon: Headphones },
+const categories = [
+  { label: 'Mac', image: '/images/store/mac.png' },
+  { label: 'iPad', image: '/images/store/ipad.png' },
+  { label: 'iPhone', image: '/images/store/iphone.png' },
+  { label: 'Apple Watch', image: '/images/store/apple-watch.png' },
+  { label: 'Apple Vision Pro', image: '/images/store/apple-vision-pro.png' },
+  { label: 'AirPods', image: '/images/store/airpods.png' },
+  { label: 'AirTag', image: '/images/store/airtag.png' },
+  { label: 'Apple TV 4K', image: '/images/store/apple-tv-4k.png' },
+  { label: 'HomePod', image: '/images/store/homepod.png' },
+  { label: 'Accessories', image: '/images/store/accessories.png' },
+  { label: 'Apple Gift Card', image: '/images/store/apple-gift-card.png' },
 ];
 
 export function CategoryRail() {
   return (
-    <nav aria-label="Service categories" className="category-scroll">
-      <ul className="mx-auto flex w-max min-w-full max-w-store items-start justify-start gap-7 px-5 py-9 md:justify-between lg:px-8">
-        {categories.map(({ label, href, Icon }) => (
+    <nav aria-label="Product categories" className="category-scroll overflow-x-auto">
+      <ul className="mx-auto flex w-max min-w-full max-w-store items-start justify-start gap-4 px-5 py-8 md:justify-between md:gap-5 lg:px-8">
+        {categories.map(({ label, image }) => (
           <li key={label}>
             <Link
-              href={href}
-              className="group flex w-16 flex-col items-center gap-2 rounded-lg text-center focus-ring"
+              href="#services"
+              className="group flex w-[5.5rem] flex-col items-center gap-2 rounded-lg text-center focus-ring"
             >
-              <span className="grid size-14 place-items-center rounded-2xl bg-white shadow-sm transition group-hover:-translate-y-1 group-hover:shadow-md">
-                <Icon aria-hidden="true" className="size-8 text-store-ink" strokeWidth={1.45} />
+              <span className="relative block h-[3.75rem] w-[5.75rem] overflow-hidden transition-transform duration-200 group-hover:-translate-y-1">
+                <Image
+                  src={image}
+                  alt=""
+                  fill
+                  sizes="92px"
+                  className="object-contain"
+                  aria-hidden="true"
+                />
               </span>
-              <span className="text-[10px] font-semibold">{label}</span>
+              <span className="text-[10px] font-semibold leading-tight">{label}</span>
             </Link>
           </li>
         ))}
