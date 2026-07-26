@@ -18,7 +18,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
   return (
     <article
       className={cn(
-        'flex min-h-[31rem] w-[18.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[1.75rem] p-4 md:w-[20rem]',
+        'flex min-h-[31rem] w-[18.5rem] shrink-0 snap-start flex-col overflow-hidden p-4 md:w-[20rem]',
         card.dark ? 'bg-black text-white' : 'bg-[#e9e9ec] text-store-ink',
         card.accent && 'bg-white'
       )}
