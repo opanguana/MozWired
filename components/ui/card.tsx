@@ -139,14 +139,25 @@ export function HeroCard({
     variant === "dark"
       ? "bg-gray-800  dark:bg-gray-800 text-white"
       : "bg-white/90 dark:bg-gray-800 text-black";
+  const titleStyles =
+    variant === "dark" ? "text-white" : "text-black dark:text-white";
+  const descriptionStyles =
+    variant === "dark" ? "text-white" : "text-gray-600 dark:text-gray-300";
 
   return (
     <section className={`w-full ${variantStyles} ${className}`}>
       <div className={baseStyles}>
-        <h2 className="text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h2
+          className={cn(
+            "text-5xl md:text-7xl font-bold tracking-tight",
+            titleStyles
+          )}
+        >
           {title}
         </h2>
-        <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">{description}</p>
+        <p className={cn("mt-4 text-lg md:text-xl", descriptionStyles)}>
+          {description}
+        </p>
         {/* Render children (e.g., actions) or links */}
         {children ? (
           <div>{children}</div>

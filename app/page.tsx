@@ -4,6 +4,33 @@
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 
+type CardAction = {
+  label: string;
+  variant: "primary" | "appleOutline";
+};
+
+type CardActionsProps = {
+  firstButton?: CardAction;
+  secondButton?: CardAction;
+};
+
+type ProductCard = {
+  title: string;
+  description: string;
+  firstButton?: CardAction;
+  secondButton?: CardAction;
+};
+
+const learnMoreButton: CardAction = {
+  label: "Learn more",
+  variant: "primary",
+};
+
+const buyButton: CardAction = {
+  label: "Buy",
+  variant: "appleOutline",
+};
+
 // Dynamically import only HeroCard since others might not be exported
 const HeroCard = dynamic(
   () => import("@/components/ui/card").then((mod) => mod.HeroCard),
@@ -20,25 +47,29 @@ const HeroCard = dynamic(
  */
 export default function HomePage() {
   // Product sections data
-  const productSections = [
+  const productSections: ProductCard[][] = [
     [
       {
         title: "Data migration",
         description: "Migrate mail and files to Exchange Online, SharePoint, and OneDrive.",
+        firstButton: learnMoreButton,
       },
       {
         title: "Microsoft Intune",
         description: "Simplify app and device management across multiple devices.",
+        firstButton: learnMoreButton,
       },
     ],
     [
       {
         title: "Microsoft Purview",
         description: "Powerful performance. Sleek design.",
+        firstButton: learnMoreButton,
       },
       {
         title: "Microsoft Entra",
         description: "Secure access for every identity with unified protection.",
+        firstButton: learnMoreButton,
       },
     ],
   ];
@@ -107,11 +138,19 @@ export default function HomePage() {
   ];
 
   // Card actions for product cards
-  function CardActions() {
+  function CardActions({ firstButton, secondButton }: CardActionsProps) {
+    if (!firstButton && !secondButton) {
+      return null;
+    }
+
     return (
       <div className="flex gap-4 mt-4">
-        <Button variant="primary">Learn more</Button>
-        <Button variant="appleOutline">Buy</Button>
+        {firstButton && (
+          <Button variant={firstButton.variant}>{firstButton.label}</Button>
+        )}
+        {secondButton && (
+          <Button variant={secondButton.variant}>{secondButton.label}</Button>
+        )}
       </div>
     );
   }
@@ -135,7 +174,7 @@ export default function HomePage() {
         variant="dark"
         className="mt-16 mx-auto mt-9 bg-gray-100/80 dark:bg-black"
       >
-        <CardActions />
+        <CardActions firstButton={learnMoreButton} />
       </HeroCard>
       
       {/* Other hero sections */}
@@ -144,7 +183,10 @@ export default function HomePage() {
         description="Modern, flexible, and scalable stack."
         className="mx-auto"
       >
-        <CardActions />
+        <CardActions
+          firstButton={learnMoreButton}
+          secondButton={buyButton}
+        />
       </HeroCard>
       
       <HeroCard
@@ -152,7 +194,10 @@ export default function HomePage() {
         description="Assessing, surfacing actions to improve configurations."
         className="mx-auto"
       >
-        <CardActions />
+        <CardActions
+          firstButton={learnMoreButton}
+          secondButton={buyButton}
+        />
       </HeroCard>
 
       {/* Product Sections */}
@@ -168,7 +213,10 @@ export default function HomePage() {
               description={card.description}
               className="rounded-none shadow-none border-none"
             >
-              <CardActions />
+              <CardActions
+                firstButton={card.firstButton}
+                secondButton={card.secondButton}
+              />
             </HeroCard>
           ))}
         </section>

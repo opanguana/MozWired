@@ -4,9 +4,15 @@
 import "./globals.css";
 import { ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 // Key for localStorage dark mode preference
 const DARK_MODE_KEY = "darkMode";
@@ -47,7 +53,7 @@ export default function Home({ children }:{children:ReactNode}) {
 
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-100 dark:bg-gray-950 dark:text-gray-100">
+      <body className={`${inter.variable} min-h-screen bg-gray-100 font-sans dark:bg-gray-950 dark:text-gray-100`}>
         {/* Accessibility: Skip to main content */}
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-blue-600 text-white px-4 py-2 rounded z-50">
           Skip to main content
