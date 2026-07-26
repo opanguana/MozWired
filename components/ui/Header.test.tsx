@@ -14,16 +14,13 @@ describe('Header', () => {
   it('provides accessible desktop mega-menu triggers and links', () => {
     render(<Header />);
 
-    expect(screen.getByRole('button', { name: 'Networks' })).toHaveAttribute(
+    expect(screen.getByRole('button', { name: 'Computers' })).toHaveAttribute(
       'aria-haspopup',
       'true'
     );
-    expect(screen.getByRole('button', { name: 'Cloud' })).toHaveAttribute('aria-haspopup', 'true');
-    expect(screen.getByRole('button', { name: 'Security' })).toHaveAttribute(
-      'aria-haspopup',
-      'true'
-    );
-    expect(screen.getByRole('link', { name: /Structured cabling/ })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Mobile' })).toHaveAttribute('aria-haspopup', 'true');
+    expect(screen.getByRole('button', { name: 'Audio' })).toHaveAttribute('aria-haspopup', 'true');
+    expect(screen.getByRole('link', { name: /MacBook Pro/ })).toBeInTheDocument();
   });
 
   it('opens and closes the mobile navigation', () => {
