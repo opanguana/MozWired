@@ -10,13 +10,13 @@ export const Footer: React.FC = () => (
       <div className="max-w-7xl w-full border-t border-gray-200/60 dark:border-white/10 mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 py-4 text-xs text-gray-500 dark:text-gray-400">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-full text-sm text-gray-600 dark:text-gray-300">
           <ul className="space-y-2 text-left flex-1">
-            <li className="font-semibold text-gray-800 dark:text-gray-100">Solutions</li>
+            <li className="font-semibold text-gray-800 dark:text-gray-100">Shop</li>
             <li>
               <Link
                 href="#"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
-                Infrastructure
+                Mac
               </Link>
             </li>
             <li>
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => (
                 href="#"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
-                Networks
+                iPad
               </Link>
             </li>
             <li>
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => (
                 href="#"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
-                Security
+                iPhone
               </Link>
             </li>
             <li>
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => (
                 href="#"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
-                Data
+                Apple Watch
               </Link>
             </li>
             <li>
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => (
                 href="#"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
-                Identity
+                Audio
               </Link>
             </li>
             <li>
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => (
                 href="#"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
-                Applications
+                Accessories
               </Link>
             </li>
           </ul>
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => (
                 href="#"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
-                Cloud
+                Saved Items
               </Link>
             </li>
             <li>
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => (
                 href="#"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
-                App Store
+                Order History
               </Link>
             </li>
           </ul>
