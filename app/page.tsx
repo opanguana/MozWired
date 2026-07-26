@@ -110,15 +110,15 @@ function CardCollection({
 export default function HomePage() {
   return (
     <main id="main-content">
-      <section id="store" className="overflow-hidden bg-black text-white">
-        <div className="mx-auto grid min-h-[12.5rem] max-w-store items-end gap-8 px-5 py-7 md:grid-cols-[1fr_auto] md:px-8 md:py-6">
+      <section id="store" className="store-hero-sticky overflow-hidden bg-black text-white">
+        <div className="mx-auto grid min-h-[14rem] max-w-store items-center gap-8 px-5 py-8 md:min-h-[16rem] md:grid-cols-[1fr_auto] md:px-8">
           <div>
             <h1 className="text-[clamp(3rem,6vw,5rem)] font-semibold leading-[0.95] tracking-[-0.055em]">
               Your Trusted Store
             </h1>
           </div>
 
-          <div className="pb-1 md:min-w-60 md:text-right">
+          <div className="md:min-w-60 md:text-right">
             <p className="text-[1.75rem] font-semibold leading-none tracking-[-0.035em]">
               Life, <span className="marker-highlight text-black">sorted.</span>
             </p>

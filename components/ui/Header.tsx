@@ -3,7 +3,7 @@
 import { ArrowUpRight, ChevronDown, Menu, Search, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { siteAnnouncement } from '@/config/announcement';
 
@@ -101,9 +101,38 @@ const navItems: NavItem[] = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+
+    const updateHeaderHeight = () => {
+      if (header.offsetHeight > 0) {
+        document.documentElement.style.setProperty(
+          '--site-header-height',
+          `${header.offsetHeight}px`
+        );
+      }
+    };
+
+    updateHeaderHeight();
+
+    const observer =
+      typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(updateHeaderHeight);
+    observer?.observe(header);
+
+    return () => {
+      observer?.disconnect();
+      document.documentElement.style.removeProperty('--site-header-height');
+    };
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black text-white">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 border-b border-white/10 bg-black text-white"
+    >
       <nav
         className="relative mx-auto grid h-14 max-w-store grid-cols-[1fr_auto_1fr] items-center px-5 lg:px-8"
         aria-label="Primary navigation"
