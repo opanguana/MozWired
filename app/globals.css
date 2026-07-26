@@ -233,27 +233,6 @@ a {
   outline-offset: 3px;
 }
 
-.campaign-hero {
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 90%,
-    92% 88%,
-    84% 94%,
-    76% 89%,
-    67% 93%,
-    58% 87%,
-    49% 92%,
-    40% 86%,
-    31% 91%,
-    22% 85%,
-    14% 91%,
-    6% 86%,
-    0 91%
-  );
-  border-bottom: 4px solid var(--color-store-cyan);
-}
-
 .marker-highlight {
   background: linear-gradient(
     transparent 12%,

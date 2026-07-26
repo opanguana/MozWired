@@ -111,7 +111,7 @@ function CardCollection({
 export default function HomePage() {
   return (
     <main id="main-content">
-      <section id="store" className="campaign-hero overflow-hidden bg-black text-white">
+      <section id="store" className="overflow-hidden bg-black text-white">
         <div className="relative mx-auto grid min-h-[19rem] max-w-store items-center gap-8 px-5 py-12 md:grid-cols-[1fr_auto] md:px-8 md:py-14">
           <Sparkles
             aria-hidden="true"
