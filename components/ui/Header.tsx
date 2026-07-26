@@ -5,6 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
+import { siteAnnouncement } from '@/config/announcement';
+
+import { AnnouncementBanner } from './AnnouncementBanner';
+
 type NavItem = {
   label: string;
   href: string;
@@ -215,12 +219,7 @@ export function Header() {
         </nav>
       )}
 
-      <div className="border-t border-white/10 bg-[#171719] px-5 py-3 text-center text-[11px] text-white/75">
-        Build a safer, faster workplace with one technology partner.{' '}
-        <Link href="#support" className="text-store-cyan hover:underline focus-ring">
-          Talk to a specialist
-        </Link>
-      </div>
+      <AnnouncementBanner announcement={siteAnnouncement} />
     </header>
   );
 }

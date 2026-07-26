@@ -41,6 +41,37 @@ git diff --cached
 gitleaks git --redact
 ```
 
+## Site announcement
+
+The optional banner below the navigation is controlled in `config/announcement.ts`. It is currently
+deactivated:
+
+```ts
+export const siteAnnouncement = {
+  id: 'workplace-specialist',
+  enabled: false,
+  message: 'Build a safer, faster workplace with one technology partner.',
+  linkLabel: 'Talk to a specialist',
+  linkHref: '#support',
+  tone: 'promotion',
+  startsAt: null,
+  endsAt: null,
+};
+```
+
+To activate it immediately, change `enabled` to `true`. To schedule it, keep `enabled: true` and
+provide ISO 8601 dates with an explicit timezone:
+
+```ts
+startsAt: '2026-08-01T00:00:00+02:00',
+endsAt: '2026-08-31T23:59:59+02:00',
+```
+
+Use a unique `id` for every campaign. Supported tones are `info`, `promotion`, and `donation`.
+Both link fields are optional; omit `linkLabel` and `linkHref` for a text-only announcement. Commit
+the configuration change and deploy it through the normal review process. Set `enabled` back to
+`false` for an immediate manual deactivation.
+
 ## Git workflow
 
 Create a focused branch from the current default branch:
