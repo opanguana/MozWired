@@ -113,25 +113,25 @@ export default function HomePage() {
       <section id="store" className="store-hero-copy overflow-hidden bg-black">
         <div className="mx-auto grid min-h-[14rem] max-w-store items-center gap-8 px-5 py-8 md:min-h-[16rem] md:grid-cols-[1fr_auto] md:px-8">
           <div>
-            <h1 className="text-[clamp(3rem,6vw,5rem)] font-semibold leading-[0.95] tracking-[-0.055em]">
+            <h1 className="text-[clamp(3rem,5vw,4rem)] font-normal leading-none tracking-[-0.045em]">
               Your Trusted Store
             </h1>
           </div>
 
           <div className="md:min-w-60 md:text-right">
-            <p className="text-[1.75rem] font-semibold leading-none tracking-[-0.035em]">
-              Life, <span className="marker-highlight text-black">sorted.</span>
+            <p className="text-[1.75rem] font-normal leading-none tracking-[-0.035em]">
+              Life, sorted.
             </p>
             <div className="mt-4 grid justify-items-start gap-2 text-[13px] md:justify-items-end">
               <Link
                 href="#support"
-                className="rounded-sm text-[#2997ff] hover:underline focus-ring"
+                className="rounded-sm text-[rgb(247_248_248)] hover:underline focus-ring"
               >
                 Connect with a Specialist ↗
               </Link>
               <Link
                 href="#services"
-                className="rounded-sm text-[#2997ff] hover:underline focus-ring"
+                className="rounded-sm text-[rgb(139_143_152)] transition hover:text-[rgb(247_248_248)] hover:underline focus-ring"
               >
                 Find a MozWired Store ↗
               </Link>

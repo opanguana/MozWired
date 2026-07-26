@@ -236,6 +236,7 @@ a {
 .store-hero-copy {
   color: rgb(247 248 248);
   font-family:
+    var(--font-inter),
     'Inter Variable',
     'SF Pro Display',
     -apple-system,
