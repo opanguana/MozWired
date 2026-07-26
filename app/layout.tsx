@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
 
+import { Footer } from '@/components/ui/Footer';
 import { Header } from '@/components/ui/Header';
 
 import './globals.css';
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         </a>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
