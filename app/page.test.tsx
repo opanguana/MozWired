@@ -19,4 +19,16 @@ describe('MozWired Store homepage', () => {
     expect(screen.queryByText('Cloud foundations')).not.toBeInTheDocument();
     expect(screen.queryByText('Structured networks')).not.toBeInTheDocument();
   });
+
+  it('extends the store hero background through the first product collection', () => {
+    render(<HomePage />);
+
+    const storeHero = document.querySelector('#store');
+
+    expect(storeHero).toContainElement(
+      screen.getByRole('navigation', { name: 'Product categories' })
+    );
+    expect(storeHero).toContainElement(screen.getByText('MacBook Pro'));
+    expect(storeHero).not.toContainElement(screen.getAllByText('Galaxy A57')[0]);
+  });
 });
