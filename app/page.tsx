@@ -1,9 +1,8 @@
-import { ArrowRight, Asterisk, Hand, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { CategoryRail } from '@/components/store/CategoryRail';
 import { ServiceCard, type ServiceCardData } from '@/components/store/ServiceCard';
-import { StoreActions } from '@/components/store/StoreActions';
 
 const essentials: ServiceCardData[] = [
   {
@@ -112,44 +111,31 @@ export default function HomePage() {
   return (
     <main id="main-content">
       <section id="store" className="overflow-hidden bg-black text-white">
-        <div className="relative mx-auto grid min-h-[19rem] max-w-store items-center gap-8 px-5 py-12 md:grid-cols-[1fr_auto] md:px-8 md:py-14">
-          <Sparkles
-            aria-hidden="true"
-            className="absolute right-[46%] top-6 hidden size-12 rotate-12 text-fuchsia-500 lg:block"
-            strokeWidth={2.4}
-          />
-          <Hand
-            aria-hidden="true"
-            className="absolute left-7 top-7 hidden size-12 -rotate-12 text-emerald-400 md:block"
-            strokeWidth={2.5}
-          />
-          <Asterisk
-            aria-hidden="true"
-            className="absolute bottom-5 left-[44%] hidden size-11 rotate-12 text-yellow-300 md:block"
-            strokeWidth={3}
-          />
-
-          <div className="relative z-10 max-w-3xl pt-4 md:pt-8">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-store-cyan">
-              Technology, sorted.
-            </p>
-            <h1 className="text-[clamp(3rem,7vw,5.75rem)] font-bold leading-[0.9] tracking-[-0.065em]">
-              The work store.
+        <div className="mx-auto grid min-h-[12.5rem] max-w-store items-end gap-8 px-5 py-7 md:grid-cols-[1fr_auto] md:px-8 md:py-6">
+          <div>
+            <h1 className="text-[clamp(3rem,6vw,5rem)] font-semibold leading-[0.95] tracking-[-0.055em]">
+              Your Trusted Store
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/65 md:text-lg">
-              Networks, cloud, security, and digital products—selected and delivered for the way
-              your team works.
-            </p>
           </div>
 
-          <div className="relative z-10 max-w-sm pb-5 md:pt-12">
-            <p className="text-xl font-bold tracking-tight">
-              Your stack, <span className="marker-highlight text-black">sorted.</span>
+          <div className="pb-1 md:min-w-60 md:text-right">
+            <p className="text-[1.75rem] font-semibold leading-none tracking-[-0.035em]">
+              Life, <span className="marker-highlight text-black">sorted.</span>
             </p>
-            <p className="mb-5 mt-2 text-sm leading-relaxed text-white/60">
-              Start with a specialist or browse the services teams ask for most.
-            </p>
-            <StoreActions />
+            <div className="mt-4 grid justify-items-start gap-2 text-[13px] md:justify-items-end">
+              <Link
+                href="#support"
+                className="rounded-sm text-[#2997ff] hover:underline focus-ring"
+              >
+                Connect with a Specialist ↗
+              </Link>
+              <Link
+                href="#services"
+                className="rounded-sm text-[#2997ff] hover:underline focus-ring"
+              >
+                Find a MozWired Store ↗
+              </Link>
+            </div>
           </div>
         </div>
       </section>
