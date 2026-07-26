@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
+import { CardCarousel } from '@/components/store/CardCarousel';
 import { CategoryRail } from '@/components/store/CategoryRail';
-import { ServiceCard, type ServiceCardData } from '@/components/store/ServiceCard';
+import type { ServiceCardData } from '@/components/store/ServiceCard';
 import { buildSmartphoneCards } from '@/data/smartphones';
 
 const samsungSmartphones = buildSmartphoneCards('Samsung');
@@ -228,17 +229,7 @@ function CardCollection({
         <span className="marker-highlight">{highlight}</span>{' '}
         <span className="text-black/55">{title}</span>
       </h2>
-      <div
-        className="card-scroll mt-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-5 md:px-8"
-        role="list"
-        aria-label={`${highlight} ${title}`}
-      >
-        {cards.map((card) => (
-          <div key={card.title} role="listitem">
-            <ServiceCard card={card} />
-          </div>
-        ))}
-      </div>
+      <CardCarousel cards={cards} label={`${highlight} ${title}`} />
     </section>
   );
 }
