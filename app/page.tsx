@@ -1,74 +1,206 @@
-import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { CategoryRail } from '@/components/store/CategoryRail';
 import { ServiceCard, type ServiceCardData } from '@/components/store/ServiceCard';
 
-const essentials: ServiceCardData[] = [
-  {
-    eyebrow: 'Limited time',
-    title: 'Move your workplace without moving the goalposts.',
-    description:
-      'A guided migration plan for mail, files, identities, and the people who use them.',
-    price: 'From discovery to go-live, with one accountable team.',
-    kind: 'migration',
+const products = {
+  macbookAir: {
+    eyebrow: 'Customer favorite',
+    title: 'MacBook Air',
+    description: 'Thin, fast, and ready for work or study wherever the day takes you.',
+    price: 'From $999 or $83.25/mo.',
+    image: '/images/store/mac.png',
+  },
+  macbookPro: {
+    eyebrow: 'Power to spare',
+    title: 'MacBook Pro',
+    description: 'Serious performance for demanding creative and professional workflows.',
+    price: 'From $1,599 or $133.25/mo.',
+    image: '/images/store/mac.png',
+  },
+  imac: {
+    eyebrow: 'All in one',
+    title: 'iMac',
+    description: 'A vivid desktop experience with everything built beautifully together.',
+    price: 'From $1,299 or $108.25/mo.',
+    image: '/images/store/mac.png',
+  },
+  macMini: {
+    eyebrow: 'Small footprint',
+    title: 'Mac mini',
+    description: 'A compact desktop with impressive performance and flexible connectivity.',
+    price: 'From $599 or $49.92/mo.',
+    image: '/images/store/mac.png',
+  },
+  ipadPro: {
+    eyebrow: 'Remarkably capable',
+    title: 'iPad Pro',
+    description: 'A powerful, portable canvas for creativity, entertainment, and productivity.',
+    price: 'From $999 or $83.25/mo.',
+    image: '/images/store/ipad.png',
+  },
+  ipadAir: {
+    eyebrow: 'Offer eligible',
+    title: 'iPad Air',
+    description: 'Versatile performance in a light design with room for every idea.',
+    price: 'From $599 or $49.92/mo.',
+    image: '/images/store/ipad.png',
+  },
+  ipadMini: {
+    eyebrow: 'Made to travel',
+    title: 'iPad mini',
+    description: 'Full iPad capability in an ultraportable size that goes everywhere.',
+    price: 'From $499 or $41.58/mo.',
+    image: '/images/store/ipad.png',
+  },
+  iphonePro: {
+    eyebrow: 'New',
+    title: 'iPhone Pro',
+    description: 'Advanced cameras, premium materials, and all-day performance.',
+    price: 'From $999 or $41.62/mo.',
+    image: '/images/store/iphone.png',
     dark: true,
   },
-  {
-    eyebrow: 'Team ready',
-    title: 'Managed devices',
-    description: 'Enroll, configure, and protect every work device without slowing anyone down.',
-    price: 'Flexible coverage for growing teams.',
-    kind: 'devices',
+  iphone: {
+    eyebrow: 'Everyday favorite',
+    title: 'iPhone',
+    description: 'A brilliant display, dependable battery life, and an effortless camera.',
+    price: 'From $799 or $33.29/mo.',
+    image: '/images/store/iphone.png',
   },
-  {
-    eyebrow: 'Built secure',
-    title: 'Identity protection',
-    description: 'Keep access simple for your team and difficult for everyone else.',
-    price: 'Modern authentication and unified policies.',
-    kind: 'security',
+  iphoneValue: {
+    eyebrow: 'Great value',
+    title: 'iPhone Essential',
+    description: 'The features you use most in a durable, colorful design.',
+    price: 'From $599 or $24.95/mo.',
+    image: '/images/store/iphone.png',
   },
-  {
-    eyebrow: 'Always connected',
-    title: 'Structured networks',
-    description: 'Reliable cabling and switching designed around how your spaces actually work.',
-    price: 'Survey, design, installation, and support.',
-    kind: 'networks',
+  watch: {
+    eyebrow: 'Fitness companion',
+    title: 'Apple Watch',
+    description: 'Stay active, connected, and informed right from your wrist.',
+    price: 'From $399 or $33.25/mo.',
+    image: '/images/store/apple-watch.png',
   },
-];
+  watchUltra: {
+    eyebrow: 'Built for adventure',
+    title: 'Apple Watch Ultra',
+    description: 'A rugged watch for endurance, exploration, and everyday life.',
+    price: 'From $799 or $66.58/mo.',
+    image: '/images/store/apple-watch.png',
+  },
+  visionPro: {
+    eyebrow: 'Spatial computing',
+    title: 'Apple Vision Pro',
+    description: 'Experience entertainment, work, and connection in an entirely new way.',
+    price: 'From $3,499 or $291.58/mo.',
+    image: '/images/store/apple-vision-pro.png',
+    dark: true,
+  },
+  airpodsPro: {
+    eyebrow: 'Free engraving',
+    title: 'AirPods Pro',
+    description: 'Immersive sound and intelligent noise control in a pocket-ready design.',
+    price: '$249',
+    image: '/images/store/airpods.png',
+  },
+  airpods: {
+    eyebrow: 'Listen all day',
+    title: 'AirPods',
+    description: 'Comfortable wireless audio with effortless pairing across your devices.',
+    price: 'From $129',
+    image: '/images/store/airpods.png',
+  },
+  airtag: {
+    eyebrow: 'Keep track',
+    title: 'AirTag',
+    description: 'A simple way to keep an eye on keys, bags, and everyday essentials.',
+    price: 'From $29',
+    image: '/images/store/airtag.png',
+  },
+  appleTV: {
+    eyebrow: 'Big-screen entertainment',
+    title: 'Apple TV 4K',
+    description: 'Bring movies, shows, music, and games together in stunning quality.',
+    price: 'From $129',
+    image: '/images/store/apple-tv-4k.png',
+  },
+  homepod: {
+    eyebrow: 'Room-filling sound',
+    title: 'HomePod',
+    description: 'Rich home audio with intelligent control in a compact design.',
+    price: 'From $99',
+    image: '/images/store/homepod.png',
+  },
+  accessories: {
+    eyebrow: 'Complete your setup',
+    title: 'Cases and bands',
+    description: 'Protection, color, and everyday utility for the devices you love.',
+    price: 'From $39',
+    image: '/images/store/accessories.png',
+  },
+  giftCard: {
+    eyebrow: 'Always the right fit',
+    title: 'Gift Card',
+    description: 'Let them choose the device, accessory, app, or experience they want.',
+    price: 'Available from $25',
+    image: '/images/store/apple-gift-card.png',
+  },
+} satisfies Record<string, ServiceCardData>;
 
-const specialistServices: ServiceCardData[] = [
+const storeCollections: {
+  id: string;
+  highlight: string;
+  title: string;
+  cards: ServiceCardData[];
+}[] = [
   {
-    eyebrow: 'New',
-    title: 'Cloud foundations',
-    description: 'A clear, scalable Microsoft cloud setup without the sprawling complexity.',
-    price: 'Designed for performance and predictable growth.',
-    kind: 'cloud',
-    accent: true,
+    id: 'services',
+    highlight: 'Limited-time offers.',
+    title: 'Major must-haves.',
+    cards: [products.macbookAir, products.macbookPro, products.ipadAir, products.iphone],
   },
   {
-    eyebrow: 'Made to fit',
-    title: 'Web platforms',
-    description: 'Fast, accessible digital products with an architecture your team can maintain.',
-    price: 'Strategy, interface design, and engineering.',
-    kind: 'web',
-    accent: true,
+    id: 'favorites',
+    highlight: 'Shop our favorites.',
+    title: 'Popular electronics for every day.',
+    cards: [products.macbookPro, products.watch, products.ipadPro, products.macMini],
   },
   {
-    eyebrow: 'Responsive',
-    title: 'Managed support',
-    description: 'Practical help from engineers who understand your systems and your priorities.',
-    price: 'Remote and on-site options available.',
-    kind: 'support',
-    accent: true,
+    id: 'savings',
+    highlight: 'More ways to save.',
+    title: 'Great technology at the right price.',
+    cards: [products.giftCard, products.iphoneValue, products.ipadMini, products.airpods],
   },
   {
-    eyebrow: 'Controlled',
-    title: 'Endpoint operations',
-    description: 'Provision, update, and retire devices with consistent controls at every stage.',
-    price: 'Clear inventory and fewer manual tasks.',
-    kind: 'endpoint',
-    accent: true,
+    id: 'benefits',
+    highlight: 'The MozWired Store difference.',
+    title: 'More reasons to shop with us.',
+    cards: [products.imac, products.macMini, products.giftCard, products.airpodsPro],
+  },
+  {
+    id: 'accessories',
+    highlight: 'Accessories.',
+    title: 'The finishing touches for every setup.',
+    cards: [products.accessories, products.airpodsPro, products.airtag, products.homepod],
+  },
+  {
+    id: 'possibilities',
+    highlight: 'Endless possibilities.',
+    title: 'Technology for work, creativity, and play.',
+    cards: [products.ipadPro, products.macbookAir, products.iphonePro, products.appleTV],
+  },
+  {
+    id: 'more-to-love',
+    highlight: 'More to love.',
+    title: 'Find your next favorite.',
+    cards: [products.iphonePro, products.airpodsPro, products.iphone, products.watchUltra],
+  },
+  {
+    id: 'experience',
+    highlight: 'The MozWired experience.',
+    title: 'Electronics that work beautifully together.',
+    cards: [products.visionPro, products.appleTV, products.homepod, products.giftCard],
   },
 ];
 
@@ -143,38 +275,9 @@ export default function HomePage() {
       <div className="bg-store-canvas">
         <CategoryRail />
         <div className="mx-auto max-w-store">
-          <CardCollection
-            id="services"
-            highlight="Popular right now."
-            title="Workplace essentials."
-            cards={essentials}
-          />
-          <CardCollection
-            id="cloud"
-            highlight="Built around you."
-            title="Specialist services."
-            cards={specialistServices}
-          />
-
-          <section
-            id="support"
-            className="mx-5 my-10 flex flex-col justify-between gap-6 rounded-[2rem] bg-black px-6 py-8 text-white md:mx-8 md:flex-row md:items-center md:px-10 md:py-10"
-          >
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-store-cyan">
-                Need a clearer next step?
-              </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-[-0.04em]">
-                Bring us the complicated part.
-              </h2>
-            </div>
-            <Link
-              href="mailto:hello@mozwired.example"
-              className="focus-ring inline-flex min-h-12 w-fit items-center gap-2 rounded-full bg-white px-6 text-sm font-bold text-black transition hover:bg-store-cyan"
-            >
-              Contact support <ArrowRight aria-hidden="true" size={17} />
-            </Link>
-          </section>
+          {storeCollections.map((collection) => (
+            <CardCollection key={collection.id} {...collection} />
+          ))}
         </div>
       </div>
     </main>

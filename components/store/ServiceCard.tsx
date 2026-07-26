@@ -1,15 +1,14 @@
-import { GraduationCap } from 'lucide-react';
+import { BadgePercent } from 'lucide-react';
+import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
-
-import { ServiceVisual } from './ServiceVisual';
 
 export type ServiceCardData = {
   eyebrow: string;
   title: string;
   description: string;
   price: string;
-  kind: string;
+  image: string;
   dark?: boolean;
   accent?: boolean;
 };
@@ -32,7 +31,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
         >
           {card.eyebrow}
         </p>
-        <GraduationCap
+        <BadgePercent
           aria-hidden="true"
           className={card.dark ? 'text-store-cyan' : 'text-store-teal'}
           size={18}
@@ -53,7 +52,15 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
       <p className={cn('mt-2 text-[11px]', card.dark ? 'text-white/55' : 'text-black/55')}>
         {card.price}
       </p>
-      <ServiceVisual kind={card.kind} label={card.title} />
+      <div className="relative mt-auto h-48 overflow-hidden bg-white/65">
+        <Image
+          src={card.image}
+          alt={card.title}
+          fill
+          sizes="(min-width: 768px) 320px, 296px"
+          className="object-contain"
+        />
+      </div>
     </article>
   );
 }
