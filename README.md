@@ -72,6 +72,34 @@ Both link fields are optional; omit `linkLabel` and `linkHref` for a text-only a
 the configuration change and deploy it through the normal review process. Set `enabled` back to
 `false` for an immediate manual deactivation.
 
+## Smartphone inventory and product pictures
+
+Smartphone SKUs, pricing, variants, and picture mappings are maintained in
+`data/smartphones.ts`. The catalog groups storage/RAM variants into one horizontal card per model
+and displays all prices in MZN.
+
+Samsung models currently use a deliberate “Image coming soon” placeholder. To add or replace a
+product picture:
+
+1. Prepare a PNG or WebP image with a transparent or plain neutral background. A square image of at
+   least 800×800 pixels works best.
+2. Give it a lowercase descriptive filename, for example `galaxy-a06.png`.
+3. Copy it into `public/images/products/smartphones/`.
+4. Add or update the model entry in `smartphoneImages` inside `data/smartphones.ts`:
+
+   ```ts
+   export const smartphoneImages = {
+     'Galaxy A06': '/images/products/smartphones/galaxy-a06.png',
+     'iPhone 15 Pro Max': '/images/products/smartphones/iphone-15-pro-max.png',
+   };
+   ```
+
+5. Run `npm run lint`, `npm test`, and `npm run build`.
+
+The mapping key must exactly match the inventory model. Removing a mapping safely restores the
+placeholder without breaking the card or build. Product copy and pricing can be updated directly in
+`smartphoneInventory`; keep prices as numeric MZN values without commas.
+
 ## Git workflow
 
 Create a focused branch from the current default branch:
