@@ -179,7 +179,7 @@ export function Header() {
           </button>
           <Link
             href="#support"
-            className="hidden min-h-8 items-center rounded-full bg-white px-4 text-[11px] font-semibold text-black transition hover:bg-store-cyan focus-ring sm:inline-flex"
+            className="hidden min-h-8 items-center rounded-full bg-white px-4 text-[13px] font-semibold text-black transition hover:bg-store-cyan focus-ring sm:inline-flex"
           >
             Get support
           </Link>

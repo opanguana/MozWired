@@ -153,7 +153,7 @@ a {
 }
 
 @utility nav-pill {
-  @apply focus-ring inline-flex min-h-7 items-center gap-1 rounded-full px-3 text-[11px] font-medium text-white/50 transition duration-200 hover:bg-white/[0.07] hover:text-white/90;
+  @apply focus-ring inline-flex min-h-7 items-center gap-1 rounded-full px-3 text-[13px] font-medium text-white/50 transition duration-200 hover:bg-white/[0.07] hover:text-white/90;
 }
 
 @utility nav-pill-active {
