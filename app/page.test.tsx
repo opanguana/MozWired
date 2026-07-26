@@ -8,8 +8,8 @@ describe('MozWired Store homepage', () => {
 
     expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(8);
     expect(screen.getAllByText('MacBook Pro')).not.toHaveLength(0);
-    expect(screen.getAllByText('iPhone Pro')).not.toHaveLength(0);
-    expect(screen.getAllByText('AirPods Pro')).not.toHaveLength(0);
+    expect(screen.getAllByText('Galaxy A57')).not.toHaveLength(0);
+    expect(screen.getAllByText('iPhone 15 Pro Max')).not.toHaveLength(0);
   });
 
   it('does not present the catalog as managed IT services', () => {

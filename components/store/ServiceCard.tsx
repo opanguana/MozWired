@@ -1,4 +1,4 @@
-import { BadgePercent } from 'lucide-react';
+import { BadgePercent, Smartphone } from 'lucide-react';
 import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
@@ -8,7 +8,7 @@ export type ServiceCardData = {
   title: string;
   description: string;
   price: string;
-  image: string;
+  image?: string;
   dark?: boolean;
   accent?: boolean;
 };
@@ -53,13 +53,27 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
         {card.price}
       </p>
       <div className="relative mt-auto h-48 overflow-hidden bg-white/65">
-        <Image
-          src={card.image}
-          alt={card.title}
-          fill
-          sizes="(min-width: 768px) 320px, 296px"
-          className="object-contain"
-        />
+        {card.image ? (
+          <Image
+            src={card.image}
+            alt={card.title}
+            fill
+            sizes="(min-width: 768px) 320px, 296px"
+            className="object-contain"
+          />
+        ) : (
+          <div
+            className="flex h-full flex-col items-center justify-center gap-3 bg-[#f2f2f4] px-6 text-center text-black"
+            role="img"
+            aria-label={`${card.title} product image coming soon`}
+          >
+            <Smartphone aria-hidden="true" className="size-20 stroke-[1.1]" />
+            <span className="text-xs font-semibold">{card.title}</span>
+            <span className="text-[10px] uppercase tracking-[0.12em] text-black/45">
+              Image coming soon
+            </span>
+          </div>
+        )}
       </div>
     </article>
   );

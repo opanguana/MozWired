@@ -2,6 +2,10 @@ import Link from 'next/link';
 
 import { CategoryRail } from '@/components/store/CategoryRail';
 import { ServiceCard, type ServiceCardData } from '@/components/store/ServiceCard';
+import { buildSmartphoneCards } from '@/data/smartphones';
+
+const samsungSmartphones = buildSmartphoneCards('Samsung');
+const appleSmartphones = buildSmartphoneCards('Apple');
 
 const products = {
   macbookAir: {
@@ -162,9 +166,9 @@ const storeCollections: {
   },
   {
     id: 'favorites',
-    highlight: 'Shop our favorites.',
-    title: 'Popular electronics for every day.',
-    cards: [products.macbookPro, products.watch, products.ipadPro, products.macMini],
+    highlight: 'Samsung Galaxy.',
+    title: 'Smartphones for every budget.',
+    cards: samsungSmartphones,
   },
   {
     id: 'savings',
@@ -192,9 +196,9 @@ const storeCollections: {
   },
   {
     id: 'more-to-love',
-    highlight: 'More to love.',
-    title: 'Find your next favorite.',
-    cards: [products.iphonePro, products.airpodsPro, products.iphone, products.watchUltra],
+    highlight: 'Apple iPhone.',
+    title: 'Find the model that fits.',
+    cards: appleSmartphones,
   },
   {
     id: 'experience',
