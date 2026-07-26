@@ -167,11 +167,6 @@ export function Header() {
               )}
             </li>
           ))}
-          <li className="ml-2 border-l border-white/15 pl-2">
-            <Link href="#support" className="nav-pill">
-              Support
-            </Link>
-          </li>
         </ul>
 
         <div className="flex items-center gap-1.5">
