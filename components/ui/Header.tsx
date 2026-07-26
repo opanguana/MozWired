@@ -6,11 +6,11 @@ import { useState } from 'react';
 
 const navItems = [
   { label: 'Store', href: '#store' },
-  { label: 'Networks', href: '#networks' },
+  { label: 'Networks', href: '#services' },
   { label: 'Cloud', href: '#cloud' },
-  { label: 'Security', href: '#security' },
-  { label: 'Devices', href: '#devices' },
-  { label: 'Web', href: '#web' },
+  { label: 'Security', href: '#services' },
+  { label: 'Devices', href: '#services' },
+  { label: 'Web', href: '#cloud' },
   { label: 'Support', href: '#support' },
 ];
 
@@ -64,7 +64,11 @@ export function Header() {
       </nav>
 
       {menuOpen && (
-        <nav id="mobile-navigation" className="border-t border-white/15 px-5 py-4 md:hidden">
+        <nav
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+          className="border-t border-white/15 px-5 py-4 md:hidden"
+        >
           <ul className="grid gap-1">
             {navItems.map((item) => (
               <li key={item.label}>

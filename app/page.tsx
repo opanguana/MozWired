@@ -93,9 +93,15 @@ function CardCollection({
         <span className="marker-highlight">{highlight}</span>{' '}
         <span className="text-black/55">{title}</span>
       </h2>
-      <div className="card-scroll mt-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-5 md:px-8">
+      <div
+        className="card-scroll mt-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-5 md:px-8"
+        role="list"
+        aria-label={`${highlight} ${title}`}
+      >
         {cards.map((card) => (
-          <ServiceCard key={card.title} card={card} />
+          <div key={card.title} role="listitem">
+            <ServiceCard card={card} />
+          </div>
         ))}
       </div>
     </section>

@@ -19,6 +19,6 @@ describe('Header', () => {
       'aria-expanded',
       'true'
     );
-    expect(screen.getByRole('navigation', { name: '' })).toBeInTheDocument();
+    expect(screen.getByRole('navigation', { name: 'Mobile navigation' })).toBeInTheDocument();
   });
 });

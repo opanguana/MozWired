@@ -14,15 +14,15 @@ import {
 import Link from 'next/link';
 
 const categories: { label: string; href: string; Icon: LucideIcon }[] = [
-  { label: 'Networks', href: '#networks', Icon: Network },
+  { label: 'Networks', href: '#services', Icon: Network },
   { label: 'Cloud', href: '#cloud', Icon: CloudCog },
-  { label: 'Devices', href: '#devices', Icon: Smartphone },
-  { label: 'Security', href: '#security', Icon: ShieldCheck },
-  { label: 'Laptops', href: '#devices', Icon: Laptop },
+  { label: 'Devices', href: '#services', Icon: Smartphone },
+  { label: 'Security', href: '#services', Icon: ShieldCheck },
+  { label: 'Laptops', href: '#services', Icon: Laptop },
   { label: 'Data', href: '#cloud', Icon: Database },
-  { label: 'Identity', href: '#security', Icon: KeyRound },
-  { label: 'Cabling', href: '#networks', Icon: Cable },
-  { label: 'Web', href: '#web', Icon: Code2 },
+  { label: 'Identity', href: '#services', Icon: KeyRound },
+  { label: 'Cabling', href: '#services', Icon: Cable },
+  { label: 'Web', href: '#cloud', Icon: Code2 },
   { label: 'Support', href: '#support', Icon: Headphones },
 ];
 
