@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -8,6 +8,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --color-store-canvas: #f5f5f7;
+  --color-store-ink: #171719;
+  --color-store-cyan: #28e1dc;
+  --color-store-teal: #0c9b82;
+  --color-store-orange: #b7502d;
+  --container-store: 88rem;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -121,7 +127,27 @@
   }
 }
 
-
 body {
   @apply font-sans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@utility focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-store-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-black;
+}
+
+@utility icon-button {
+  @apply focus-ring inline-flex size-9 items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white;
 }
