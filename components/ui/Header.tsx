@@ -105,10 +105,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black text-white">
       <nav
-        className="relative mx-auto flex h-14 max-w-store items-center justify-between px-5 lg:px-8"
+        className="relative mx-auto grid h-14 max-w-store grid-cols-[1fr_auto_1fr] items-center px-5 lg:px-8"
         aria-label="Primary navigation"
       >
-        <Link href="#store" aria-label="MozWired home" className="rounded-sm px-1 focus-ring">
+        <Link
+          href="#store"
+          aria-label="MozWired home"
+          className="justify-self-start rounded-sm px-1 focus-ring"
+        >
           <Image
             src="/images/brand/mw-white.png"
             alt=""
@@ -169,7 +173,7 @@ export function Header() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center justify-self-end gap-1.5">
           <button type="button" className="icon-button" aria-label="Search MozWired">
             <Search aria-hidden="true" size={15} strokeWidth={1.7} />
           </button>

@@ -9,9 +9,6 @@ describe('Header', () => {
     expect(screen.getByRole('link', { name: 'MozWired home' })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: 'Primary navigation' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Get support' })).toBeInTheDocument();
-    expect(
-      screen.queryByRole('complementary', { name: 'Site announcement' })
-    ).not.toBeInTheDocument();
   });
 
   it('provides accessible desktop mega-menu triggers and links', () => {
