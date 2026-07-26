@@ -229,6 +229,55 @@ export const smartphoneImages: Partial<Record<string, string>> = {
 
 const formatMzn = (value: number) => `${new Intl.NumberFormat('en-US').format(value)} MZN`;
 
+const smartphoneEyebrows: Record<string, string> = {
+  'Galaxy A04e': 'Simple and practical',
+  'Galaxy A05s': 'Reliable everyday performance',
+  'Galaxy A06': 'Made for the essentials',
+  'Galaxy A07': 'Everyday value',
+  'Galaxy A16': 'Ready for every day',
+  'Galaxy A17': 'More ways to choose',
+  'Galaxy A25': 'Step into 5G',
+  'Galaxy A26': 'Versatile 5G value',
+  'Galaxy A36': 'More room for more',
+  'Galaxy A37': 'Built for daily life',
+  'Galaxy A56': 'A capable 5G choice',
+  'Galaxy A57': 'Flexible 5G options',
+  'iPhone XR': 'A familiar favorite',
+  'iPhone 11': 'Everyday iPhone value',
+  'iPhone 12': 'A modern essential',
+  'iPhone 12 Pro': 'A step up to Pro',
+  'iPhone 12 Pro Max': 'More room to go Pro',
+  'iPhone 13': 'A dependable favorite',
+  'iPhone 13 Pro': 'Pro with more storage',
+  'iPhone 13 Pro Max': 'A larger Pro choice',
+  'iPhone 14 Pro': 'Designed for Pro',
+  'iPhone 14 Pro Max': 'The bigger Pro option',
+  'iPhone 15 Pro Max': 'Premium iPhone choice',
+};
+
+function joinOptions(options: string[]) {
+  if (options.length === 1) return options[0];
+  if (options.length === 2) return `${options[0]} or ${options[1]}`;
+  return `${options.slice(0, -1).join(', ')}, or ${options.at(-1)}`;
+}
+
+function describeVariants(brand: SmartphoneSku['brand'], variants: SmartphoneSku[]) {
+  const storageOptions = [...new Set(variants.map(({ storage }) => storage))];
+  const ramOptions = [...new Set(variants.flatMap(({ ram }) => (ram ? [ram] : [])))];
+  const networks = [...new Set(variants.flatMap(({ network }) => (network ? [network] : [])))];
+  const storage = joinOptions(storageOptions);
+  const network = networks.length ? ` ${joinOptions(networks)}` : '';
+
+  if (!ramOptions.length) {
+    return `An ${brand} smartphone with ${storage} of storage for everyday communication, apps and entertainment.`;
+  }
+
+  const ram = joinOptions(ramOptions);
+  const availability = variants.length > 1 ? 'available with' : 'with';
+
+  return `A practical ${brand}${network} smartphone ${availability} ${storage} of storage and ${ram} of RAM for everyday use.`;
+}
+
 export function buildSmartphoneCards(brand: SmartphoneSku['brand']): ServiceCardData[] {
   const groupedModels = new Map<string, SmartphoneSku[]>();
 
@@ -242,19 +291,13 @@ export function buildSmartphoneCards(brand: SmartphoneSku['brand']): ServiceCard
     const prices = variants.map(({ priceMzn }) => priceMzn);
     const lowestPrice = Math.min(...prices);
     const highestPrice = Math.max(...prices);
-    const networks = [...new Set(variants.flatMap(({ network }) => (network ? [network] : [])))];
-    const variantSummary = variants
-      .map(({ storage, ram }) => (ram ? `${storage}/${ram} RAM` : storage))
-      .join(' • ');
 
     return {
-      eyebrow: networks.length ? networks.join(' / ') : brand,
+      eyebrow: smartphoneEyebrows[model],
       title: model,
-      description: variantSummary,
+      description: describeVariants(brand, variants),
       price:
-        lowestPrice === highestPrice
-          ? formatMzn(lowestPrice)
-          : `${formatMzn(lowestPrice)} – ${formatMzn(highestPrice)}`,
+        lowestPrice === highestPrice ? formatMzn(lowestPrice) : `From ${formatMzn(lowestPrice)}`,
       image: smartphoneImages[model],
       accent: true,
     };
