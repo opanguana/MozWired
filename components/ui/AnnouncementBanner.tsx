@@ -11,12 +11,6 @@ export type Announcement = {
   endsAt?: string | null;
 };
 
-const toneClasses: Record<NonNullable<Announcement['tone']>, string> = {
-  info: 'bg-[#171719] text-white/75',
-  promotion: 'bg-[#171719] text-white/75',
-  donation: 'bg-store-cyan text-black/75',
-};
-
 export function isAnnouncementActive(announcement: Announcement, now = new Date()): boolean {
   if (!announcement.enabled) return false;
 
@@ -46,24 +40,22 @@ export function AnnouncementBanner({
     <aside
       aria-label="Site announcement"
       data-announcement-id={announcement.id}
-      className={`border-t border-white/10 px-5 py-3 text-center text-[11px] ${toneClasses[tone]}`}
+      data-tone={tone}
+      className={`ribbon ${tone === 'donation' ? 'ribbon-donation' : 'theme-dark'}`}
     >
-      {announcement.message}
-      {hasLink && (
-        <>
-          {' '}
-          <Link
-            href={announcement.linkHref!}
-            className={
-              tone === 'donation'
-                ? 'font-semibold text-black hover:underline focus-ring'
-                : 'text-store-cyan hover:underline focus-ring'
-            }
-          >
-            {announcement.linkLabel}
-          </Link>
-        </>
-      )}
+      <div className="ribbon-content-wrapper">
+        <div className="ribbon-content">
+          {announcement.message}
+          {hasLink && (
+            <>
+              {' '}
+              <Link href={announcement.linkHref!} className="ribbon-link">
+                {announcement.linkLabel}
+              </Link>
+            </>
+          )}
+        </div>
+      </div>
     </aside>
   );
 }

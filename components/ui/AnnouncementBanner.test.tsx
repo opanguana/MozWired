@@ -15,8 +15,20 @@ describe('AnnouncementBanner', () => {
   it('renders an enabled announcement', () => {
     render(<AnnouncementBanner announcement={activeAnnouncement} />);
 
-    expect(screen.getByRole('complementary', { name: 'Site announcement' })).toBeInTheDocument();
+    expect(screen.getByRole('complementary', { name: 'Site announcement' })).toHaveClass(
+      'ribbon',
+      'ribbon-donation'
+    );
     expect(screen.getByRole('link', { name: 'Donate now' })).toHaveAttribute('href', '/donate');
+  });
+
+  it('uses the dark ribbon theme for promotions', () => {
+    render(<AnnouncementBanner announcement={{ ...activeAnnouncement, tone: 'promotion' }} />);
+
+    expect(screen.getByRole('complementary', { name: 'Site announcement' })).toHaveClass(
+      'ribbon',
+      'theme-dark'
+    );
   });
 
   it('renders nothing when disabled', () => {

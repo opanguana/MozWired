@@ -168,6 +168,71 @@ a {
   @apply flex min-h-24 flex-col rounded-lg border border-transparent p-3 transition hover:border-white/[0.06] hover:bg-white/[0.04] focus-ring;
 }
 
+.ribbon {
+  --ribbon-link-inline-color: inherit;
+  --ribbon-link-color: #06c;
+  --ribbon-focus-color: #0071e3;
+  --ribbon-text-color: #1d1d1f;
+  --ribbon-background-color: #f5f5f7;
+  --ribbon-content-padding-top: 16px;
+  --ribbon-content-padding-bottom: var(--ribbon-content-padding-top);
+  --ribbon-content-width: 83.33333%;
+  --ribbon-content-minimum-width: 320px;
+
+  color: var(--ribbon-text-color);
+  background-color: var(--ribbon-background-color);
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.016em;
+  line-height: 1.4285914286;
+}
+
+.theme-dark.ribbon,
+.theme-dark .ribbon {
+  --ribbon-text-color: #f5f5f7;
+  --ribbon-background-color: #1d1d1f;
+  --ribbon-link-color: #2997ff;
+  --ribbon-focus-color: #0071e3;
+}
+
+.ribbon-donation {
+  --ribbon-text-color: #1d1d1f;
+  --ribbon-background-color: var(--color-store-cyan);
+  --ribbon-link-color: #1d1d1f;
+  --ribbon-focus-color: #0071e3;
+}
+
+.ribbon-content-wrapper {
+  width: var(--ribbon-content-width);
+  min-width: min(var(--ribbon-content-minimum-width), 100%);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.ribbon-content {
+  padding-top: var(--ribbon-content-padding-top);
+  padding-bottom: var(--ribbon-content-padding-bottom);
+  color: var(--ribbon-text-color);
+  white-space: normal;
+}
+
+.ribbon-link {
+  color: var(--ribbon-link-color);
+  text-decoration: none;
+  outline: none;
+}
+
+.ribbon-link:hover {
+  text-decoration: underline;
+}
+
+.ribbon-link:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--ribbon-focus-color);
+  outline-offset: 3px;
+}
+
 .campaign-hero {
   clip-path: polygon(
     0 0,
