@@ -3,10 +3,10 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { Header } from './Header';
 
 describe('Header', () => {
-  it('renders the brand and primary navigation', () => {
+  it('renders the linked company logo and primary navigation', () => {
     render(<Header />);
 
-    expect(screen.getByText('MozWired')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'MozWired home' })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: 'Primary navigation' })).toBeInTheDocument();
   });
 

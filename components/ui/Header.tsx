@@ -1,6 +1,7 @@
 'use client';
 
 import { Menu, Search, ShoppingBag, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -23,11 +24,15 @@ export function Header() {
         className="mx-auto flex h-11 max-w-store items-center justify-between px-5 lg:px-8"
         aria-label="Primary navigation"
       >
-        <Link href="#store" className="rounded-sm text-sm font-bold tracking-tight focus-ring">
-          <span aria-hidden="true" className="mr-1 text-store-cyan">
-            ●
-          </span>
-          MozWired
+        <Link href="#store" aria-label="MozWired home" className="rounded-sm px-1 focus-ring">
+          <Image
+            src="/images/brand/mw-white.png"
+            alt=""
+            width={221}
+            height={141}
+            priority
+            className="h-7 w-auto"
+          />
         </Link>
 
         <ul className="hidden items-center gap-7 md:flex">
