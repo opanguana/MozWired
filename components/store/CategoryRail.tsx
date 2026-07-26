@@ -18,7 +18,7 @@ const categories = [
 export function CategoryRail() {
   return (
     <nav aria-label="Product categories" className="category-scroll overflow-x-auto">
-      <ul className="mx-auto flex w-max min-w-full max-w-store items-start justify-start gap-2 px-5 py-8 lg:px-8">
+      <ul className="mx-auto flex w-max min-w-full max-w-store items-start justify-center gap-3 px-5 py-8 lg:px-8">
         {categories.map(({ label, image }) => (
           <li key={label}>
             <Link
