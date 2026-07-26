@@ -8,6 +8,22 @@ describe('Header', () => {
 
     expect(screen.getByRole('link', { name: 'MozWired home' })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: 'Primary navigation' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Get support' })).toBeInTheDocument();
+  });
+
+  it('provides accessible desktop mega-menu triggers and links', () => {
+    render(<Header />);
+
+    expect(screen.getByRole('button', { name: 'Networks' })).toHaveAttribute(
+      'aria-haspopup',
+      'true'
+    );
+    expect(screen.getByRole('button', { name: 'Cloud' })).toHaveAttribute('aria-haspopup', 'true');
+    expect(screen.getByRole('button', { name: 'Security' })).toHaveAttribute(
+      'aria-haspopup',
+      'true'
+    );
+    expect(screen.getByRole('link', { name: /Structured cabling/ })).toBeInTheDocument();
   });
 
   it('opens and closes the mobile navigation', () => {
