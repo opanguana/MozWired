@@ -9,7 +9,11 @@ describe('Button', () => {
   });
 
   it('applies variant and size classes', () => {
-    render(<Button variant="primary" size="lg">Primary</Button>);
+    render(
+      <Button variant="primary" size="lg">
+        Primary
+      </Button>
+    );
     const button = screen.getByText('Primary');
     expect(button).toHaveClass('bg-blue-600');
     expect(button).toHaveClass('h-10');

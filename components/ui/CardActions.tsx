@@ -1,16 +1,16 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import { Button } from '@/components/ui/button';
 
 // Button variants allowed for CardActions
 export type ButtonVariant =
-  | "primary"
-  | "appleOutline"
-  | "link"
-  | "default"
-  | "destructive"
-  | "outline"
-  | "secondary"
-  | "ghost";
+  | 'primary'
+  | 'appleOutline'
+  | 'link'
+  | 'default'
+  | 'destructive'
+  | 'outline'
+  | 'secondary'
+  | 'ghost';
 
 // Single action button definition
 export interface CardAction {
@@ -35,10 +35,10 @@ export interface CardActionsProps {
  */
 export function CardActions({
   actions = [
-    { label: "Learn more", variant: "primary" },
-    { label: "Buy", variant: "appleOutline" },
+    { label: 'Learn more', variant: 'primary' },
+    { label: 'Buy', variant: 'appleOutline' },
   ],
-  className = "flex gap-3 mt-4",
+  className = 'flex gap-3 mt-4',
 }: CardActionsProps) {
   return (
     <div className={className}>
@@ -49,7 +49,7 @@ export function CardActions({
           onClick={action.onClick}
           aria-label={action.ariaLabel || action.label}
           disabled={action.disabled}
-          className={cn("transition-all duration-300", action.className)}
+          className={cn('transition-all duration-300', action.className)}
         >
           {action.icon && <span className="mr-2">{action.icon}</span>}
           {action.label}
@@ -60,4 +60,4 @@ export function CardActions({
 }
 
 // Re-import cn for CardActions
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
