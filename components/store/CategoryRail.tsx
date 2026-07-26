@@ -23,14 +23,14 @@ export function CategoryRail() {
           <li key={label}>
             <Link
               href="#services"
-              className="group flex w-[5.5rem] flex-col items-center gap-2 rounded-lg text-center focus-ring"
+              className="group flex w-[6.5rem] flex-col items-center gap-2 rounded-lg text-center focus-ring"
             >
-              <span className="relative block h-[3.75rem] w-[5.75rem] overflow-hidden transition-transform duration-200 group-hover:-translate-y-1">
+              <span className="relative block h-[4.5rem] w-[6.75rem] overflow-hidden transition-transform duration-200 group-hover:-translate-y-1">
                 <Image
                   src={image}
                   alt=""
                   fill
-                  sizes="92px"
+                  sizes="108px"
                   className="object-contain"
                   aria-hidden="true"
                 />
