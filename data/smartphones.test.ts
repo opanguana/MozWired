@@ -12,9 +12,9 @@ describe('smartphone inventory', () => {
     expect(buildSmartphoneCards('Apple')).toHaveLength(11);
   });
 
-  it('uses the shared gray surface for Samsung cards', () => {
+  it('uses the shared gray surface for smartphone cards', () => {
     expect(buildSmartphoneCards('Samsung').every(({ accent }) => !accent)).toBe(true);
-    expect(buildSmartphoneCards('Apple').every(({ accent }) => accent)).toBe(true);
+    expect(buildSmartphoneCards('Apple').every(({ accent }) => !accent)).toBe(true);
   });
 
   it('preserves supplied variant pricing', () => {
