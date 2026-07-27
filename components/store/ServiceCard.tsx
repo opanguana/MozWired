@@ -12,6 +12,7 @@ export type ServiceCardData = {
   price: string;
   image?: string;
   dark?: boolean;
+  warmDark?: boolean;
   accent?: boolean;
 };
 
@@ -20,9 +21,11 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
     <article
       className={cn(
         'group relative flex min-h-[31rem] w-[18.5rem] shrink-0 snap-start flex-col overflow-hidden p-4 md:w-[20rem]',
-        card.dark
-          ? 'border border-white/15 bg-[#151517] text-white shadow-[0_18px_50px_rgb(0_0_0/0.35)]'
-          : 'bg-[#e9e9ec] text-store-ink',
+        card.warmDark
+          ? 'border border-[#2a2821] bg-[#1b1a15] text-white shadow-[0_18px_50px_rgb(0_0_0/0.3)]'
+          : card.dark
+            ? 'border border-white/15 bg-[#151517] text-white shadow-[0_18px_50px_rgb(0_0_0/0.35)]'
+            : 'bg-[#e9e9ec] text-store-ink',
         card.accent && 'bg-white'
       )}
     >
@@ -35,14 +38,20 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
         <p
           className={cn(
             'text-[10px] font-bold uppercase tracking-wide',
-            card.dark ? 'text-store-orange' : 'text-store-teal'
+            card.dark || card.warmDark ? 'text-store-orange' : 'text-store-teal'
           )}
         >
           {card.eyebrow}
         </p>
         <BadgePercent
           aria-hidden="true"
-          className={card.dark ? 'text-store-cyan' : 'text-store-teal'}
+          className={
+            card.warmDark
+              ? 'text-store-orange'
+              : card.dark
+                ? 'text-store-cyan'
+                : 'text-store-teal'
+          }
           size={18}
           strokeWidth={2.2}
         />
@@ -53,15 +62,25 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
       <p
         className={cn(
           'mt-2 text-xs leading-relaxed',
-          card.dark ? 'text-white/75' : 'text-black/70'
+          card.warmDark ? 'text-[#aaa79f]' : card.dark ? 'text-white/75' : 'text-black/70'
         )}
       >
         {card.description}
       </p>
-      <p className={cn('mt-2 text-[11px]', card.dark ? 'text-white/65' : 'text-black/55')}>
+      <p
+        className={cn(
+          'mt-2 text-[11px]',
+          card.warmDark ? 'text-[#8f8b82]' : card.dark ? 'text-white/65' : 'text-black/55'
+        )}
+      >
         {card.price}
       </p>
-      <div className="relative mt-auto h-48 overflow-hidden bg-white/65">
+      <div
+        className={cn(
+          'relative mt-auto h-48 overflow-hidden',
+          card.warmDark ? 'border border-[#353229] bg-[#292720]' : 'bg-white/65'
+        )}
+      >
         {card.image ? (
           <Image
             src={card.image}
@@ -72,13 +91,21 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
           />
         ) : (
           <div
-            className="flex h-full flex-col items-center justify-center gap-3 bg-[#f2f2f4] px-6 text-center text-black"
+            className={cn(
+              'flex h-full flex-col items-center justify-center gap-3 px-6 text-center',
+              card.warmDark ? 'bg-[#292720] text-[#d7d4cd]' : 'bg-[#f2f2f4] text-black'
+            )}
             role="img"
             aria-label={`${card.title} product image coming soon`}
           >
             <Smartphone aria-hidden="true" className="size-20 stroke-[1.1]" />
             <span className="text-xs font-semibold">{card.title}</span>
-            <span className="text-[10px] uppercase tracking-[0.12em] text-black/45">
+            <span
+              className={cn(
+                'text-[10px] uppercase tracking-[0.12em]',
+                card.warmDark ? 'text-[#8f8b82]' : 'text-black/45'
+              )}
+            >
               Image coming soon
             </span>
           </div>

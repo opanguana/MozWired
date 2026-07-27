@@ -85,7 +85,7 @@ function CardCollection({
   darkCards?: boolean;
 }) {
   const collectionCards = darkCards
-    ? cards.map((card) => ({ ...card, dark: true, accent: false }))
+    ? cards.map((card) => ({ ...card, dark: false, warmDark: true, accent: false }))
     : cards;
 
   return (

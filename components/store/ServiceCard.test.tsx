@@ -40,4 +40,28 @@ describe('ServiceCard', () => {
       'shadow-[0_18px_50px_rgb(0_0_0/0.35)]'
     );
   });
+
+  it('applies the warm charcoal treatment without changing card structure', () => {
+    render(
+      <ServiceCard
+        card={{
+          eyebrow: 'Connected entertainment',
+          title: 'Apple TV',
+          description: 'Stream entertainment and bring your connected home together.',
+          price: 'From $129',
+          warmDark: true,
+        }}
+      />
+    );
+
+    expect(screen.getByRole('article')).toHaveClass(
+      'border-[#2a2821]',
+      'bg-[#1b1a15]',
+      'text-white'
+    );
+    expect(screen.getByRole('img', { name: /Apple TV product image coming soon/i })).toHaveClass(
+      'bg-[#292720]',
+      'text-[#d7d4cd]'
+    );
+  });
 });

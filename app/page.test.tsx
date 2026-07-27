@@ -59,14 +59,14 @@ describe('MozWired Store homepage', () => {
     expect(background).not.toContainElement(document.querySelector('#possibilities'));
   });
 
-  it('uses one dark card treatment across the MozWired experience collection', () => {
+  it('uses one warm dark card treatment across the MozWired experience collection', () => {
     render(<HomePage />);
 
     const experienceCards = document.querySelectorAll('#experience article');
 
     expect(experienceCards).toHaveLength(4);
     experienceCards.forEach((card) => {
-      expect(card).toHaveClass('bg-[#151517]', 'border-white/15');
+      expect(card).toHaveClass('bg-[#1b1a15]', 'border-[#2a2821]');
     });
   });
 });
