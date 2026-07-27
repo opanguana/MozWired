@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 import { siteAnnouncement } from '@/config/announcement';
+import { catalogProducts, type CatalogProduct } from '@/data/catalog';
+import { cn } from '@/lib/utils';
 
 import { AnnouncementBanner } from './AnnouncementBanner';
 
@@ -13,6 +15,7 @@ type NavItem = {
   label: string;
   href: string;
   featured?: boolean;
+  wide?: boolean;
   children?: {
     eyebrow: string;
     title: string;
@@ -21,82 +24,65 @@ type NavItem = {
   }[];
 };
 
+function productLinks(products: CatalogProduct[]): NonNullable<NavItem['children']> {
+  return products.map(({ card, slug }) => ({
+    eyebrow: card.eyebrow,
+    title: card.title,
+    description: card.description,
+    href: `/products/${slug}`,
+  }));
+}
+
+const productGroups = {
+  computers: catalogProducts.filter(({ card }) =>
+    ['MacBook Air', 'MacBook Pro', 'iMac', 'Mac mini'].includes(card.title)
+  ),
+  phones: catalogProducts.filter(
+    ({ brand, card }) => Boolean(brand) || card.title.startsWith('iPhone')
+  ),
+  mobile: catalogProducts.filter(
+    ({ card }) =>
+      card.title.startsWith('iPad') ||
+      card.title.startsWith('Apple Watch') ||
+      card.title === 'Apple Vision Pro'
+  ),
+  audio: catalogProducts.filter(({ card }) =>
+    ['AirPods Pro', 'AirPods', 'HomePod', 'Apple TV 4K'].includes(card.title)
+  ),
+  accessories: catalogProducts.filter(({ card }) =>
+    ['AirTag', 'Cases and bands', 'Gift Card'].includes(card.title)
+  ),
+};
+
 const navItems: NavItem[] = [
-  { label: 'Store', href: '#store', featured: true },
+  { label: 'Store', href: '/#store', featured: true },
   {
     label: 'Computers',
-    href: '#services',
-    children: [
-      {
-        eyebrow: 'Portable',
-        title: 'MacBook Air',
-        description: 'Thin, capable, and ready to travel.',
-        href: '#services',
-      },
-      {
-        eyebrow: 'Professional',
-        title: 'MacBook Pro',
-        description: 'Performance for ambitious creative work.',
-        href: '#services',
-      },
-      {
-        eyebrow: 'Desktop',
-        title: 'iMac and Mac mini',
-        description: 'Flexible computers for home and office.',
-        href: '#favorites',
-      },
-    ],
+    href: '/#services',
+    children: productLinks(productGroups.computers),
+  },
+  {
+    label: 'Phones',
+    href: '/#favorites',
+    wide: true,
+    children: productLinks(productGroups.phones),
   },
   {
     label: 'Mobile',
-    href: '#favorites',
-    children: [
-      {
-        eyebrow: 'Phone',
-        title: 'iPhone',
-        description: 'Powerful cameras and all-day performance.',
-        href: '#more-to-love',
-      },
-      {
-        eyebrow: 'Tablet',
-        title: 'iPad',
-        description: 'A versatile canvas for work and play.',
-        href: '#favorites',
-      },
-      {
-        eyebrow: 'Wearable',
-        title: 'Apple Watch',
-        description: 'Health, fitness, and connection on your wrist.',
-        href: '#more-to-love',
-      },
-    ],
+    href: '/#possibilities',
+    children: productLinks(productGroups.mobile),
   },
   {
     label: 'Audio',
-    href: '#accessories',
-    children: [
-      {
-        eyebrow: 'Personal',
-        title: 'AirPods',
-        description: 'Wireless listening with effortless pairing.',
-        href: '#accessories',
-      },
-      {
-        eyebrow: 'Home',
-        title: 'HomePod',
-        description: 'Room-filling sound in a compact design.',
-        href: '#accessories',
-      },
-      {
-        eyebrow: 'Entertainment',
-        title: 'Apple TV 4K',
-        description: 'Movies, music, and games on the big screen.',
-        href: '#experience',
-      },
-    ],
+    href: '/#accessories',
+    children: productLinks(productGroups.audio),
   },
-  { label: 'Accessories', href: '#accessories' },
-  { label: 'Deals', href: '#savings' },
+  {
+    label: 'Accessories',
+    href: '/#accessories',
+    children: productLinks(productGroups.accessories),
+  },
+  { label: 'Deals', href: '/#savings' },
 ];
 
 export function Header() {
@@ -109,7 +95,7 @@ export function Header() {
         aria-label="Primary navigation"
       >
         <Link
-          href="#store"
+          href="/"
           aria-label="MozWired home"
           className="justify-self-start rounded-sm px-1 focus-ring"
         >
@@ -149,8 +135,10 @@ export function Header() {
               )}
 
               {item.children && (
-                <div className="nav-mega-panel">
-                  <div className="grid grid-cols-3 gap-1 p-1.5">
+                <div className={cn('nav-mega-panel', item.wide && 'nav-mega-panel-wide')}>
+                  <div
+                    className={cn('grid grid-cols-3 gap-1 p-1.5', item.wide && 'lg:grid-cols-4')}
+                  >
                     {item.children.map((child) => (
                       <Link key={child.title} href={child.href} className="nav-mega-item">
                         <span className="text-[10px] text-white/35">{child.eyebrow}</span>
@@ -161,7 +149,7 @@ export function Header() {
                             className="size-3 opacity-0 transition-opacity group-hover:opacity-50"
                           />
                         </span>
-                        <span className="mt-1 text-[10px] leading-relaxed text-white/45">
+                        <span className="mt-1 line-clamp-2 text-[10px] leading-relaxed text-white/45">
                           {child.description}
                         </span>
                       </Link>
@@ -178,7 +166,7 @@ export function Header() {
             <Search aria-hidden="true" size={15} strokeWidth={1.7} />
           </button>
           <Link
-            href="#support"
+            href="/#support"
             className="hidden min-h-8 items-center rounded-full bg-white px-4 text-[13px] font-semibold text-black transition hover:bg-store-cyan focus-ring sm:inline-flex"
           >
             Get support
@@ -203,15 +191,40 @@ export function Header() {
           className="border-t border-white/10 bg-[#090a0a] px-5 py-4 md:hidden"
         >
           <ul className="grid gap-1">
-            {[...navItems, { label: 'Support', href: '#support' }].map((item) => (
+            {([...navItems, { label: 'Support', href: '/#support' }] as NavItem[]).map((item) => (
               <li key={item.label}>
-                <Link
-                  href={item.href}
-                  className="block rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/[0.06] hover:text-white focus-ring"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
+                {item.children ? (
+                  <details className="group/mobile">
+                    <summary className="flex cursor-pointer list-none items-center justify-between rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/[0.06] hover:text-white focus-ring">
+                      {item.label}
+                      <ChevronDown
+                        aria-hidden="true"
+                        className="size-4 transition-transform group-open/mobile:rotate-180"
+                      />
+                    </summary>
+                    <ul className="grid gap-1 pb-2 pl-3">
+                      {item.children.map((child) => (
+                        <li key={child.title}>
+                          <Link
+                            href={child.href}
+                            className="block rounded-lg px-3 py-2 text-xs text-white/55 transition hover:bg-white/[0.06] hover:text-white focus-ring"
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            {child.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block rounded-xl px-3 py-3 text-sm text-white/70 transition hover:bg-white/[0.06] hover:text-white focus-ring"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
