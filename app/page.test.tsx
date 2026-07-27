@@ -36,4 +36,16 @@ describe('MozWired Store homepage', () => {
       screen.queryByRole('navigation', { name: 'Product categories' })
     ).not.toBeInTheDocument();
   });
+
+  it('groups the Samsung and savings collections over the section two background', () => {
+    render(<HomePage />);
+
+    const samsungSection = document.querySelector('#favorites');
+    const savingsSection = document.querySelector('#savings');
+    const background = document.querySelector('img[src*="store-section-2"]')?.parentElement;
+
+    expect(background).toContainElement(samsungSection);
+    expect(background).toContainElement(savingsSection);
+    expect(background).not.toContainElement(document.querySelector('#benefits'));
+  });
 });

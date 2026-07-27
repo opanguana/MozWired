@@ -98,6 +98,8 @@ function CardCollection({
 
 export default function HomePage() {
   const [featuredCollection, ...remainingCollections] = storeCollections;
+  const backgroundCollections = remainingCollections.slice(0, 2);
+  const standardCollections = remainingCollections.slice(2);
 
   return (
     <main id="main-content">
@@ -147,7 +149,21 @@ export default function HomePage() {
       </section>
 
       <div className="bg-store-canvas">
-        {remainingCollections.map((collection) => (
+        <div className="relative isolate overflow-hidden bg-[#111315]">
+          <Image
+            src="/images/store/store-section-2.avif"
+            alt=""
+            fill
+            sizes="100vw"
+            className="-z-10 object-cover"
+            aria-hidden="true"
+          />
+          {backgroundCollections.map((collection) => (
+            <CardCollection key={collection.id} {...collection} darkHeading />
+          ))}
+        </div>
+
+        {standardCollections.map((collection) => (
           <CardCollection key={collection.id} {...collection} />
         ))}
       </div>
