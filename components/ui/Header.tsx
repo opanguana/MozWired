@@ -137,7 +137,7 @@ export function Header() {
               {item.children && (
                 <div className={cn('nav-mega-panel', item.wide && 'nav-mega-panel-wide')}>
                   <div
-                    className={cn('grid grid-cols-3 gap-1 p-1.5', item.wide && 'lg:grid-cols-4')}
+                    className={cn('nav-mega-grid grid grid-cols-3', item.wide && 'lg:grid-cols-4')}
                   >
                     {item.children.map((child) => (
                       <Link key={child.title} href={child.href} className="nav-mega-item">

@@ -161,15 +161,19 @@ a {
 }
 
 @utility nav-mega-panel {
-  @apply invisible fixed left-1/2 top-[3.75rem] max-h-[calc(100vh-5rem)] w-[min(40rem,calc(100vw-2rem))] -translate-x-1/2 translate-y-1 overflow-y-auto rounded-xl border border-white/10 bg-[#101111]/98 opacity-0 shadow-2xl shadow-black/50 backdrop-blur-xl transition duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100;
+  @apply invisible fixed left-1/2 top-[3.75rem] max-h-[calc(100vh-5rem)] w-[min(40rem,calc(100vw-2rem))] -translate-x-1/2 translate-y-1 overflow-y-auto rounded-xl border border-white/10 bg-[#0b0c0d]/70 opacity-0 shadow-[0_24px_80px_rgb(0_0_0/0.6)] backdrop-blur-2xl backdrop-saturate-150 transition duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100;
 }
 
 @utility nav-mega-panel-wide {
   @apply w-[min(56rem,calc(100vw-2rem))];
 }
 
+@utility nav-mega-grid {
+  @apply gap-px bg-white/[0.06] p-px;
+}
+
 @utility nav-mega-item {
-  @apply flex min-h-24 flex-col rounded-lg border border-transparent p-3 transition hover:border-white/[0.06] hover:bg-white/[0.04] focus-ring;
+  @apply flex min-h-20 flex-col bg-[#111214]/55 p-3 transition hover:bg-white/[0.08] focus-ring;
 }
 
 .ribbon {
