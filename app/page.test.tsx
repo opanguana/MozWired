@@ -48,4 +48,14 @@ describe('MozWired Store homepage', () => {
     expect(background).toContainElement(savingsSection);
     expect(background).not.toContainElement(document.querySelector('#benefits'));
   });
+
+  it('groups the final iPhone and experience collections over the footer background', () => {
+    render(<HomePage />);
+
+    const background = document.querySelector('[data-section-background="footer"]');
+
+    expect(background).toContainElement(document.querySelector('#more-to-love'));
+    expect(background).toContainElement(document.querySelector('#experience'));
+    expect(background).not.toContainElement(document.querySelector('#possibilities'));
+  });
 });

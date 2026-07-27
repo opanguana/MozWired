@@ -100,6 +100,8 @@ export default function HomePage() {
   const [featuredCollection, ...remainingCollections] = storeCollections;
   const backgroundCollections = remainingCollections.slice(0, 2);
   const standardCollections = remainingCollections.slice(2);
+  const middleCollections = standardCollections.slice(0, -2);
+  const footerBackgroundCollections = standardCollections.slice(-2);
 
   return (
     <main id="main-content">
@@ -163,9 +165,26 @@ export default function HomePage() {
           ))}
         </div>
 
-        {standardCollections.map((collection) => (
+        {middleCollections.map((collection) => (
           <CardCollection key={collection.id} {...collection} />
         ))}
+
+        <div
+          className="relative isolate overflow-hidden bg-[#111315]"
+          data-section-background="footer"
+        >
+          <Image
+            src="/images/store/store-section-2.avif"
+            alt=""
+            fill
+            sizes="100vw"
+            className="-z-10 object-cover"
+            aria-hidden="true"
+          />
+          {footerBackgroundCollections.map((collection) => (
+            <CardCollection key={collection.id} {...collection} darkHeading />
+          ))}
+        </div>
       </div>
     </main>
   );
