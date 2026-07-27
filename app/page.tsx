@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { CardCarousel } from '@/components/store/CardCarousel';
 import { CategoryRail } from '@/components/store/CategoryRail';
 import type { ServiceCardData } from '@/components/store/ServiceCard';
+import { storeConfig } from '@/config/store';
 import { buildSmartphoneCards } from '@/data/smartphones';
 
 const samsungSmartphones = buildSmartphoneCards('Samsung');
@@ -284,7 +285,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <CategoryRail />
+          {storeConfig.showCategoryRail && <CategoryRail />}
           <div className="mx-auto max-w-store">
             <CardCollection {...featuredCollection} darkHeading />
           </div>

@@ -25,10 +25,15 @@ describe('MozWired Store homepage', () => {
 
     const storeHero = document.querySelector('#store');
 
-    expect(storeHero).toContainElement(
-      screen.getByRole('navigation', { name: 'Product categories' })
-    );
     expect(storeHero).toContainElement(screen.getByText('MacBook Pro'));
     expect(storeHero).not.toContainElement(screen.getAllByText('Galaxy A57')[0]);
+  });
+
+  it('hides the category rail when it is disabled in the store configuration', () => {
+    render(<HomePage />);
+
+    expect(
+      screen.queryByRole('navigation', { name: 'Product categories' })
+    ).not.toBeInTheDocument();
   });
 });
