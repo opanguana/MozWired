@@ -24,13 +24,19 @@ describe('CardCarousel', () => {
       'w-full'
     );
     expect(screen.getByRole('list', { name: 'Featured devices' })).toHaveClass(
-      'card-scroll-full-bleed'
+      'card-scroll-full-bleed',
+      'card-scroll-awaiting-interaction'
     );
     expect(document.querySelectorAll('[data-carousel-copy]')).toHaveLength(15);
     expect(document.querySelectorAll('[data-carousel-copy="0"][aria-hidden="true"]')).toHaveLength(
       5
     );
     expect(screen.getAllByRole('listitem')).toHaveLength(5);
+
+    fireEvent.pointerDown(screen.getByRole('list', { name: 'Featured devices' }));
+    expect(screen.getByRole('list', { name: 'Featured devices' })).not.toHaveClass(
+      'card-scroll-awaiting-interaction'
+    );
   });
 
   it('keeps four-card collections as a scrollable rail without gallery controls', () => {

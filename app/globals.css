@@ -304,6 +304,10 @@ a {
   scroll-padding-inline: var(--carousel-inset);
 }
 
+.card-scroll-awaiting-interaction {
+  clip-path: inset(0 var(--carousel-inset));
+}
+
 @media (min-width: 48rem) {
   .card-scroll-full-bleed {
     --carousel-page-padding: 2rem;
