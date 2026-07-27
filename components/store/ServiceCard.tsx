@@ -1,7 +1,9 @@
 import { BadgePercent, Smartphone } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
+import { toProductSlug } from '@/lib/product-slug';
 
 export type ServiceCardData = {
   eyebrow: string;
@@ -17,11 +19,16 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
   return (
     <article
       className={cn(
-        'flex min-h-[31rem] w-[18.5rem] shrink-0 snap-start flex-col overflow-hidden p-4 md:w-[20rem]',
+        'group relative flex min-h-[31rem] w-[18.5rem] shrink-0 snap-start flex-col overflow-hidden p-4 md:w-[20rem]',
         card.dark ? 'bg-black text-white' : 'bg-[#e9e9ec] text-store-ink',
         card.accent && 'bg-white'
       )}
     >
+      <Link
+        href={`/products/${toProductSlug(card.title)}`}
+        aria-label={`View ${card.title} details`}
+        className="focus-ring absolute inset-0 z-10"
+      />
       <div className="mb-2 flex items-start justify-between gap-4">
         <p
           className={cn(
@@ -59,7 +66,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
             alt={card.title}
             fill
             sizes="(min-width: 768px) 320px, 296px"
-            className="object-contain"
+            className="object-contain transition-transform duration-300 group-hover:scale-[1.02]"
           />
         ) : (
           <div
