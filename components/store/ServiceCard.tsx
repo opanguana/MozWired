@@ -20,7 +20,9 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
     <article
       className={cn(
         'group relative flex min-h-[31rem] w-[18.5rem] shrink-0 snap-start flex-col overflow-hidden p-4 md:w-[20rem]',
-        card.dark ? 'bg-black text-white' : 'bg-[#e9e9ec] text-store-ink',
+        card.dark
+          ? 'border border-white/15 bg-[#151517] text-white shadow-[0_18px_50px_rgb(0_0_0/0.35)]'
+          : 'bg-[#e9e9ec] text-store-ink',
         card.accent && 'bg-white'
       )}
     >
@@ -51,12 +53,12 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
       <p
         className={cn(
           'mt-2 text-xs leading-relaxed',
-          card.dark ? 'text-white/70' : 'text-black/70'
+          card.dark ? 'text-white/75' : 'text-black/70'
         )}
       >
         {card.description}
       </p>
-      <p className={cn('mt-2 text-[11px]', card.dark ? 'text-white/55' : 'text-black/55')}>
+      <p className={cn('mt-2 text-[11px]', card.dark ? 'text-white/65' : 'text-black/55')}>
         {card.price}
       </p>
       <div className="relative mt-auto h-48 overflow-hidden bg-white/65">

@@ -20,4 +20,24 @@ describe('ServiceCard', () => {
       '/products/galaxy-a06'
     );
   });
+
+  it('separates dark cards from dark section backgrounds', () => {
+    render(
+      <ServiceCard
+        card={{
+          eyebrow: 'Spatial computing',
+          title: 'Apple Vision Pro',
+          description: 'Experience entertainment, work, and connection in an entirely new way.',
+          price: 'From $3,499',
+          dark: true,
+        }}
+      />
+    );
+
+    expect(screen.getByRole('article')).toHaveClass(
+      'border-white/15',
+      'bg-[#151517]',
+      'shadow-[0_18px_50px_rgb(0_0_0/0.35)]'
+    );
+  });
 });
