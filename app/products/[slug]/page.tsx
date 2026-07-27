@@ -50,7 +50,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
       <section className="mx-auto max-w-[100rem] px-5 pb-16 pt-10 md:px-8 md:pb-24 md:pt-16">
         <Link
-          href="/#services"
+          href="/"
+          scroll
           className="focus-ring inline-flex rounded-sm text-sm font-semibold text-store-cyan hover:underline"
         >
           ← Back to the store

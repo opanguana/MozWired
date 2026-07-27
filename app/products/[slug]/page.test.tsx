@@ -12,6 +12,7 @@ describe('dynamic product page', () => {
     ).toBeInTheDocument();
     expect(screen.getByText('64GB · 4GB RAM · 4G')).toBeInTheDocument();
     expect(screen.getByText('8,850 MZN')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: '← Back to the store' })).toHaveAttribute('href', '/');
   });
 
   it('prebuilds a route for every catalog product', () => {
