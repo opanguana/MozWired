@@ -16,6 +16,7 @@ const storeCollections: {
   highlight: string;
   title: string;
   cards: ServiceCardData[];
+  darkCards?: boolean;
 }[] = [
   {
     id: 'services',
@@ -64,6 +65,7 @@ const storeCollections: {
     highlight: 'The MozWired experience.',
     title: 'Electronics that work beautifully together.',
     cards: [products.visionPro, products.appleTV, products.homepod, products.giftCard],
+    darkCards: true,
   },
 ];
 
@@ -73,13 +75,19 @@ function CardCollection({
   title,
   cards,
   darkHeading = false,
+  darkCards = false,
 }: {
   id: string;
   highlight: string;
   title: string;
   cards: ServiceCardData[];
   darkHeading?: boolean;
+  darkCards?: boolean;
 }) {
+  const collectionCards = darkCards
+    ? cards.map((card) => ({ ...card, dark: true, accent: false }))
+    : cards;
+
   return (
     <section id={id} className="scroll-mt-28 py-7 md:py-10" aria-labelledby={`${id}-title`}>
       <h2
@@ -91,7 +99,11 @@ function CardCollection({
         <span className={`marker-highlight ${darkHeading ? 'text-black' : ''}`}>{highlight}</span>{' '}
         <span className={darkHeading ? 'text-white/55' : 'text-black/55'}>{title}</span>
       </h2>
-      <CardCarousel cards={cards} label={`${highlight} ${title}`} fullBleed={cards.length > 4} />
+      <CardCarousel
+        cards={collectionCards}
+        label={`${highlight} ${title}`}
+        fullBleed={collectionCards.length > 4}
+      />
     </section>
   );
 }
