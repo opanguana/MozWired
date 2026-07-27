@@ -262,21 +262,26 @@ a {
   -webkit-box-decoration-break: clone;
 }
 
-.category-scroll,
-.card-scroll {
+.category-scroll {
   scrollbar-color: rgb(0 0 0 / 24%) transparent;
   scrollbar-width: thin;
 }
 
-.category-scroll::-webkit-scrollbar,
-.card-scroll::-webkit-scrollbar {
+.category-scroll::-webkit-scrollbar {
   height: 6px;
 }
 
-.category-scroll::-webkit-scrollbar-thumb,
-.card-scroll::-webkit-scrollbar-thumb {
+.category-scroll::-webkit-scrollbar-thumb {
   border-radius: 999px;
   background: rgb(0 0 0 / 24%);
+}
+
+.card-scroll {
+  scrollbar-width: none;
+}
+
+.card-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .card-scroll-full-bleed {
