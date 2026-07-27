@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 
 import type { ServiceCardData } from './ServiceCard';
 import { CardCarousel } from './CardCarousel';
@@ -59,7 +59,8 @@ describe('CardCarousel', () => {
     expect(document.querySelectorAll('[data-carousel-copy]')).toHaveLength(4);
   });
 
-  it('repositions by one card-set width at either loop boundary', () => {
+  it('repositions by one card-set width after scrolling settles at either loop boundary', () => {
+    jest.useFakeTimers();
     render(<CardCarousel cards={cards} label="Featured devices" fullBleed />);
 
     const scroller = screen.getByRole('list', { name: 'Featured devices' });
@@ -71,10 +72,38 @@ describe('CardCarousel', () => {
 
     scroller.scrollLeft = 400;
     fireEvent.scroll(scroller);
+    expect(scroller.scrollLeft).toBe(400);
+    act(() => jest.advanceTimersByTime(140));
     expect(scroller.scrollLeft).toBe(1400);
 
     scroller.scrollLeft = 1600;
     fireEvent.scroll(scroller);
+    act(() => jest.advanceTimersByTime(140));
     expect(scroller.scrollLeft).toBe(600);
+    jest.clearAllTimers();
+    jest.useRealTimers();
+  });
+
+  it('moves by the number of complete cards visible when a chevron is clicked', () => {
+    render(<CardCarousel cards={cards} label="Featured devices" fullBleed />);
+
+    const scroller = screen.getByRole('list', { name: 'Featured devices' });
+    const firstCard = scroller.firstElementChild as HTMLElement;
+    const secondCard = firstCard.nextElementSibling as HTMLElement;
+    const scrollBy = jest.fn();
+
+    Object.defineProperty(scroller, 'clientWidth', { configurable: true, value: 1408 });
+    Object.defineProperty(firstCard, 'offsetLeft', { configurable: true, value: 32 });
+    Object.defineProperty(secondCard, 'offsetLeft', { configurable: true, value: 364 });
+    Object.defineProperty(scroller, 'scrollBy', { configurable: true, value: scrollBy });
+
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Show next products in Featured devices' })
+    );
+
+    expect(scrollBy).toHaveBeenCalledWith({
+      left: 1328,
+      behavior: 'smooth',
+    });
   });
 });

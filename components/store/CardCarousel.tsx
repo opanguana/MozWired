@@ -19,6 +19,7 @@ export function CardCarousel({
   const scrollerRef = useRef<HTMLDivElement>(null);
   const leadingSetRef = useRef<HTMLDivElement>(null);
   const accessibleSetRef = useRef<HTMLDivElement>(null);
+  const loopMaintenanceTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const hasCarouselControls = cards.length > 4;
   const cardSets = hasCarouselControls ? [0, 1, 2] : [1];
 
@@ -55,16 +56,36 @@ export function CardCarousel({
     return () => {
       window.removeEventListener('resize', maintainLoop);
       resizeObserver?.disconnect();
+      clearTimeout(loopMaintenanceTimerRef.current);
     };
   }, [maintainLoop]);
+
+  const scheduleLoopMaintenance = () => {
+    clearTimeout(loopMaintenanceTimerRef.current);
+    loopMaintenanceTimerRef.current = setTimeout(maintainLoop, 140);
+  };
 
   const move = (direction: -1 | 1) => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
 
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reducedMotion =
+      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
+    const firstCard = scroller.firstElementChild as HTMLElement | null;
+    const secondCard = firstCard?.nextElementSibling as HTMLElement | null;
+    const cardStride =
+      firstCard && secondCard ? secondCard.offsetLeft - firstCard.offsetLeft : 0;
+    const inlinePadding = Number.parseFloat(getComputedStyle(scroller).paddingLeft) || 0;
+    const visibleWidth = Math.max(scroller.clientWidth - inlinePadding * 2, 0);
+    const cardsPerView =
+      cardStride > 0 ? Math.max(1, Math.floor((visibleWidth + 12) / cardStride)) : 0;
+    const distance =
+      cardStride > 0
+        ? cardStride * cardsPerView
+        : Math.max(scroller.clientWidth * 0.85, 296);
+
     scroller.scrollBy({
-      left: direction * Math.max(scroller.clientWidth * 0.85, 296),
+      left: direction * distance,
       behavior: reducedMotion ? 'auto' : 'smooth',
     });
   };
@@ -85,7 +106,7 @@ export function CardCarousel({
         )}
         role="list"
         aria-label={label}
-        onScroll={maintainLoop}
+        onScroll={scheduleLoopMaintenance}
       >
         {cardSets.flatMap((copyIndex) =>
           cards.map((card, cardIndex) => {
