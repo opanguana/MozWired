@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -20,7 +20,6 @@ export function CardCarousel({
   const leadingSetRef = useRef<HTMLDivElement>(null);
   const accessibleSetRef = useRef<HTMLDivElement>(null);
   const hasCarouselControls = cards.length > 4;
-  const [hasInteracted, setHasInteracted] = useState(false);
   const cardSets = hasCarouselControls ? [0, 1, 2] : [1];
 
   const maintainLoop = useCallback(() => {
@@ -71,20 +70,22 @@ export function CardCarousel({
   };
 
   return (
-    <div className={cn('relative mt-5', fullBleed ? 'w-full' : 'mx-auto max-w-store')}>
+    <div
+      className={cn(
+        'relative mt-5',
+        fullBleed ? 'card-carousel-full-bleed w-full' : 'mx-auto max-w-store'
+      )}
+    >
       <div
         ref={scrollerRef}
         className={cn(
           'card-scroll flex snap-x snap-mandatory gap-3 overflow-x-auto pb-5',
           fullBleed ? 'card-scroll-full-bleed' : 'px-5 md:px-8',
-          fullBleed && hasCarouselControls && !hasInteracted && 'card-scroll-awaiting-interaction'
+          fullBleed && hasCarouselControls && 'card-scroll-content-window'
         )}
         role="list"
         aria-label={label}
         onScroll={maintainLoop}
-        onPointerDown={() => setHasInteracted(true)}
-        onWheel={() => setHasInteracted(true)}
-        onKeyDown={() => setHasInteracted(true)}
       >
         {cardSets.flatMap((copyIndex) =>
           cards.map((card, cardIndex) => {
@@ -119,22 +120,22 @@ export function CardCarousel({
           <button
             type="button"
             aria-label={`Show previous products in ${label}`}
-            onClick={() => {
-              setHasInteracted(true);
-              move(-1);
-            }}
-            className="focus-ring absolute left-3 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#e2e2e5]/95 text-black/60 shadow-sm backdrop-blur transition hover:bg-[#d7d7da] hover:text-black md:flex"
+            onClick={() => move(-1)}
+            className={cn(
+              'focus-ring absolute top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#e2e2e5]/95 text-black/60 shadow-sm backdrop-blur transition hover:bg-[#d7d7da] hover:text-black md:flex',
+              fullBleed ? 'card-carousel-control-start' : 'left-3'
+            )}
           >
             <ChevronLeft aria-hidden="true" size={24} strokeWidth={2.4} />
           </button>
           <button
             type="button"
             aria-label={`Show next products in ${label}`}
-            onClick={() => {
-              setHasInteracted(true);
-              move(1);
-            }}
-            className="focus-ring absolute right-3 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#e2e2e5]/95 text-black/60 shadow-sm backdrop-blur transition hover:bg-[#d7d7da] hover:text-black md:flex"
+            onClick={() => move(1)}
+            className={cn(
+              'focus-ring absolute top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#e2e2e5]/95 text-black/60 shadow-sm backdrop-blur transition hover:bg-[#d7d7da] hover:text-black md:flex',
+              fullBleed ? 'card-carousel-control-end' : 'right-3'
+            )}
           >
             <ChevronRight aria-hidden="true" size={24} strokeWidth={2.4} />
           </button>

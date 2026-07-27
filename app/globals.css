@@ -292,24 +292,34 @@ a {
   display: none;
 }
 
-.card-scroll-full-bleed {
+.card-carousel-full-bleed {
   --carousel-content-max-width: 88rem;
   --carousel-page-padding: 1.25rem;
   --carousel-inset: max(
     var(--carousel-page-padding),
     calc((100vw - var(--carousel-content-max-width)) / 2 + var(--carousel-page-padding))
   );
+}
 
+.card-scroll-full-bleed {
   padding-inline: var(--carousel-inset);
   scroll-padding-inline: var(--carousel-inset);
 }
 
-.card-scroll-awaiting-interaction {
+.card-scroll-content-window {
   clip-path: inset(0 var(--carousel-inset));
 }
 
+.card-carousel-control-start {
+  left: calc(var(--carousel-inset) + 0.75rem);
+}
+
+.card-carousel-control-end {
+  right: calc(var(--carousel-inset) + 0.75rem);
+}
+
 @media (min-width: 48rem) {
-  .card-scroll-full-bleed {
+  .card-carousel-full-bleed {
     --carousel-page-padding: 2rem;
   }
 }

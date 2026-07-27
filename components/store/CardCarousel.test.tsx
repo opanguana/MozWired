@@ -25,7 +25,7 @@ describe('CardCarousel', () => {
     );
     expect(screen.getByRole('list', { name: 'Featured devices' })).toHaveClass(
       'card-scroll-full-bleed',
-      'card-scroll-awaiting-interaction'
+      'card-scroll-content-window'
     );
     expect(document.querySelectorAll('[data-carousel-copy]')).toHaveLength(15);
     expect(document.querySelectorAll('[data-carousel-copy="0"][aria-hidden="true"]')).toHaveLength(
@@ -34,9 +34,15 @@ describe('CardCarousel', () => {
     expect(screen.getAllByRole('listitem')).toHaveLength(5);
 
     fireEvent.pointerDown(screen.getByRole('list', { name: 'Featured devices' }));
-    expect(screen.getByRole('list', { name: 'Featured devices' })).not.toHaveClass(
-      'card-scroll-awaiting-interaction'
+    expect(screen.getByRole('list', { name: 'Featured devices' })).toHaveClass(
+      'card-scroll-content-window'
     );
+    expect(
+      screen.getByRole('button', { name: 'Show previous products in Featured devices' })
+    ).toHaveClass('card-carousel-control-start');
+    expect(
+      screen.getByRole('button', { name: 'Show next products in Featured devices' })
+    ).toHaveClass('card-carousel-control-end');
   });
 
   it('keeps four-card collections as a scrollable rail without gallery controls', () => {
