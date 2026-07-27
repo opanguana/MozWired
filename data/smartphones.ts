@@ -299,7 +299,7 @@ export function buildSmartphoneCards(brand: SmartphoneSku['brand']): ServiceCard
       price:
         lowestPrice === highestPrice ? formatMzn(lowestPrice) : `From ${formatMzn(lowestPrice)}`,
       image: smartphoneImages[model],
-      accent: true,
+      accent: brand === 'Apple',
     };
   });
 }

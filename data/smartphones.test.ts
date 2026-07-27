@@ -12,6 +12,11 @@ describe('smartphone inventory', () => {
     expect(buildSmartphoneCards('Apple')).toHaveLength(11);
   });
 
+  it('uses the shared gray surface for Samsung cards', () => {
+    expect(buildSmartphoneCards('Samsung').every(({ accent }) => !accent)).toBe(true);
+    expect(buildSmartphoneCards('Apple').every(({ accent }) => accent)).toBe(true);
+  });
+
   it('preserves supplied variant pricing', () => {
     const galaxyA36 = buildSmartphoneCards('Samsung').find(({ title }) => title === 'Galaxy A36');
     const iphone15ProMax = buildSmartphoneCards('Apple').find(
