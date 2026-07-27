@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -17,36 +17,46 @@ export function CardCarousel({
   fullBleed?: boolean;
 }) {
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const leadingSetRef = useRef<HTMLDivElement>(null);
+  const accessibleSetRef = useRef<HTMLDivElement>(null);
   const hasCarouselControls = cards.length > 4;
-  const [canScrollBackward, setCanScrollBackward] = useState(false);
-  const [canScrollForward, setCanScrollForward] = useState(hasCarouselControls);
+  const cardSets = hasCarouselControls ? [0, 1, 2] : [1];
 
-  const updateControls = useCallback(() => {
+  const maintainLoop = useCallback(() => {
     const scroller = scrollerRef.current;
     if (!scroller || !hasCarouselControls) return;
 
-    const endPosition = scroller.scrollWidth - scroller.clientWidth;
-    setCanScrollBackward(scroller.scrollLeft > 2);
-    setCanScrollForward(scroller.scrollLeft < endPosition - 2);
+    const leadingStart = leadingSetRef.current?.offsetLeft;
+    const accessibleStart = accessibleSetRef.current?.offsetLeft;
+    if (leadingStart === undefined || accessibleStart === undefined) return;
+
+    const setWidth = accessibleStart - leadingStart;
+    if (setWidth <= 0) return;
+
+    if (scroller.scrollLeft < setWidth * 0.5) {
+      scroller.scrollLeft += setWidth;
+    } else if (scroller.scrollLeft > setWidth * 1.5) {
+      scroller.scrollLeft -= setWidth;
+    }
   }, [hasCarouselControls]);
 
   useEffect(() => {
-    updateControls();
-    window.addEventListener('resize', updateControls);
+    maintainLoop();
+    window.addEventListener('resize', maintainLoop);
 
     const scroller = scrollerRef.current;
     const resizeObserver =
       scroller && typeof ResizeObserver !== 'undefined'
-        ? new ResizeObserver(updateControls)
+        ? new ResizeObserver(maintainLoop)
         : undefined;
 
     if (scroller) resizeObserver?.observe(scroller);
 
     return () => {
-      window.removeEventListener('resize', updateControls);
+      window.removeEventListener('resize', maintainLoop);
       resizeObserver?.disconnect();
     };
-  }, [updateControls]);
+  }, [maintainLoop]);
 
   const move = (direction: -1 | 1) => {
     const scroller = scrollerRef.current;
@@ -69,13 +79,34 @@ export function CardCarousel({
         )}
         role="list"
         aria-label={label}
-        onScroll={updateControls}
+        onScroll={maintainLoop}
       >
-        {cards.map((card) => (
-          <div key={card.title} role="listitem">
-            <ServiceCard card={card} />
-          </div>
-        ))}
+        {cardSets.flatMap((copyIndex) =>
+          cards.map((card, cardIndex) => {
+            const accessible = copyIndex === 1;
+
+            return (
+              <div
+                key={`${copyIndex}-${card.title}`}
+                ref={
+                  cardIndex === 0
+                    ? copyIndex === 0
+                      ? leadingSetRef
+                      : copyIndex === 1
+                        ? accessibleSetRef
+                        : undefined
+                    : undefined
+                }
+                role={accessible ? 'listitem' : 'presentation'}
+                aria-hidden={!accessible || undefined}
+                inert={!accessible || undefined}
+                data-carousel-copy={copyIndex}
+              >
+                <ServiceCard card={card} />
+              </div>
+            );
+          })
+        )}
       </div>
 
       {hasCarouselControls && (
@@ -83,24 +114,16 @@ export function CardCarousel({
           <button
             type="button"
             aria-label={`Show previous products in ${label}`}
-            disabled={!canScrollBackward}
             onClick={() => move(-1)}
-            className={cn(
-              'focus-ring absolute left-3 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#e2e2e5]/95 text-black/60 shadow-sm backdrop-blur transition hover:bg-[#d7d7da] hover:text-black md:flex',
-              !canScrollBackward && 'invisible'
-            )}
+            className="focus-ring absolute left-3 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#e2e2e5]/95 text-black/60 shadow-sm backdrop-blur transition hover:bg-[#d7d7da] hover:text-black md:flex"
           >
             <ChevronLeft aria-hidden="true" size={24} strokeWidth={2.4} />
           </button>
           <button
             type="button"
             aria-label={`Show next products in ${label}`}
-            disabled={!canScrollForward}
             onClick={() => move(1)}
-            className={cn(
-              'focus-ring absolute right-3 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#e2e2e5]/95 text-black/60 shadow-sm backdrop-blur transition hover:bg-[#d7d7da] hover:text-black md:flex',
-              !canScrollForward && 'invisible'
-            )}
+            className="focus-ring absolute right-3 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#e2e2e5]/95 text-black/60 shadow-sm backdrop-blur transition hover:bg-[#d7d7da] hover:text-black md:flex"
           >
             <ChevronRight aria-hidden="true" size={24} strokeWidth={2.4} />
           </button>
