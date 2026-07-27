@@ -63,7 +63,10 @@ export function CardCarousel({
     <div className={cn('relative mt-5', fullBleed ? 'w-full' : 'mx-auto max-w-store')}>
       <div
         ref={scrollerRef}
-        className="card-scroll flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-5 md:px-8"
+        className={cn(
+          'card-scroll flex snap-x snap-mandatory gap-3 overflow-x-auto pb-5',
+          fullBleed ? 'card-scroll-full-bleed' : 'px-5 md:px-8'
+        )}
         role="list"
         aria-label={label}
         onScroll={updateControls}

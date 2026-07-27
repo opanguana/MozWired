@@ -279,6 +279,24 @@ a {
   background: rgb(0 0 0 / 24%);
 }
 
+.card-scroll-full-bleed {
+  --carousel-content-max-width: 88rem;
+  --carousel-page-padding: 1.25rem;
+  --carousel-inset: max(
+    var(--carousel-page-padding),
+    calc((100vw - var(--carousel-content-max-width)) / 2 + var(--carousel-page-padding))
+  );
+
+  padding-inline: var(--carousel-inset);
+  scroll-padding-inline: var(--carousel-inset);
+}
+
+@media (min-width: 48rem) {
+  .card-scroll-full-bleed {
+    --carousel-page-padding: 2rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -23,6 +23,9 @@ describe('CardCarousel', () => {
     expect(screen.getByRole('list', { name: 'Featured devices' }).parentElement).toHaveClass(
       'w-full'
     );
+    expect(screen.getByRole('list', { name: 'Featured devices' })).toHaveClass(
+      'card-scroll-full-bleed'
+    );
   });
 
   it('keeps four-card collections as a scrollable rail without gallery controls', () => {
@@ -32,6 +35,9 @@ describe('CardCarousel', () => {
     expect(screen.getByRole('list', { name: 'Featured devices' })).toBeInTheDocument();
     expect(screen.getByRole('list', { name: 'Featured devices' }).parentElement).toHaveClass(
       'max-w-store'
+    );
+    expect(screen.getByRole('list', { name: 'Featured devices' })).not.toHaveClass(
+      'card-scroll-full-bleed'
     );
   });
 });
