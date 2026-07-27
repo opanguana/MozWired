@@ -7,7 +7,15 @@ import { cn } from '@/lib/utils';
 
 import { ServiceCard, type ServiceCardData } from './ServiceCard';
 
-export function CardCarousel({ cards, label }: { cards: ServiceCardData[]; label: string }) {
+export function CardCarousel({
+  cards,
+  label,
+  fullBleed = false,
+}: {
+  cards: ServiceCardData[];
+  label: string;
+  fullBleed?: boolean;
+}) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const hasCarouselControls = cards.length > 4;
   const [canScrollBackward, setCanScrollBackward] = useState(false);
@@ -52,7 +60,7 @@ export function CardCarousel({ cards, label }: { cards: ServiceCardData[]; label
   };
 
   return (
-    <div className="relative mt-5">
+    <div className={cn('relative mt-5', fullBleed ? 'w-full' : 'mx-auto max-w-store')}>
       <div
         ref={scrollerRef}
         className="card-scroll flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-5 md:px-8"

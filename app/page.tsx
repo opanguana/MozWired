@@ -228,14 +228,14 @@ function CardCollection({
     <section id={id} className="scroll-mt-28 py-7 md:py-10" aria-labelledby={`${id}-title`}>
       <h2
         id={`${id}-title`}
-        className={`px-5 text-2xl font-bold tracking-[-0.04em] md:px-8 md:text-[1.75rem] ${
+        className={`mx-auto max-w-store px-5 text-2xl font-bold tracking-[-0.04em] md:px-8 md:text-[1.75rem] ${
           darkHeading ? 'text-white' : 'text-store-ink'
         }`}
       >
         <span className={`marker-highlight ${darkHeading ? 'text-black' : ''}`}>{highlight}</span>{' '}
         <span className={darkHeading ? 'text-white/55' : 'text-black/55'}>{title}</span>
       </h2>
-      <CardCarousel cards={cards} label={`${highlight} ${title}`} />
+      <CardCarousel cards={cards} label={`${highlight} ${title}`} fullBleed={cards.length > 4} />
     </section>
   );
 }
@@ -286,18 +286,14 @@ export default function HomePage() {
           </div>
 
           {storeConfig.showCategoryRail && <CategoryRail />}
-          <div className="mx-auto max-w-store">
-            <CardCollection {...featuredCollection} darkHeading />
-          </div>
+          <CardCollection {...featuredCollection} darkHeading />
         </div>
       </section>
 
       <div className="bg-store-canvas">
-        <div className="mx-auto max-w-store">
-          {remainingCollections.map((collection) => (
-            <CardCollection key={collection.id} {...collection} />
-          ))}
-        </div>
+        {remainingCollections.map((collection) => (
+          <CardCollection key={collection.id} {...collection} />
+        ))}
       </div>
     </main>
   );

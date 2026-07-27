@@ -12,7 +12,7 @@ const cards: ServiceCardData[] = Array.from({ length: 5 }, (_, index) => ({
 
 describe('CardCarousel', () => {
   it('adds gallery controls when a collection contains more than four cards', () => {
-    render(<CardCarousel cards={cards} label="Featured devices" />);
+    render(<CardCarousel cards={cards} label="Featured devices" fullBleed />);
 
     expect(
       screen.getByRole('button', { name: 'Show previous products in Featured devices' })
@@ -20,6 +20,9 @@ describe('CardCarousel', () => {
     expect(
       screen.getByRole('button', { name: 'Show next products in Featured devices' })
     ).toBeInTheDocument();
+    expect(screen.getByRole('list', { name: 'Featured devices' }).parentElement).toHaveClass(
+      'w-full'
+    );
   });
 
   it('keeps four-card collections as a scrollable rail without gallery controls', () => {
@@ -27,5 +30,8 @@ describe('CardCarousel', () => {
 
     expect(screen.queryByRole('button')).not.toBeInTheDocument();
     expect(screen.getByRole('list', { name: 'Featured devices' })).toBeInTheDocument();
+    expect(screen.getByRole('list', { name: 'Featured devices' }).parentElement).toHaveClass(
+      'max-w-store'
+    );
   });
 });
