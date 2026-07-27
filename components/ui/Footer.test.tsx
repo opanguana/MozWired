@@ -17,4 +17,11 @@ describe('Footer', () => {
     render(<Footer />);
     expect(screen.getByText('Mozambique')).toBeInTheDocument();
   });
+
+  it('uses the permanent dark footer treatment', () => {
+    render(<Footer />);
+
+    expect(screen.getByRole('contentinfo', { name: 'Site footer' })).toHaveClass('bg-[#08090a]');
+    expect(screen.getByRole('navigation', { name: 'Legal' })).toBeInTheDocument();
+  });
 });
