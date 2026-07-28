@@ -63,10 +63,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <h1 className="mt-2 text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-none tracking-[-0.055em]">
             Buy {card.title}
           </h1>
-          <ProductPrice
-            price={card.price}
-            className="mt-4 text-base font-medium text-white/80"
-          />
+          <ProductPrice price={card.price} className="mt-4 text-base font-medium text-white/80" />
         </div>
 
         <div className="mt-16 grid gap-8 md:mt-24 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-center lg:gap-12">
@@ -114,9 +111,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {variants.length > 0 && (
               <ul className="mt-6 grid gap-3" aria-label={`${card.title} available configurations`}>
-                {variants.map(({ network, storage, ram, price }) => (
+                {variants.map(({ sku, network, storage, ram, price }) => (
                   <li
-                    key={`${storage}-${ram ?? 'standard'}-${price.amount.amountMinor}`}
+                    key={sku}
                     className="flex min-h-16 items-center justify-between gap-5 rounded-xl border border-white/30 bg-black/20 px-4 py-3 transition hover:border-store-cyan"
                   >
                     <span className="text-sm font-semibold">
@@ -124,7 +121,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     </span>
                     <ProductPrice
                       price={price}
-                      className="shrink-0 justify-end text-right text-xs font-semibold"
+                      className="shrink-0 text-right text-xs font-semibold"
                     />
                   </li>
                 ))}

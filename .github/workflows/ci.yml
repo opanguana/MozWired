@@ -30,6 +30,9 @@ jobs:
       - name: Check formatting
         run: npm run format:check
 
+      - name: Validate product catalogue
+        run: npm run catalog:validate
+
       - name: Lint
         run: npm run lint
 

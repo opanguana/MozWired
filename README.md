@@ -72,10 +72,12 @@ Both link fields are optional; omit `linkLabel` and `linkHref` for a text-only a
 the configuration change and deploy it through the normal review process. Set `enabled` back to
 `false` for an immediate manual deactivation.
 
-## Smartphone inventory and product pictures
+## Product catalogue and safe updates
 
-Smartphone SKUs, pricing, variants, and picture mappings are maintained in
-`data/smartphones.ts`. The catalog groups storage/RAM variants into one horizontal card per model.
+`data/catalog-source.json` is the single source of truth for product cards, navigation links,
+detail pages, variants, availability, media, and pricing. Every record has a stable `id` and
+`slug`; every variant has a stable `sku`. Published and draft records use the same schema in
+`catalog/schema.ts`.
 
 MZN is the authoritative store currency. Prices use integer minor units, so `1_055_000` represents
 `10,550.00 MZN`. Prices exclude VAT. Do not store formatted price strings or derive local product
@@ -86,34 +88,49 @@ from the fixed, dated Banco de Moçambique sell rates in `config/currencies.ts`;
 the stored MZN amount. Update the rates and `ratesUpdatedAt` together. The project uses ordinary
 mathematical rounding and does not apply commercial `.99` endings.
 
-Products without an approved MZN amount deliberately display `Contact for MZN price`. Replace
-`price: null` in `data/products.ts` only after an authoritative local price is approved:
+Products without an approved MZN amount deliberately use `"pricing": null` and
+`"availability": "price_on_request"`, which displays `Contact for MZN price`. Add a verified price
+only after an authoritative local amount is approved:
 
-```ts
-price: mznPrice(1_055_000, 'from')
+```json
+{
+  "currency": "MZN",
+  "amountMinor": 1055000,
+  "label": "from",
+  "vatIncluded": false,
+  "effectiveFrom": null,
+  "effectiveUntil": null
+}
 ```
 
-Samsung models currently use a deliberate “Image coming soon” placeholder. To add or replace a
-product picture:
+Before opening a pull request, run:
 
-1. Prepare a PNG or WebP image with a transparent or plain neutral background. A square image of at
-   least 800×800 pixels works best.
-2. Give it a lowercase descriptive filename, for example `galaxy-a06.png`.
-3. Copy it into `public/images/products/smartphones/`.
-4. Add or update the model entry in `smartphoneImages` inside `data/smartphones.ts`:
+```bash
+npm run catalog:validate
+npm test
+npm run build
+```
 
-   ```ts
-   export const smartphoneImages = {
-     'Galaxy A06': '/images/products/smartphones/galaxy-a06.png',
-     'iPhone 15 Pro Max': '/images/products/smartphones/iphone-15-pro-max.png',
-   };
-   ```
+For bulk changes, export a JSON array using the catalogue schema and dry-run it first:
 
-5. Run `npm run lint`, `npm test`, and `npm run build`.
+```bash
+npm run catalog:import -- ./incoming-products.json
+npm run catalog:import -- ./incoming-products.json --apply
+```
 
-The mapping key must exactly match the inventory model. Removing a mapping safely restores the
-placeholder without breaking the card or build. Product copy and pricing can be updated directly in
-`smartphoneInventory`; keep prices as integer MZN minor units through the `mznPrice` helper.
+The importer validates the entire candidate, verifies referenced images, refuses accidental product
+removals, and replaces the catalogue atomically only with `--apply`. An intentional removal also
+requires `--allow-removals`. Review and commit the JSON diff; CI validates the catalogue before
+lint, tests, and build. A failed deployment leaves the previously deployed Git revision intact.
+Rollback is a normal `git revert <catalog-commit>`.
+
+Use `status: "draft"` to keep a record out of customer-facing selectors. Scheduled prices belong in
+`scheduledPrices` with explicit timezone-bearing `effectiveFrom` and `effectiveUntil` values.
+Because this site is statically deployed, a scheduled boundary becomes visible on the next build;
+use a scheduled deployment when exact activation time matters.
+
+For product media, place the asset under `public/images/`, then set `image.src` to its `/images/...`
+URL. A `null` image keeps the existing accessible “Image coming soon” media placeholder.
 
 ## Git workflow
 

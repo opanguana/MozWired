@@ -1,0 +1,1697 @@
+[
+  {
+    "id": "apple-macbook-air",
+    "slug": "macbook-air",
+    "status": "published",
+    "brand": "Apple",
+    "title": "MacBook Air",
+    "eyebrow": "Customer favorite",
+    "description": "Thin, fast, and ready for work or study wherever the day takes you.",
+    "category": "computers",
+    "image": {
+      "src": "/images/store/mac.png",
+      "alt": "MacBook Air"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "services",
+        "order": 0
+      },
+      {
+        "section": "possibilities",
+        "order": 1
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-macbook-pro",
+    "slug": "macbook-pro",
+    "status": "published",
+    "brand": "Apple",
+    "title": "MacBook Pro",
+    "eyebrow": "Power to spare",
+    "description": "Serious performance for demanding creative and professional workflows.",
+    "category": "computers",
+    "image": {
+      "src": "/images/store/mac.png",
+      "alt": "MacBook Pro"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "services",
+        "order": 1
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-imac",
+    "slug": "imac",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iMac",
+    "eyebrow": "All in one",
+    "description": "A vivid desktop experience with everything built beautifully together.",
+    "category": "computers",
+    "image": {
+      "src": "/images/store/mac.png",
+      "alt": "iMac"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "benefits",
+        "order": 0
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-mac-mini",
+    "slug": "mac-mini",
+    "status": "published",
+    "brand": "Apple",
+    "title": "Mac mini",
+    "eyebrow": "Small footprint",
+    "description": "A compact desktop with impressive performance and flexible connectivity.",
+    "category": "computers",
+    "image": {
+      "src": "/images/store/mac.png",
+      "alt": "Mac mini"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "benefits",
+        "order": 1
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-ipad-pro",
+    "slug": "ipad-pro",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPad Pro",
+    "eyebrow": "Remarkably capable",
+    "description": "A powerful, portable canvas for creativity, entertainment, and productivity.",
+    "category": "mobile",
+    "image": {
+      "src": "/images/store/ipad.png",
+      "alt": "iPad Pro"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "possibilities",
+        "order": 0
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-ipad-air",
+    "slug": "ipad-air",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPad Air",
+    "eyebrow": "Offer eligible",
+    "description": "Versatile performance in a light design with room for every idea.",
+    "category": "mobile",
+    "image": {
+      "src": "/images/store/ipad.png",
+      "alt": "iPad Air"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "services",
+        "order": 2
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-ipad-mini",
+    "slug": "ipad-mini",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPad mini",
+    "eyebrow": "Made to travel",
+    "description": "Full iPad capability in an ultraportable size that goes everywhere.",
+    "category": "mobile",
+    "image": {
+      "src": "/images/store/ipad.png",
+      "alt": "iPad mini"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "savings",
+        "order": 2
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-pro",
+    "slug": "iphone-pro",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone Pro",
+    "eyebrow": "New",
+    "description": "Advanced cameras, premium materials, and all-day performance.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone Pro"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "possibilities",
+        "order": 2
+      }
+    ],
+    "cardTone": "dark",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone",
+    "slug": "iphone",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone",
+    "eyebrow": "Everyday favorite",
+    "description": "A brilliant display, dependable battery life, and an effortless camera.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "services",
+        "order": 3
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-essential",
+    "slug": "iphone-essential",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone Essential",
+    "eyebrow": "Great value",
+    "description": "The features you use most in a durable, colorful design.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone Essential"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "savings",
+        "order": 1
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-watch",
+    "slug": "apple-watch",
+    "status": "published",
+    "brand": "Apple",
+    "title": "Apple Watch",
+    "eyebrow": "Fitness companion",
+    "description": "Stay active, connected, and informed right from your wrist.",
+    "category": "mobile",
+    "image": {
+      "src": "/images/store/apple-watch.png",
+      "alt": "Apple Watch"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-watch-ultra",
+    "slug": "apple-watch-ultra",
+    "status": "published",
+    "brand": "Apple",
+    "title": "Apple Watch Ultra",
+    "eyebrow": "Built for adventure",
+    "description": "A rugged watch for endurance, exploration, and everyday life.",
+    "category": "mobile",
+    "image": {
+      "src": "/images/store/apple-watch.png",
+      "alt": "Apple Watch Ultra"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-vision-pro",
+    "slug": "apple-vision-pro",
+    "status": "published",
+    "brand": "Apple",
+    "title": "Apple Vision Pro",
+    "eyebrow": "Spatial computing",
+    "description": "Experience entertainment, work, and connection in an entirely new way.",
+    "category": "mobile",
+    "image": {
+      "src": "/images/store/apple-vision-pro.png",
+      "alt": "Apple Vision Pro"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "experience",
+        "order": 0
+      }
+    ],
+    "cardTone": "dark",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-airpods-pro",
+    "slug": "airpods-pro",
+    "status": "published",
+    "brand": "Apple",
+    "title": "AirPods Pro",
+    "eyebrow": "Free engraving",
+    "description": "Immersive sound and intelligent noise control in a pocket-ready design.",
+    "category": "audio",
+    "image": {
+      "src": "/images/store/airpods.png",
+      "alt": "AirPods Pro"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "benefits",
+        "order": 3
+      },
+      {
+        "section": "accessories",
+        "order": 1
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-airpods",
+    "slug": "airpods",
+    "status": "published",
+    "brand": "Apple",
+    "title": "AirPods",
+    "eyebrow": "Listen all day",
+    "description": "Comfortable wireless audio with effortless pairing across your devices.",
+    "category": "audio",
+    "image": {
+      "src": "/images/store/airpods.png",
+      "alt": "AirPods"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "savings",
+        "order": 3
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-airtag",
+    "slug": "airtag",
+    "status": "published",
+    "brand": "Apple",
+    "title": "AirTag",
+    "eyebrow": "Keep track",
+    "description": "A simple way to keep an eye on keys, bags, and everyday essentials.",
+    "category": "accessories",
+    "image": {
+      "src": "/images/store/airtag.png",
+      "alt": "AirTag"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "accessories",
+        "order": 2
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-tv-4k",
+    "slug": "apple-tv-4k",
+    "status": "published",
+    "brand": "Apple",
+    "title": "Apple TV 4K",
+    "eyebrow": "Big-screen entertainment",
+    "description": "Bring movies, shows, music, and games together in stunning quality.",
+    "category": "audio",
+    "image": {
+      "src": "/images/store/apple-tv-4k.png",
+      "alt": "Apple TV 4K"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "possibilities",
+        "order": 3
+      },
+      {
+        "section": "experience",
+        "order": 1
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-homepod",
+    "slug": "homepod",
+    "status": "published",
+    "brand": "Apple",
+    "title": "HomePod",
+    "eyebrow": "Room-filling sound",
+    "description": "Rich home audio with intelligent control in a compact design.",
+    "category": "audio",
+    "image": {
+      "src": "/images/store/homepod.png",
+      "alt": "HomePod"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "accessories",
+        "order": 3
+      },
+      {
+        "section": "experience",
+        "order": 2
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "accessories-cases-and-bands",
+    "slug": "cases-and-bands",
+    "status": "published",
+    "brand": "Apple",
+    "title": "Cases and bands",
+    "eyebrow": "Complete your setup",
+    "description": "Protection, color, and everyday utility for the devices you love.",
+    "category": "accessories",
+    "image": {
+      "src": "/images/store/accessories.png",
+      "alt": "Cases and bands"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "accessories",
+        "order": 0
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-gift-card",
+    "slug": "gift-card",
+    "status": "published",
+    "brand": "Apple",
+    "title": "Gift Card",
+    "eyebrow": "Always the right fit",
+    "description": "Let them choose the device, accessory, app, or experience they want.",
+    "category": "accessories",
+    "image": {
+      "src": "/images/store/apple-gift-card.png",
+      "alt": "Gift Card"
+    },
+    "availability": "price_on_request",
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [],
+    "placements": [
+      {
+        "section": "savings",
+        "order": 0
+      },
+      {
+        "section": "benefits",
+        "order": 2
+      },
+      {
+        "section": "experience",
+        "order": 3
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a04e",
+    "slug": "galaxy-a04e",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A04e",
+    "eyebrow": "Simple and practical",
+    "description": "A practical Samsung 4G smartphone with 32GB of storage and 3GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A04E-32-3-4G",
+        "storage": "32GB",
+        "ram": "3GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 595000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 0
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a05s",
+    "slug": "galaxy-a05s",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A05s",
+    "eyebrow": "Reliable everyday performance",
+    "description": "A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A05S-128-4-4G",
+        "storage": "128GB",
+        "ram": "4GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1055000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 1
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a06",
+    "slug": "galaxy-a06",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A06",
+    "eyebrow": "Made for the essentials",
+    "description": "A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A06-64-4-4G",
+        "storage": "64GB",
+        "ram": "4GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 700000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A06-128-4-4G",
+        "storage": "128GB",
+        "ram": "4GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 885000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 2
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a07",
+    "slug": "galaxy-a07",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A07",
+    "eyebrow": "Everyday value",
+    "description": "A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A07-64-4-4G",
+        "storage": "64GB",
+        "ram": "4GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 760000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A07-128-4-4G",
+        "storage": "128GB",
+        "ram": "4GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 860000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 3
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a16",
+    "slug": "galaxy-a16",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A16",
+    "eyebrow": "Ready for every day",
+    "description": "A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A16-128-4-4G",
+        "storage": "128GB",
+        "ram": "4GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1000000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 4
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a17",
+    "slug": "galaxy-a17",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A17",
+    "eyebrow": "More ways to choose",
+    "description": "A practical Samsung 4G smartphone available with 128GB or 256GB of storage and 4GB, 6GB, or 8GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A17-128-4-4G",
+        "storage": "128GB",
+        "ram": "4GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1200000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A17-128-6-4G",
+        "storage": "128GB",
+        "ram": "6GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1370000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A17-256-8-4G",
+        "storage": "256GB",
+        "ram": "8GB",
+        "network": "4G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1495000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 5
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a25",
+    "slug": "galaxy-a25",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A25",
+    "eyebrow": "Step into 5G",
+    "description": "A practical Samsung 5G smartphone with 128GB of storage and 6GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A25-128-6-5G",
+        "storage": "128GB",
+        "ram": "6GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1450000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 6
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a26",
+    "slug": "galaxy-a26",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A26",
+    "eyebrow": "Versatile 5G value",
+    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A26-128-6-5G",
+        "storage": "128GB",
+        "ram": "6GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1640000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A26-256-8-5G",
+        "storage": "256GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1880000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 7
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a36",
+    "slug": "galaxy-a36",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A36",
+    "eyebrow": "More room for more",
+    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A36-128-6-5G",
+        "storage": "128GB",
+        "ram": "6GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2050000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A36-128-8-5G",
+        "storage": "128GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2030000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A36-256-8-5G",
+        "storage": "256GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2280000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 8
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a37",
+    "slug": "galaxy-a37",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A37",
+    "eyebrow": "Built for daily life",
+    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 8GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A37-128-8-5G",
+        "storage": "128GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2480000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A37-256-8-5G",
+        "storage": "256GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2630000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 9
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a56",
+    "slug": "galaxy-a56",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A56",
+    "eyebrow": "A capable 5G choice",
+    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 8GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A56-128-8-5G",
+        "storage": "128GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2530000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A56-256-8-5G",
+        "storage": "256GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2730000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 10
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "samsung-galaxy-a57",
+    "slug": "galaxy-a57",
+    "status": "published",
+    "brand": "Samsung",
+    "title": "Galaxy A57",
+    "eyebrow": "Flexible 5G options",
+    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
+    "category": "phones",
+    "image": null,
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "SAM-A57-128-6-5G",
+        "storage": "128GB",
+        "ram": "6GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2830000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A57-128-8-5G",
+        "storage": "128GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 3100000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "SAM-A57-256-8-5G",
+        "storage": "256GB",
+        "ram": "8GB",
+        "network": "5G",
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 3030000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "favorites",
+        "order": 11
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-xr",
+    "slug": "iphone-xr",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone XR",
+    "eyebrow": "A familiar favorite",
+    "description": "An Apple smartphone with 64GB or 128GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone XR"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IPXR-64",
+        "storage": "64GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1280000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "APL-IPXR-128",
+        "storage": "128GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1400000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 0
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-11",
+    "slug": "iphone-11",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 11",
+    "eyebrow": "Everyday iPhone value",
+    "description": "An Apple smartphone with 64GB or 128GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 11"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP11-64",
+        "storage": "64GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1600000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      },
+      {
+        "sku": "APL-IP11-128",
+        "storage": "128GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1740000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 1
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-12",
+    "slug": "iphone-12",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 12",
+    "eyebrow": "A modern essential",
+    "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 12"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP12-128",
+        "storage": "128GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 1980000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 2
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-12-pro",
+    "slug": "iphone-12-pro",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 12 Pro",
+    "eyebrow": "A step up to Pro",
+    "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 12 Pro"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP12P-128",
+        "storage": "128GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2550000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 3
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-12-pro-max",
+    "slug": "iphone-12-pro-max",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 12 Pro Max",
+    "eyebrow": "More room to go Pro",
+    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 12 Pro Max"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP12PM-256",
+        "storage": "256GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 3200000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 4
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-13",
+    "slug": "iphone-13",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 13",
+    "eyebrow": "A dependable favorite",
+    "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 13"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP13-128",
+        "storage": "128GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 2580000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 5
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-13-pro",
+    "slug": "iphone-13-pro",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 13 Pro",
+    "eyebrow": "Pro with more storage",
+    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 13 Pro"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP13P-256",
+        "storage": "256GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 3600000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 6
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-13-pro-max",
+    "slug": "iphone-13-pro-max",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 13 Pro Max",
+    "eyebrow": "A larger Pro choice",
+    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 13 Pro Max"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP13PM-256",
+        "storage": "256GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 4100000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 7
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-14-pro",
+    "slug": "iphone-14-pro",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 14 Pro",
+    "eyebrow": "Designed for Pro",
+    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 14 Pro"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP14P-256",
+        "storage": "256GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 4200000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 8
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-14-pro-max",
+    "slug": "iphone-14-pro-max",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 14 Pro Max",
+    "eyebrow": "The bigger Pro option",
+    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 14 Pro Max"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP14PM-256",
+        "storage": "256GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 4600000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 9
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  },
+  {
+    "id": "apple-iphone-15-pro-max",
+    "slug": "iphone-15-pro-max",
+    "status": "published",
+    "brand": "Apple",
+    "title": "iPhone 15 Pro Max",
+    "eyebrow": "Premium iPhone choice",
+    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+    "category": "phones",
+    "image": {
+      "src": "/images/store/iphone.png",
+      "alt": "iPhone 15 Pro Max"
+    },
+    "availability": null,
+    "pricing": null,
+    "scheduledPrices": [],
+    "variants": [
+      {
+        "sku": "APL-IP15PM-256",
+        "storage": "256GB",
+        "ram": null,
+        "network": null,
+        "availability": null,
+        "pricing": {
+          "currency": "MZN",
+          "amountMinor": 5950000,
+          "label": "exact",
+          "vatIncluded": false,
+          "effectiveFrom": null,
+          "effectiveUntil": null
+        },
+        "scheduledPrices": []
+      }
+    ],
+    "placements": [
+      {
+        "section": "more-to-love",
+        "order": 10
+      }
+    ],
+    "cardTone": "default",
+    "updatedAt": "2026-07-28T00:00:00+02:00"
+  }
+]

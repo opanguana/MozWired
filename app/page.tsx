@@ -4,12 +4,9 @@ import Link from 'next/link';
 import { CardCarousel } from '@/components/store/CardCarousel';
 import { CategoryRail } from '@/components/store/CategoryRail';
 import type { ServiceCardData } from '@/components/store/ServiceCard';
+import { getProductsForSection } from '@/catalog/load';
+import { toServiceCard } from '@/catalog/presentation';
 import { storeConfig } from '@/config/store';
-import { products } from '@/data/products';
-import { buildSmartphoneCards } from '@/data/smartphones';
-
-const samsungSmartphones = buildSmartphoneCards('Samsung');
-const appleSmartphones = buildSmartphoneCards('Apple');
 
 const storeCollections: {
   id: string;
@@ -22,49 +19,49 @@ const storeCollections: {
     id: 'services',
     highlight: 'Limited-time offers.',
     title: 'Major must-haves.',
-    cards: [products.macbookAir, products.macbookPro, products.ipadAir, products.iphone],
+    cards: getProductsForSection('services').map((product) => toServiceCard(product)),
   },
   {
     id: 'favorites',
     highlight: 'Samsung Galaxy.',
     title: 'Smartphones for every budget.',
-    cards: samsungSmartphones,
+    cards: getProductsForSection('favorites').map((product) => toServiceCard(product)),
   },
   {
     id: 'savings',
     highlight: 'More ways to save.',
     title: 'Great technology at the right price.',
-    cards: [products.giftCard, products.iphoneValue, products.ipadMini, products.airpods],
+    cards: getProductsForSection('savings').map((product) => toServiceCard(product)),
   },
   {
     id: 'benefits',
     highlight: 'The MozWired Store difference.',
     title: 'More reasons to shop with us.',
-    cards: [products.imac, products.macMini, products.giftCard, products.airpodsPro],
+    cards: getProductsForSection('benefits').map((product) => toServiceCard(product)),
   },
   {
     id: 'accessories',
     highlight: 'Accessories.',
     title: 'The finishing touches for every setup.',
-    cards: [products.accessories, products.airpodsPro, products.airtag, products.homepod],
+    cards: getProductsForSection('accessories').map((product) => toServiceCard(product)),
   },
   {
     id: 'possibilities',
     highlight: 'Endless possibilities.',
     title: 'Technology for work, creativity, and play.',
-    cards: [products.ipadPro, products.macbookAir, products.iphonePro, products.appleTV],
+    cards: getProductsForSection('possibilities').map((product) => toServiceCard(product)),
   },
   {
     id: 'more-to-love',
     highlight: 'Apple iPhone.',
     title: 'Find the model that fits.',
-    cards: appleSmartphones,
+    cards: getProductsForSection('more-to-love').map((product) => toServiceCard(product)),
   },
   {
     id: 'experience',
     highlight: 'The MozWired experience.',
     title: 'Electronics that work beautifully together.',
-    cards: [products.visionPro, products.appleTV, products.homepod, products.giftCard],
+    cards: getProductsForSection('experience').map((product) => toServiceCard(product)),
     darkCards: true,
   },
 ];

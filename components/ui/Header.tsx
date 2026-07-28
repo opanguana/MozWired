@@ -35,24 +35,11 @@ function productLinks(products: CatalogProduct[]): NonNullable<NavItem['children
 }
 
 const productGroups = {
-  computers: catalogProducts.filter(({ card }) =>
-    ['MacBook Air', 'MacBook Pro', 'iMac', 'Mac mini'].includes(card.title)
-  ),
-  phones: catalogProducts.filter(
-    ({ brand, card }) => Boolean(brand) || card.title.startsWith('iPhone')
-  ),
-  mobile: catalogProducts.filter(
-    ({ card }) =>
-      card.title.startsWith('iPad') ||
-      card.title.startsWith('Apple Watch') ||
-      card.title === 'Apple Vision Pro'
-  ),
-  audio: catalogProducts.filter(({ card }) =>
-    ['AirPods Pro', 'AirPods', 'HomePod', 'Apple TV 4K'].includes(card.title)
-  ),
-  accessories: catalogProducts.filter(({ card }) =>
-    ['AirTag', 'Cases and bands', 'Gift Card'].includes(card.title)
-  ),
+  computers: catalogProducts.filter(({ category }) => category === 'computers'),
+  phones: catalogProducts.filter(({ category }) => category === 'phones'),
+  mobile: catalogProducts.filter(({ category }) => category === 'mobile'),
+  audio: catalogProducts.filter(({ category }) => category === 'audio'),
+  accessories: catalogProducts.filter(({ category }) => category === 'accessories'),
 };
 
 const navItems: NavItem[] = [
