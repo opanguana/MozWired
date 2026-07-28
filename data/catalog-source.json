@@ -8,9 +8,17 @@
     "eyebrow": "Customer favorite",
     "description": "Thin, fast, and ready for work or study wherever the day takes you.",
     "category": "computers",
-    "image": {
-      "src": "/images/store/mac.png",
-      "alt": "MacBook Air"
+    "media": {
+      "primaryImageId": "apple-macbook-air-main",
+      "images": [
+        {
+          "id": "apple-macbook-air-main",
+          "role": "main",
+          "src": "/images/store/mac.png",
+          "alt": "MacBook Air",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -38,9 +46,17 @@
     "eyebrow": "Power to spare",
     "description": "Serious performance for demanding creative and professional workflows.",
     "category": "computers",
-    "image": {
-      "src": "/images/store/mac.png",
-      "alt": "MacBook Pro"
+    "media": {
+      "primaryImageId": "apple-macbook-pro-main",
+      "images": [
+        {
+          "id": "apple-macbook-pro-main",
+          "role": "main",
+          "src": "/images/store/mac.png",
+          "alt": "MacBook Pro",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -64,9 +80,17 @@
     "eyebrow": "All in one",
     "description": "A vivid desktop experience with everything built beautifully together.",
     "category": "computers",
-    "image": {
-      "src": "/images/store/mac.png",
-      "alt": "iMac"
+    "media": {
+      "primaryImageId": "apple-imac-main",
+      "images": [
+        {
+          "id": "apple-imac-main",
+          "role": "main",
+          "src": "/images/store/mac.png",
+          "alt": "iMac",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -90,9 +114,17 @@
     "eyebrow": "Small footprint",
     "description": "A compact desktop with impressive performance and flexible connectivity.",
     "category": "computers",
-    "image": {
-      "src": "/images/store/mac.png",
-      "alt": "Mac mini"
+    "media": {
+      "primaryImageId": "apple-mac-mini-main",
+      "images": [
+        {
+          "id": "apple-mac-mini-main",
+          "role": "main",
+          "src": "/images/store/mac.png",
+          "alt": "Mac mini",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -116,9 +148,17 @@
     "eyebrow": "Remarkably capable",
     "description": "A powerful, portable canvas for creativity, entertainment, and productivity.",
     "category": "mobile",
-    "image": {
-      "src": "/images/store/ipad.png",
-      "alt": "iPad Pro"
+    "media": {
+      "primaryImageId": "apple-ipad-pro-main",
+      "images": [
+        {
+          "id": "apple-ipad-pro-main",
+          "role": "main",
+          "src": "/images/store/ipad.png",
+          "alt": "iPad Pro",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -142,9 +182,17 @@
     "eyebrow": "Offer eligible",
     "description": "Versatile performance in a light design with room for every idea.",
     "category": "mobile",
-    "image": {
-      "src": "/images/store/ipad.png",
-      "alt": "iPad Air"
+    "media": {
+      "primaryImageId": "apple-ipad-air-main",
+      "images": [
+        {
+          "id": "apple-ipad-air-main",
+          "role": "main",
+          "src": "/images/store/ipad.png",
+          "alt": "iPad Air",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -168,9 +216,17 @@
     "eyebrow": "Made to travel",
     "description": "Full iPad capability in an ultraportable size that goes everywhere.",
     "category": "mobile",
-    "image": {
-      "src": "/images/store/ipad.png",
-      "alt": "iPad mini"
+    "media": {
+      "primaryImageId": "apple-ipad-mini-main",
+      "images": [
+        {
+          "id": "apple-ipad-mini-main",
+          "role": "main",
+          "src": "/images/store/ipad.png",
+          "alt": "iPad mini",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -194,9 +250,17 @@
     "eyebrow": "New",
     "description": "Advanced cameras, premium materials, and all-day performance.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone Pro"
+    "media": {
+      "primaryImageId": "apple-iphone-pro-main",
+      "images": [
+        {
+          "id": "apple-iphone-pro-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone Pro",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -220,9 +284,17 @@
     "eyebrow": "Everyday favorite",
     "description": "A brilliant display, dependable battery life, and an effortless camera.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone"
+    "media": {
+      "primaryImageId": "apple-iphone-main",
+      "images": [
+        {
+          "id": "apple-iphone-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -246,9 +318,17 @@
     "eyebrow": "Great value",
     "description": "The features you use most in a durable, colorful design.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone Essential"
+    "media": {
+      "primaryImageId": "apple-iphone-essential-main",
+      "images": [
+        {
+          "id": "apple-iphone-essential-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone Essential",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -272,9 +352,17 @@
     "eyebrow": "Fitness companion",
     "description": "Stay active, connected, and informed right from your wrist.",
     "category": "mobile",
-    "image": {
-      "src": "/images/store/apple-watch.png",
-      "alt": "Apple Watch"
+    "media": {
+      "primaryImageId": "apple-watch-main",
+      "images": [
+        {
+          "id": "apple-watch-main",
+          "role": "main",
+          "src": "/images/store/apple-watch.png",
+          "alt": "Apple Watch",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -293,9 +381,17 @@
     "eyebrow": "Built for adventure",
     "description": "A rugged watch for endurance, exploration, and everyday life.",
     "category": "mobile",
-    "image": {
-      "src": "/images/store/apple-watch.png",
-      "alt": "Apple Watch Ultra"
+    "media": {
+      "primaryImageId": "apple-watch-ultra-main",
+      "images": [
+        {
+          "id": "apple-watch-ultra-main",
+          "role": "main",
+          "src": "/images/store/apple-watch.png",
+          "alt": "Apple Watch Ultra",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -314,9 +410,17 @@
     "eyebrow": "Spatial computing",
     "description": "Experience entertainment, work, and connection in an entirely new way.",
     "category": "mobile",
-    "image": {
-      "src": "/images/store/apple-vision-pro.png",
-      "alt": "Apple Vision Pro"
+    "media": {
+      "primaryImageId": "apple-vision-pro-main",
+      "images": [
+        {
+          "id": "apple-vision-pro-main",
+          "role": "main",
+          "src": "/images/store/apple-vision-pro.png",
+          "alt": "Apple Vision Pro",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -340,9 +444,17 @@
     "eyebrow": "Free engraving",
     "description": "Immersive sound and intelligent noise control in a pocket-ready design.",
     "category": "audio",
-    "image": {
-      "src": "/images/store/airpods.png",
-      "alt": "AirPods Pro"
+    "media": {
+      "primaryImageId": "apple-airpods-pro-main",
+      "images": [
+        {
+          "id": "apple-airpods-pro-main",
+          "role": "main",
+          "src": "/images/store/airpods.png",
+          "alt": "AirPods Pro",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -370,9 +482,17 @@
     "eyebrow": "Listen all day",
     "description": "Comfortable wireless audio with effortless pairing across your devices.",
     "category": "audio",
-    "image": {
-      "src": "/images/store/airpods.png",
-      "alt": "AirPods"
+    "media": {
+      "primaryImageId": "apple-airpods-main",
+      "images": [
+        {
+          "id": "apple-airpods-main",
+          "role": "main",
+          "src": "/images/store/airpods.png",
+          "alt": "AirPods",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -396,9 +516,17 @@
     "eyebrow": "Keep track",
     "description": "A simple way to keep an eye on keys, bags, and everyday essentials.",
     "category": "accessories",
-    "image": {
-      "src": "/images/store/airtag.png",
-      "alt": "AirTag"
+    "media": {
+      "primaryImageId": "apple-airtag-main",
+      "images": [
+        {
+          "id": "apple-airtag-main",
+          "role": "main",
+          "src": "/images/store/airtag.png",
+          "alt": "AirTag",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -422,9 +550,17 @@
     "eyebrow": "Big-screen entertainment",
     "description": "Bring movies, shows, music, and games together in stunning quality.",
     "category": "audio",
-    "image": {
-      "src": "/images/store/apple-tv-4k.png",
-      "alt": "Apple TV 4K"
+    "media": {
+      "primaryImageId": "apple-tv-4k-main",
+      "images": [
+        {
+          "id": "apple-tv-4k-main",
+          "role": "main",
+          "src": "/images/store/apple-tv-4k.png",
+          "alt": "Apple TV 4K",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -452,9 +588,17 @@
     "eyebrow": "Room-filling sound",
     "description": "Rich home audio with intelligent control in a compact design.",
     "category": "audio",
-    "image": {
-      "src": "/images/store/homepod.png",
-      "alt": "HomePod"
+    "media": {
+      "primaryImageId": "apple-homepod-main",
+      "images": [
+        {
+          "id": "apple-homepod-main",
+          "role": "main",
+          "src": "/images/store/homepod.png",
+          "alt": "HomePod",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -482,9 +626,17 @@
     "eyebrow": "Complete your setup",
     "description": "Protection, color, and everyday utility for the devices you love.",
     "category": "accessories",
-    "image": {
-      "src": "/images/store/accessories.png",
-      "alt": "Cases and bands"
+    "media": {
+      "primaryImageId": "accessories-cases-and-bands-main",
+      "images": [
+        {
+          "id": "accessories-cases-and-bands-main",
+          "role": "main",
+          "src": "/images/store/accessories.png",
+          "alt": "Cases and bands",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -508,9 +660,17 @@
     "eyebrow": "Always the right fit",
     "description": "Let them choose the device, accessory, app, or experience they want.",
     "category": "accessories",
-    "image": {
-      "src": "/images/store/apple-gift-card.png",
-      "alt": "Gift Card"
+    "media": {
+      "primaryImageId": "apple-gift-card-main",
+      "images": [
+        {
+          "id": "apple-gift-card-main",
+          "role": "main",
+          "src": "/images/store/apple-gift-card.png",
+          "alt": "Gift Card",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": "price_on_request",
     "pricing": null,
@@ -542,7 +702,7 @@
     "eyebrow": "Simple and practical",
     "description": "A practical Samsung 4G smartphone with 32GB of storage and 3GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -582,7 +742,7 @@
     "eyebrow": "Reliable everyday performance",
     "description": "A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -622,7 +782,7 @@
     "eyebrow": "Made for the essentials",
     "description": "A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -678,7 +838,7 @@
     "eyebrow": "Everyday value",
     "description": "A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -734,7 +894,7 @@
     "eyebrow": "Ready for every day",
     "description": "A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -774,7 +934,7 @@
     "eyebrow": "More ways to choose",
     "description": "A practical Samsung 4G smartphone available with 128GB or 256GB of storage and 4GB, 6GB, or 8GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -846,7 +1006,7 @@
     "eyebrow": "Step into 5G",
     "description": "A practical Samsung 5G smartphone with 128GB of storage and 6GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -886,7 +1046,7 @@
     "eyebrow": "Versatile 5G value",
     "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -942,7 +1102,7 @@
     "eyebrow": "More room for more",
     "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -1014,7 +1174,7 @@
     "eyebrow": "Built for daily life",
     "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 8GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -1070,7 +1230,7 @@
     "eyebrow": "A capable 5G choice",
     "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 8GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -1126,7 +1286,7 @@
     "eyebrow": "Flexible 5G options",
     "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
     "category": "phones",
-    "image": null,
+    "media": null,
     "availability": null,
     "pricing": null,
     "scheduledPrices": [],
@@ -1198,9 +1358,17 @@
     "eyebrow": "A familiar favorite",
     "description": "An Apple smartphone with 64GB or 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone XR"
+    "media": {
+      "primaryImageId": "apple-iphone-xr-main",
+      "images": [
+        {
+          "id": "apple-iphone-xr-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone XR",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1257,9 +1425,17 @@
     "eyebrow": "Everyday iPhone value",
     "description": "An Apple smartphone with 64GB or 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 11"
+    "media": {
+      "primaryImageId": "apple-iphone-11-main",
+      "images": [
+        {
+          "id": "apple-iphone-11-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 11",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1316,9 +1492,17 @@
     "eyebrow": "A modern essential",
     "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 12"
+    "media": {
+      "primaryImageId": "apple-iphone-12-main",
+      "images": [
+        {
+          "id": "apple-iphone-12-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 12",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1359,9 +1543,17 @@
     "eyebrow": "A step up to Pro",
     "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 12 Pro"
+    "media": {
+      "primaryImageId": "apple-iphone-12-pro-main",
+      "images": [
+        {
+          "id": "apple-iphone-12-pro-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 12 Pro",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1402,9 +1594,17 @@
     "eyebrow": "More room to go Pro",
     "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 12 Pro Max"
+    "media": {
+      "primaryImageId": "apple-iphone-12-pro-max-main",
+      "images": [
+        {
+          "id": "apple-iphone-12-pro-max-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 12 Pro Max",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1445,9 +1645,17 @@
     "eyebrow": "A dependable favorite",
     "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 13"
+    "media": {
+      "primaryImageId": "apple-iphone-13-main",
+      "images": [
+        {
+          "id": "apple-iphone-13-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 13",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1488,9 +1696,17 @@
     "eyebrow": "Pro with more storage",
     "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 13 Pro"
+    "media": {
+      "primaryImageId": "apple-iphone-13-pro-main",
+      "images": [
+        {
+          "id": "apple-iphone-13-pro-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 13 Pro",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1531,9 +1747,17 @@
     "eyebrow": "A larger Pro choice",
     "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 13 Pro Max"
+    "media": {
+      "primaryImageId": "apple-iphone-13-pro-max-main",
+      "images": [
+        {
+          "id": "apple-iphone-13-pro-max-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 13 Pro Max",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1574,9 +1798,17 @@
     "eyebrow": "Designed for Pro",
     "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 14 Pro"
+    "media": {
+      "primaryImageId": "apple-iphone-14-pro-main",
+      "images": [
+        {
+          "id": "apple-iphone-14-pro-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 14 Pro",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1617,9 +1849,17 @@
     "eyebrow": "The bigger Pro option",
     "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 14 Pro Max"
+    "media": {
+      "primaryImageId": "apple-iphone-14-pro-max-main",
+      "images": [
+        {
+          "id": "apple-iphone-14-pro-max-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 14 Pro Max",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,
@@ -1660,9 +1900,17 @@
     "eyebrow": "Premium iPhone choice",
     "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
-    "image": {
-      "src": "/images/store/iphone.png",
-      "alt": "iPhone 15 Pro Max"
+    "media": {
+      "primaryImageId": "apple-iphone-15-pro-max-main",
+      "images": [
+        {
+          "id": "apple-iphone-15-pro-max-main",
+          "role": "main",
+          "src": "/images/store/iphone.png",
+          "alt": "iPhone 15 Pro Max",
+          "sortOrder": 0
+        }
+      ]
     },
     "availability": null,
     "pricing": null,

@@ -1,6 +1,7 @@
 import catalogSource from '@/data/catalog-source.json';
 
 import { validateCatalogMedia } from './media-validation';
+import { getPrimaryProductImage, getProductImages } from './presentation';
 import { resolveProductPrice } from './pricing';
 import type { CatalogProduct } from './schema';
 import { validateCatalog } from './validation';
@@ -36,6 +37,33 @@ describe('validated product catalogue', () => {
 
     expect(result.products).toHaveLength(1);
     expect(result.issues.some(({ product }) => product === 'Invalid ID')).toBe(true);
+  });
+
+  it('selects the designated primary image and orders the gallery', () => {
+    const product = clone(baseProduct);
+    const primary = getPrimaryProductImage(product);
+
+    expect(primary?.role).toBe('main');
+    expect(getProductImages(product)).toEqual(
+      [...(product.media?.images ?? [])].sort((left, right) => left.sortOrder - right.sortOrder)
+    );
+  });
+
+  it('rejects invalid primary references and duplicate media identifiers', () => {
+    const product = clone(baseProduct);
+    if (!product.media) throw new Error('Fixture must contain media.');
+
+    product.media.primaryImageId = 'missing-image';
+    product.media.images.push({ ...product.media.images[0] });
+    const result = validateCatalog([product]);
+
+    expect(result.issues.map(({ message }) => message)).toEqual(
+      expect.arrayContaining([
+        'primaryImageId must reference an image in this product.',
+        'Image IDs must be unique within a product.',
+        'Image sort orders must be unique within a product.',
+      ])
+    );
   });
 
   it('resolves scheduled prices without mutating the MZN base price', () => {

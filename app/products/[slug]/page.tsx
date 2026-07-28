@@ -1,10 +1,11 @@
-import { Smartphone } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ProductPrice } from '@/components/currency/ProductPrice';
+import { ProductGallery } from '@/components/store/ProductGallery';
+import { getProductImages } from '@/catalog/presentation';
 import { catalogProducts, getCatalogProduct } from '@/data/catalog';
 
 type ProductPageProps = {
@@ -31,6 +32,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (!product) notFound();
 
   const { card, variants } = product;
+  const images = getProductImages(product.product);
 
   return (
     <main
@@ -67,33 +69,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </div>
 
         <div className="mt-16 grid gap-8 md:mt-24 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-center lg:gap-12">
-          <div className="relative min-h-[30rem] overflow-hidden rounded-2xl bg-[#f5f5f7]/95 text-store-ink shadow-2xl shadow-black/25 md:min-h-[46rem]">
-            <p className="relative z-[1] max-w-md p-6 text-sm font-semibold leading-relaxed text-black/60 md:p-8">
-              {card.description}
-            </p>
-            {card.image ? (
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                priority
-                sizes="(min-width: 1024px) 65vw, 100vw"
-                className="object-contain px-8 pb-8 pt-20 md:px-14 md:pb-14 md:pt-24"
-              />
-            ) : (
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center gap-5 px-8 pt-16 text-center"
-                role="img"
-                aria-label={`${card.title} product image coming soon`}
-              >
-                <Smartphone aria-hidden="true" className="size-32 stroke-[0.9]" />
-                <p className="font-semibold">{card.title}</p>
-                <p className="text-xs uppercase tracking-[0.14em] text-black/45">
-                  Image coming soon
-                </p>
-              </div>
-            )}
-          </div>
+          <ProductGallery
+            images={images}
+            productTitle={card.title}
+            description={card.description}
+          />
 
           <aside className="rounded-2xl border border-white/10 bg-black/35 p-6 shadow-xl shadow-black/15 backdrop-blur-md md:p-8">
             <h2 className="text-2xl font-bold tracking-[-0.035em]">

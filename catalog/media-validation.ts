@@ -8,18 +8,18 @@ export function validateCatalogMedia(
   products: CatalogProduct[],
   publicDirectory = join(process.cwd(), 'public')
 ): CatalogValidationIssue[] {
-  return products.flatMap((product) => {
-    if (!product.image) return [];
-
-    const imagePath = join(publicDirectory, product.image.src.replace(/^\/+/, ''));
-    return existsSync(imagePath)
-      ? []
-      : [
-          {
-            product: product.id,
-            path: 'image.src',
-            message: `Image does not exist: ${product.image.src}`,
-          },
-        ];
-  });
+  return products.flatMap((product) =>
+    (product.media?.images ?? []).flatMap((image, index) => {
+      const imagePath = join(publicDirectory, image.src.replace(/^\/+/, ''));
+      return existsSync(imagePath)
+        ? []
+        : [
+            {
+              product: product.id,
+              path: `media.images.${index}.src`,
+              message: `Image does not exist: ${image.src}`,
+            },
+          ];
+    })
+  );
 }

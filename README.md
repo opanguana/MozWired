@@ -76,8 +76,8 @@ the configuration change and deploy it through the normal review process. Set `e
 
 `data/catalog-source.json` is the single source of truth for product cards, navigation links,
 detail pages, variants, availability, media, and pricing. Every record has a stable `id` and
-`slug`; every variant has a stable `sku`. Published and draft records use the same schema in
-`catalog/schema.ts`.
+`slug`; every variant has a stable `sku`; every image has a stable media ID. Published and draft
+records use the same schema in `catalog/schema.ts`.
 
 MZN is the authoritative store currency. Prices use integer minor units, so `1_055_000` represents
 `10,550.00 MZN`. Prices exclude VAT. Do not store formatted price strings or derive local product
@@ -129,8 +129,37 @@ Use `status: "draft"` to keep a record out of customer-facing selectors. Schedul
 Because this site is statically deployed, a scheduled boundary becomes visible on the next build;
 use a scheduled deployment when exact activation time matters.
 
-For product media, place the asset under `public/images/`, then set `image.src` to its `/images/...`
-URL. A `null` image keeps the existing accessible “Image coming soon” media placeholder.
+For product media, place assets under `public/images/`, then add them to the product's structured
+media collection:
+
+```json
+{
+  "media": {
+    "primaryImageId": "galaxy-a06-main",
+    "images": [
+      {
+        "id": "galaxy-a06-main",
+        "role": "main",
+        "src": "/images/products/smartphones/galaxy-a06-main.webp",
+        "alt": "Samsung Galaxy A06 front view",
+        "sortOrder": 0
+      },
+      {
+        "id": "galaxy-a06-back",
+        "role": "gallery",
+        "src": "/images/products/smartphones/galaxy-a06-back.webp",
+        "alt": "Samsung Galaxy A06 rear view",
+        "sortOrder": 1
+      }
+    ]
+  }
+}
+```
+
+Cards and product pages select `primaryImageId`; gallery images remain ordered by `sortOrder`.
+Image IDs and sort orders must be unique within each product, the primary image must exist and use
+the `main` role, all assets are checked during catalogue validation, and every image requires useful
+alternative text. Use `"media": null` to retain the accessible “Image coming soon” placeholder.
 
 ## Git workflow
 
