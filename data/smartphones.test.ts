@@ -23,8 +23,14 @@ describe('smartphone inventory', () => {
       ({ title }) => title === 'iPhone 15 Pro Max'
     );
 
-    expect(galaxyA36?.price).toBe('From 20,300 MZN');
-    expect(iphone15ProMax?.price).toBe('59,500 MZN');
+    expect(galaxyA36?.price).toEqual({
+      amount: { amountMinor: 2_030_000, currency: 'MZN' },
+      label: 'from',
+    });
+    expect(iphone15ProMax?.price).toEqual({
+      amount: { amountMinor: 5_950_000, currency: 'MZN' },
+      label: 'exact',
+    });
   });
 
   it('presents specifications through the established card hierarchy', () => {
@@ -35,13 +41,19 @@ describe('smartphone inventory', () => {
       eyebrow: 'Reliable everyday performance',
       description:
         'A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.',
-      price: '10,550 MZN',
+      price: {
+        amount: { amountMinor: 1_055_000, currency: 'MZN' },
+        label: 'exact',
+      },
     });
     expect(galaxyA06).toMatchObject({
       eyebrow: 'Made for the essentials',
       description:
         'A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.',
-      price: 'From 7,000 MZN',
+      price: {
+        amount: { amountMinor: 700_000, currency: 'MZN' },
+        label: 'from',
+      },
     });
     expect(galaxyA06?.description).not.toContain('•');
   });

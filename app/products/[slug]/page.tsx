@@ -4,13 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { ProductPrice } from '@/components/currency/ProductPrice';
 import { catalogProducts, getCatalogProduct } from '@/data/catalog';
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
 };
-
-const formatMzn = (value: number) => `${new Intl.NumberFormat('en-US').format(value)} MZN`;
 
 export function generateStaticParams() {
   return catalogProducts.map(({ slug }) => ({ slug }));
@@ -64,7 +63,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <h1 className="mt-2 text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-none tracking-[-0.055em]">
             Buy {card.title}
           </h1>
-          <p className="mt-4 text-base font-medium text-white/80">{card.price}</p>
+          <ProductPrice
+            price={card.price}
+            className="mt-4 text-base font-medium text-white/80"
+          />
         </div>
 
         <div className="mt-16 grid gap-8 md:mt-24 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-center lg:gap-12">
@@ -112,22 +114,25 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {variants.length > 0 && (
               <ul className="mt-6 grid gap-3" aria-label={`${card.title} available configurations`}>
-                {variants.map(({ network, storage, ram, priceMzn }) => (
+                {variants.map(({ network, storage, ram, price }) => (
                   <li
-                    key={`${storage}-${ram ?? 'standard'}-${priceMzn}`}
+                    key={`${storage}-${ram ?? 'standard'}-${price.amount.amountMinor}`}
                     className="flex min-h-16 items-center justify-between gap-5 rounded-xl border border-white/30 bg-black/20 px-4 py-3 transition hover:border-store-cyan"
                   >
                     <span className="text-sm font-semibold">
                       {[storage, ram ? `${ram} RAM` : null, network].filter(Boolean).join(' · ')}
                     </span>
-                    <span className="shrink-0 text-xs font-semibold">{formatMzn(priceMzn)}</span>
+                    <ProductPrice
+                      price={price}
+                      className="shrink-0 justify-end text-right text-xs font-semibold"
+                    />
                   </li>
                 ))}
               </ul>
             )}
 
             <div className="mt-8 border-t border-white/15 pt-6">
-              <p className="text-xl font-bold">{card.price}</p>
+              <ProductPrice price={card.price} className="text-xl font-bold" />
               <Link
                 href="/#support"
                 className="focus-ring mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-black transition hover:bg-store-cyan"

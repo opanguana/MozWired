@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
+import { CurrencySelector } from '@/components/currency/CurrencySelector';
 import { siteAnnouncement } from '@/config/announcement';
 import { catalogProducts, type CatalogProduct } from '@/data/catalog';
 import { cn } from '@/lib/utils';
@@ -162,6 +163,7 @@ export function Header() {
         </ul>
 
         <div className="flex items-center justify-self-end gap-1.5">
+          <CurrencySelector />
           <button type="button" className="icon-button" aria-label="Search MozWired">
             <Search aria-hidden="true" size={15} strokeWidth={1.7} />
           </button>

@@ -75,8 +75,23 @@ the configuration change and deploy it through the normal review process. Set `e
 ## Smartphone inventory and product pictures
 
 Smartphone SKUs, pricing, variants, and picture mappings are maintained in
-`data/smartphones.ts`. The catalog groups storage/RAM variants into one horizontal card per model
-and displays all prices in MZN.
+`data/smartphones.ts`. The catalog groups storage/RAM variants into one horizontal card per model.
+
+MZN is the authoritative store currency. Prices use integer minor units, so `1_055_000` represents
+`10,550.00 MZN`. Prices exclude VAT. Do not store formatted price strings or derive local product
+prices from foreign retail prices.
+
+Customers can view verified prices in MZN, USD, ZAR, or EUR. Foreign values are estimates produced
+from the fixed, dated Banco de Moçambique sell rates in `config/currencies.ts`; they never replace
+the stored MZN amount. Update the rates and `ratesUpdatedAt` together. The project uses ordinary
+mathematical rounding and does not apply commercial `.99` endings.
+
+Products without an approved MZN amount deliberately display `Contact for MZN price`. Replace
+`price: null` in `data/products.ts` only after an authoritative local price is approved:
+
+```ts
+price: mznPrice(1_055_000, 'from')
+```
 
 Samsung models currently use a deliberate “Image coming soon” placeholder. To add or replace a
 product picture:
@@ -98,7 +113,7 @@ product picture:
 
 The mapping key must exactly match the inventory model. Removing a mapping safely restores the
 placeholder without breaking the card or build. Product copy and pricing can be updated directly in
-`smartphoneInventory`; keep prices as numeric MZN values without commas.
+`smartphoneInventory`; keep prices as integer MZN minor units through the `mznPrice` helper.
 
 ## Git workflow
 

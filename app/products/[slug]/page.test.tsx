@@ -11,7 +11,7 @@ describe('dynamic product page', () => {
       screen.getByRole('list', { name: 'Galaxy A06 available configurations' })
     ).toBeInTheDocument();
     expect(screen.getByText('64GB · 4GB RAM · 4G')).toBeInTheDocument();
-    expect(screen.getByText('8,850 MZN')).toBeInTheDocument();
+    expect(screen.getByText(/MZN\s*8,850/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: '← Back to the store' })).toHaveAttribute('href', '/');
   });
 

@@ -2,12 +2,13 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 
 import type { ServiceCardData } from './ServiceCard';
 import { CardCarousel } from './CardCarousel';
+import { mznPrice } from '@/types/money';
 
 const cards: ServiceCardData[] = Array.from({ length: 5 }, (_, index) => ({
   eyebrow: `Product ${index + 1}`,
   title: `Device ${index + 1}`,
   description: 'A concise product description.',
-  price: `${index + 1},000 MZN`,
+  price: mznPrice((index + 1) * 100_000),
 }));
 
 describe('CardCarousel', () => {

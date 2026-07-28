@@ -1,4 +1,5 @@
 import type { ServiceCardData } from '@/components/store/ServiceCard';
+import { mznPrice, type ProductPrice } from '@/types/money';
 
 export type SmartphoneSku = {
   brand: 'Samsung' | 'Apple';
@@ -6,7 +7,7 @@ export type SmartphoneSku = {
   network?: '4G' | '5G';
   storage: string;
   ram?: string;
-  priceMzn: number;
+  price: ProductPrice;
 };
 
 export const smartphoneInventory: SmartphoneSku[] = [
@@ -16,7 +17,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '32GB',
     ram: '3GB',
-    priceMzn: 5950,
+    price: mznPrice(595_000),
   },
   {
     brand: 'Samsung',
@@ -24,7 +25,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '128GB',
     ram: '4GB',
-    priceMzn: 10550,
+    price: mznPrice(1_055_000),
   },
   {
     brand: 'Samsung',
@@ -32,7 +33,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '64GB',
     ram: '4GB',
-    priceMzn: 7000,
+    price: mznPrice(700_000),
   },
   {
     brand: 'Samsung',
@@ -40,7 +41,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '128GB',
     ram: '4GB',
-    priceMzn: 8850,
+    price: mznPrice(885_000),
   },
   {
     brand: 'Samsung',
@@ -48,7 +49,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '64GB',
     ram: '4GB',
-    priceMzn: 7600,
+    price: mznPrice(760_000),
   },
   {
     brand: 'Samsung',
@@ -56,7 +57,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '128GB',
     ram: '4GB',
-    priceMzn: 8600,
+    price: mznPrice(860_000),
   },
   {
     brand: 'Samsung',
@@ -64,7 +65,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '128GB',
     ram: '4GB',
-    priceMzn: 10000,
+    price: mznPrice(1_000_000),
   },
   {
     brand: 'Samsung',
@@ -72,7 +73,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '128GB',
     ram: '4GB',
-    priceMzn: 12000,
+    price: mznPrice(1_200_000),
   },
   {
     brand: 'Samsung',
@@ -80,7 +81,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '128GB',
     ram: '6GB',
-    priceMzn: 13700,
+    price: mznPrice(1_370_000),
   },
   {
     brand: 'Samsung',
@@ -88,7 +89,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '4G',
     storage: '256GB',
     ram: '8GB',
-    priceMzn: 14950,
+    price: mznPrice(1_495_000),
   },
   {
     brand: 'Samsung',
@@ -96,7 +97,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '128GB',
     ram: '6GB',
-    priceMzn: 14500,
+    price: mznPrice(1_450_000),
   },
   {
     brand: 'Samsung',
@@ -104,7 +105,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '128GB',
     ram: '6GB',
-    priceMzn: 16400,
+    price: mznPrice(1_640_000),
   },
   {
     brand: 'Samsung',
@@ -112,7 +113,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '256GB',
     ram: '8GB',
-    priceMzn: 18800,
+    price: mznPrice(1_880_000),
   },
   {
     brand: 'Samsung',
@@ -120,7 +121,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '128GB',
     ram: '6GB',
-    priceMzn: 20500,
+    price: mznPrice(2_050_000),
   },
   {
     brand: 'Samsung',
@@ -128,7 +129,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '128GB',
     ram: '8GB',
-    priceMzn: 20300,
+    price: mznPrice(2_030_000),
   },
   {
     brand: 'Samsung',
@@ -136,7 +137,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '256GB',
     ram: '8GB',
-    priceMzn: 22800,
+    price: mznPrice(2_280_000),
   },
   {
     brand: 'Samsung',
@@ -144,7 +145,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '128GB',
     ram: '8GB',
-    priceMzn: 24800,
+    price: mznPrice(2_480_000),
   },
   {
     brand: 'Samsung',
@@ -152,7 +153,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '256GB',
     ram: '8GB',
-    priceMzn: 26300,
+    price: mznPrice(2_630_000),
   },
   {
     brand: 'Samsung',
@@ -160,7 +161,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '128GB',
     ram: '8GB',
-    priceMzn: 25300,
+    price: mznPrice(2_530_000),
   },
   {
     brand: 'Samsung',
@@ -168,7 +169,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '256GB',
     ram: '8GB',
-    priceMzn: 27300,
+    price: mznPrice(2_730_000),
   },
   {
     brand: 'Samsung',
@@ -176,7 +177,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '128GB',
     ram: '6GB',
-    priceMzn: 28300,
+    price: mznPrice(2_830_000),
   },
   {
     brand: 'Samsung',
@@ -184,7 +185,7 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '128GB',
     ram: '8GB',
-    priceMzn: 31000,
+    price: mznPrice(3_100_000),
   },
   {
     brand: 'Samsung',
@@ -192,21 +193,41 @@ export const smartphoneInventory: SmartphoneSku[] = [
     network: '5G',
     storage: '256GB',
     ram: '8GB',
-    priceMzn: 30300,
+    price: mznPrice(3_030_000),
   },
-  { brand: 'Apple', model: 'iPhone XR', storage: '64GB', priceMzn: 12800 },
-  { brand: 'Apple', model: 'iPhone XR', storage: '128GB', priceMzn: 14000 },
-  { brand: 'Apple', model: 'iPhone 11', storage: '64GB', priceMzn: 16000 },
-  { brand: 'Apple', model: 'iPhone 11', storage: '128GB', priceMzn: 17400 },
-  { brand: 'Apple', model: 'iPhone 12', storage: '128GB', priceMzn: 19800 },
-  { brand: 'Apple', model: 'iPhone 12 Pro', storage: '128GB', priceMzn: 25500 },
-  { brand: 'Apple', model: 'iPhone 12 Pro Max', storage: '256GB', priceMzn: 32000 },
-  { brand: 'Apple', model: 'iPhone 13', storage: '128GB', priceMzn: 25800 },
-  { brand: 'Apple', model: 'iPhone 13 Pro', storage: '256GB', priceMzn: 36000 },
-  { brand: 'Apple', model: 'iPhone 13 Pro Max', storage: '256GB', priceMzn: 41000 },
-  { brand: 'Apple', model: 'iPhone 14 Pro', storage: '256GB', priceMzn: 42000 },
-  { brand: 'Apple', model: 'iPhone 14 Pro Max', storage: '256GB', priceMzn: 46000 },
-  { brand: 'Apple', model: 'iPhone 15 Pro Max', storage: '256GB', priceMzn: 59500 },
+  { brand: 'Apple', model: 'iPhone XR', storage: '64GB', price: mznPrice(1_280_000) },
+  { brand: 'Apple', model: 'iPhone XR', storage: '128GB', price: mznPrice(1_400_000) },
+  { brand: 'Apple', model: 'iPhone 11', storage: '64GB', price: mznPrice(1_600_000) },
+  { brand: 'Apple', model: 'iPhone 11', storage: '128GB', price: mznPrice(1_740_000) },
+  { brand: 'Apple', model: 'iPhone 12', storage: '128GB', price: mznPrice(1_980_000) },
+  { brand: 'Apple', model: 'iPhone 12 Pro', storage: '128GB', price: mznPrice(2_550_000) },
+  {
+    brand: 'Apple',
+    model: 'iPhone 12 Pro Max',
+    storage: '256GB',
+    price: mznPrice(3_200_000),
+  },
+  { brand: 'Apple', model: 'iPhone 13', storage: '128GB', price: mznPrice(2_580_000) },
+  { brand: 'Apple', model: 'iPhone 13 Pro', storage: '256GB', price: mznPrice(3_600_000) },
+  {
+    brand: 'Apple',
+    model: 'iPhone 13 Pro Max',
+    storage: '256GB',
+    price: mznPrice(4_100_000),
+  },
+  { brand: 'Apple', model: 'iPhone 14 Pro', storage: '256GB', price: mznPrice(4_200_000) },
+  {
+    brand: 'Apple',
+    model: 'iPhone 14 Pro Max',
+    storage: '256GB',
+    price: mznPrice(4_600_000),
+  },
+  {
+    brand: 'Apple',
+    model: 'iPhone 15 Pro Max',
+    storage: '256GB',
+    price: mznPrice(5_950_000),
+  },
 ];
 
 /**
@@ -226,8 +247,6 @@ export const smartphoneImages: Partial<Record<string, string>> = {
   'iPhone 14 Pro Max': '/images/store/iphone.png',
   'iPhone 15 Pro Max': '/images/store/iphone.png',
 };
-
-const formatMzn = (value: number) => `${new Intl.NumberFormat('en-US').format(value)} MZN`;
 
 const smartphoneEyebrows: Record<string, string> = {
   'Galaxy A04e': 'Simple and practical',
@@ -288,7 +307,7 @@ export function buildSmartphoneCards(brand: SmartphoneSku['brand']): ServiceCard
     });
 
   return [...groupedModels.entries()].map(([model, variants]) => {
-    const prices = variants.map(({ priceMzn }) => priceMzn);
+    const prices = variants.map(({ price }) => price.amount.amountMinor);
     const lowestPrice = Math.min(...prices);
     const highestPrice = Math.max(...prices);
 
@@ -296,8 +315,7 @@ export function buildSmartphoneCards(brand: SmartphoneSku['brand']): ServiceCard
       eyebrow: smartphoneEyebrows[model],
       title: model,
       description: describeVariants(brand, variants),
-      price:
-        lowestPrice === highestPrice ? formatMzn(lowestPrice) : `From ${formatMzn(lowestPrice)}`,
+      price: mznPrice(lowestPrice, lowestPrice === highestPrice ? 'exact' : 'from'),
       image: smartphoneImages[model],
       accent: false,
     };

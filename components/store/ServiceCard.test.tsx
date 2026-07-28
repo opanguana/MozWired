@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react';
 
+import { mznPrice } from '@/types/money';
+
 import { ServiceCard } from './ServiceCard';
 
 describe('ServiceCard', () => {
@@ -10,7 +12,7 @@ describe('ServiceCard', () => {
           eyebrow: 'Made for the essentials',
           title: 'Galaxy A06',
           description: 'A practical smartphone for everyday use.',
-          price: 'From 7,000 MZN',
+          price: mznPrice(700_000, 'from'),
         }}
       />
     );
@@ -28,7 +30,7 @@ describe('ServiceCard', () => {
           eyebrow: 'Spatial computing',
           title: 'Apple Vision Pro',
           description: 'Experience entertainment, work, and connection in an entirely new way.',
-          price: 'From $3,499',
+          price: null,
           dark: true,
         }}
       />
@@ -48,7 +50,7 @@ describe('ServiceCard', () => {
           eyebrow: 'Connected entertainment',
           title: 'Apple TV',
           description: 'Stream entertainment and bring your connected home together.',
-          price: 'From $129',
+          price: null,
           warmDark: true,
         }}
       />

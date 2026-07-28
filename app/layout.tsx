@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
 
+import { CurrencyProvider } from '@/components/currency/CurrencyProvider';
 import { Footer } from '@/components/ui/Footer';
 import { Header } from '@/components/ui/Header';
 
@@ -28,9 +29,11 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         >
           Skip to main content
         </a>
-        <Header />
-        {children}
-        <Footer />
+        <CurrencyProvider>
+          <Header />
+          {children}
+          <Footer />
+        </CurrencyProvider>
       </body>
     </html>
   );

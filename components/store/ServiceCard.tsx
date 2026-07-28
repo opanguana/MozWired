@@ -2,14 +2,16 @@ import { BadgePercent, Smartphone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { ProductPrice } from '@/components/currency/ProductPrice';
 import { cn } from '@/lib/utils';
 import { toProductSlug } from '@/lib/product-slug';
+import type { ProductPrice as ProductPriceValue } from '@/types/money';
 
 export type ServiceCardData = {
   eyebrow: string;
   title: string;
   description: string;
-  price: string;
+  price: ProductPriceValue | null;
   image?: string;
   dark?: boolean;
   warmDark?: boolean;
@@ -67,14 +69,13 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
       >
         {card.description}
       </p>
-      <p
+      <ProductPrice
+        price={card.price}
         className={cn(
           'mt-2 text-[11px]',
           card.warmDark ? 'text-[#8f8b82]' : card.dark ? 'text-white/65' : 'text-black/55'
         )}
-      >
-        {card.price}
-      </p>
+      />
       <div
         className={cn(
           'relative mt-auto h-48 overflow-hidden',
