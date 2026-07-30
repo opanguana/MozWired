@@ -38,7 +38,9 @@ describe('ServiceCard', () => {
 
     expect(screen.getByRole('article')).toHaveClass(
       'border-white/15',
-      'bg-[#151517]',
+      'bg-[#151517]'
+    );
+    expect(screen.getByRole('article')).not.toHaveClass(
       'shadow-[0_18px_50px_rgb(0_0_0/0.35)]'
     );
   });

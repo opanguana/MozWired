@@ -26,7 +26,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
         card.warmDark
           ? 'border border-[#2a2821] bg-[#1b1a15] text-white shadow-[0_18px_50px_rgb(0_0_0/0.3)]'
           : card.dark
-            ? 'border border-white/15 bg-[#151517] text-white shadow-[0_18px_50px_rgb(0_0_0/0.35)]'
+            ? 'border border-white/15 bg-[#151517] text-white'
             : 'bg-[#e9e9ec] text-store-ink',
         card.accent && 'bg-white'
       )}
