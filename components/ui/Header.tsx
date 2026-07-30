@@ -44,8 +44,6 @@ function productLinks(products: CatalogProduct[]): NonNullable<NavItem['children
 const productGroups = {
   computers: catalogProducts.filter(({ category }) => category === 'computers'),
   phones: catalogProducts.filter(({ category }) => category === 'phones'),
-  mobile: catalogProducts.filter(({ category }) => category === 'mobile'),
-  audio: catalogProducts.filter(({ category }) => category === 'audio'),
   accessories: catalogProducts.filter(({ category }) => category === 'accessories'),
 };
 
@@ -63,22 +61,11 @@ const navItems: NavItem[] = [
     children: productLinks(productGroups.phones),
   },
   {
-    label: 'Mobile',
-    href: '/#possibilities',
-    children: productLinks(productGroups.mobile),
-  },
-  {
-    label: 'Audio',
-    href: '/#accessories',
-    children: productLinks(productGroups.audio),
-  },
-  {
     label: 'Accessories',
     href: '/#accessories',
     children: productLinks(productGroups.accessories),
   },
-  { label: 'Deals', href: '/#savings' },
-];
+].filter((item) => !item.children || item.children.length > 0);
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

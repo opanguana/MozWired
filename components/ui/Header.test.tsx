@@ -21,9 +21,9 @@ describe('Header', () => {
       'true'
     );
     expect(screen.getByRole('button', { name: 'Phones' })).toHaveAttribute('aria-haspopup', 'true');
-    expect(screen.getByRole('button', { name: 'Mobile' })).toHaveAttribute('aria-haspopup', 'true');
-    expect(screen.getByRole('button', { name: 'Audio' })).toHaveAttribute('aria-haspopup', 'true');
-    expect(screen.getByRole('link', { name: /MacBook Pro/ })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Mobile' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Audio' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /ThinkPad X1 Carbon Gen 13/ })).toBeInTheDocument();
   });
 
   it('provides desktop navigation options only for curated catalog products', () => {

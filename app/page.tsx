@@ -13,31 +13,18 @@ const storeCollections: {
   highlight: string;
   title: string;
   cards: ServiceCardData[];
-  darkCards?: boolean;
 }[] = [
   {
     id: 'services',
-    highlight: 'Limited-time offers.',
-    title: 'Major must-haves.',
+    highlight: 'Computers.',
+    title: 'Find the configuration that fits.',
     cards: getProductsForSection('services').map((product) => toServiceCard(product)),
   },
   {
     id: 'favorites',
-    highlight: 'Samsung Galaxy.',
+    highlight: 'Smartphones.',
     title: 'Smartphones for every budget.',
     cards: getProductsForSection('favorites').map((product) => toServiceCard(product)),
-  },
-  {
-    id: 'savings',
-    highlight: 'More ways to save.',
-    title: 'Great technology at the right price.',
-    cards: getProductsForSection('savings').map((product) => toServiceCard(product)),
-  },
-  {
-    id: 'benefits',
-    highlight: 'The MozWired Store difference.',
-    title: 'More reasons to shop with us.',
-    cards: getProductsForSection('benefits').map((product) => toServiceCard(product)),
   },
   {
     id: 'accessories',
@@ -51,19 +38,6 @@ const storeCollections: {
     title: 'Technology for work, creativity, and play.',
     cards: getProductsForSection('possibilities').map((product) => toServiceCard(product)),
   },
-  {
-    id: 'more-to-love',
-    highlight: 'Apple iPhone.',
-    title: 'Find the model that fits.',
-    cards: getProductsForSection('more-to-love').map((product) => toServiceCard(product)),
-  },
-  {
-    id: 'experience',
-    highlight: 'The MozWired experience.',
-    title: 'Electronics that work beautifully together.',
-    cards: getProductsForSection('experience').map((product) => toServiceCard(product)),
-    darkCards: true,
-  },
 ];
 
 function CardCollection({
@@ -72,19 +46,13 @@ function CardCollection({
   title,
   cards,
   darkHeading = false,
-  darkCards = false,
 }: {
   id: string;
   highlight: string;
   title: string;
   cards: ServiceCardData[];
   darkHeading?: boolean;
-  darkCards?: boolean;
 }) {
-  const collectionCards = darkCards
-    ? cards.map((card) => ({ ...card, dark: false, warmDark: true, accent: false }))
-    : cards;
-
   return (
     <section id={id} className="scroll-mt-28 py-7 md:py-10" aria-labelledby={`${id}-title`}>
       <h2
@@ -96,21 +64,18 @@ function CardCollection({
         <span className={`marker-highlight ${darkHeading ? 'text-black' : ''}`}>{highlight}</span>{' '}
         <span className={darkHeading ? 'text-white/55' : 'text-black/55'}>{title}</span>
       </h2>
-      <CardCarousel
-        cards={collectionCards}
-        label={`${highlight} ${title}`}
-        fullBleed={collectionCards.length > 4}
-      />
+      <CardCarousel cards={cards} label={`${highlight} ${title}`} fullBleed={cards.length > 4} />
     </section>
   );
 }
 
 export default function HomePage() {
-  const [featuredCollection, ...remainingCollections] = storeCollections;
-  const backgroundCollections = remainingCollections.slice(0, 2);
-  const standardCollections = remainingCollections.slice(2);
-  const middleCollections = standardCollections.slice(0, -2);
-  const footerBackgroundCollections = standardCollections.slice(-2);
+  const activeCollections = storeCollections.filter(({ cards }) => cards.length > 0);
+  const featuredCollection = activeCollections.find(({ id }) => id === 'services');
+  const backgroundCollections = activeCollections.filter(({ id }) => id === 'favorites');
+  const middleCollections = activeCollections.filter(({ id }) =>
+    ['accessories', 'possibilities'].includes(id)
+  );
 
   return (
     <main id="main-content">
@@ -155,7 +120,7 @@ export default function HomePage() {
           </div>
 
           {storeConfig.showCategoryRail && <CategoryRail />}
-          <CardCollection {...featuredCollection} darkHeading />
+          {featuredCollection && <CardCollection {...featuredCollection} darkHeading />}
         </div>
       </section>
 
@@ -177,23 +142,6 @@ export default function HomePage() {
         {middleCollections.map((collection) => (
           <CardCollection key={collection.id} {...collection} />
         ))}
-
-        <div
-          className="relative isolate overflow-hidden bg-[#111315]"
-          data-section-background="footer"
-        >
-          <Image
-            src="/images/store/store-section-2.avif"
-            alt=""
-            fill
-            sizes="100vw"
-            className="-z-10 object-cover"
-            aria-hidden="true"
-          />
-          {footerBackgroundCollections.map((collection) => (
-            <CardCollection key={collection.id} {...collection} darkHeading />
-          ))}
-        </div>
       </div>
     </main>
   );

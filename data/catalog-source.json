@@ -2,7 +2,7 @@
   {
     "id": "apple-macbook-air",
     "slug": "macbook-air",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "MacBook Air",
     "content": {
@@ -30,23 +30,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "services",
-        "order": 0
-      },
-      {
-        "section": "possibilities",
-        "order": 1
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 0
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -54,7 +45,7 @@
   {
     "id": "apple-macbook-pro",
     "slug": "macbook-pro",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "MacBook Pro",
     "content": {
@@ -82,19 +73,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "services",
-        "order": 1
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 1
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -102,7 +88,7 @@
   {
     "id": "apple-imac",
     "slug": "imac",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iMac",
     "content": {
@@ -130,19 +116,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "benefits",
-        "order": 0
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 2
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -150,7 +131,7 @@
   {
     "id": "apple-mac-mini",
     "slug": "mac-mini",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "Mac mini",
     "content": {
@@ -178,19 +159,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "benefits",
-        "order": 1
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 3
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -198,7 +174,7 @@
   {
     "id": "apple-ipad-pro",
     "slug": "ipad-pro",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPad Pro",
     "content": {
@@ -226,19 +202,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "possibilities",
-        "order": 0
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 15
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -246,7 +217,7 @@
   {
     "id": "apple-ipad-air",
     "slug": "ipad-air",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPad Air",
     "content": {
@@ -274,19 +245,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "services",
-        "order": 2
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 16
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -294,7 +260,7 @@
   {
     "id": "apple-ipad-mini",
     "slug": "ipad-mini",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPad mini",
     "content": {
@@ -322,16 +288,11 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "savings",
-        "order": 2
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -342,7 +303,7 @@
   {
     "id": "apple-iphone-pro",
     "slug": "iphone-pro",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone Pro",
     "content": {
@@ -370,19 +331,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "possibilities",
-        "order": 2
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 11
+      "featured": false,
+      "order": null
     },
     "cardTone": "dark",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -390,7 +346,7 @@
   {
     "id": "apple-iphone",
     "slug": "iphone",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone",
     "content": {
@@ -418,19 +374,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "services",
-        "order": 3
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 12
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -438,7 +389,7 @@
   {
     "id": "apple-iphone-essential",
     "slug": "iphone-essential",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone Essential",
     "content": {
@@ -466,16 +417,11 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "savings",
-        "order": 1
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -486,7 +432,7 @@
   {
     "id": "apple-watch",
     "slug": "apple-watch",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "Apple Watch",
     "content": {
@@ -514,14 +460,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
     "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 17
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -529,7 +475,7 @@
   {
     "id": "apple-watch-ultra",
     "slug": "apple-watch-ultra",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "Apple Watch Ultra",
     "content": {
@@ -557,7 +503,7 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
@@ -572,7 +518,7 @@
   {
     "id": "apple-vision-pro",
     "slug": "apple-vision-pro",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "Apple Vision Pro",
     "content": {
@@ -600,19 +546,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "experience",
-        "order": 0
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 18
+      "featured": false,
+      "order": null
     },
     "cardTone": "dark",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -620,7 +561,7 @@
   {
     "id": "apple-airpods-pro",
     "slug": "airpods-pro",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "AirPods Pro",
     "content": {
@@ -648,23 +589,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "benefits",
-        "order": 3
-      },
-      {
-        "section": "accessories",
-        "order": 1
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 19
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -672,7 +604,7 @@
   {
     "id": "apple-airpods",
     "slug": "airpods",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "AirPods",
     "content": {
@@ -700,19 +632,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "savings",
-        "order": 3
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 20
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -720,7 +647,7 @@
   {
     "id": "apple-airtag",
     "slug": "airtag",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "AirTag",
     "content": {
@@ -748,19 +675,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "accessories",
-        "order": 2
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 23
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -768,7 +690,7 @@
   {
     "id": "apple-tv-4k",
     "slug": "apple-tv-4k",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "Apple TV 4K",
     "content": {
@@ -796,23 +718,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "possibilities",
-        "order": 3
-      },
-      {
-        "section": "experience",
-        "order": 1
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 21
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -820,7 +733,7 @@
   {
     "id": "apple-homepod",
     "slug": "homepod",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "HomePod",
     "content": {
@@ -848,23 +761,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "accessories",
-        "order": 3
-      },
-      {
-        "section": "experience",
-        "order": 2
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 22
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -872,7 +776,7 @@
   {
     "id": "accessories-cases-and-bands",
     "slug": "cases-and-bands",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "Cases and bands",
     "content": {
@@ -900,19 +804,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "accessories",
-        "order": 0
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 24
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -920,7 +819,7 @@
   {
     "id": "apple-gift-card",
     "slug": "gift-card",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "Gift Card",
     "content": {
@@ -948,27 +847,14 @@
         }
       ]
     },
-    "availability": "price_on_request",
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [],
-    "placements": [
-      {
-        "section": "savings",
-        "order": 0
-      },
-      {
-        "section": "benefits",
-        "order": 2
-      },
-      {
-        "section": "experience",
-        "order": 3
-      }
-    ],
+    "placements": [],
     "navigation": {
-      "featured": true,
-      "order": 25
+      "featured": false,
+      "order": null
     },
     "cardTone": "default",
     "updatedAt": "2026-07-28T00:00:00+02:00"
@@ -976,7 +862,7 @@
   {
     "id": "samsung-galaxy-a04e",
     "slug": "galaxy-a04e",
-    "status": "published",
+    "status": "archived",
     "brand": "Samsung",
     "title": "Galaxy A04e",
     "content": {
@@ -993,7 +879,7 @@
     },
     "category": "phones",
     "media": null,
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -1008,7 +894,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 595000,
@@ -1017,15 +903,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "favorites",
-        "order": 0
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -1036,7 +918,7 @@
   {
     "id": "samsung-galaxy-a05s",
     "slug": "galaxy-a05s",
-    "status": "published",
+    "status": "archived",
     "brand": "Samsung",
     "title": "Galaxy A05s",
     "content": {
@@ -1053,7 +935,7 @@
     },
     "category": "phones",
     "media": null,
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -1068,7 +950,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 1055000,
@@ -1077,15 +959,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "favorites",
-        "order": 1
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -1141,7 +1019,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A06-128-4-4G",
@@ -1167,7 +1046,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -1231,7 +1111,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A07-128-4-4G",
@@ -1257,7 +1138,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -1321,7 +1203,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -1385,7 +1268,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A17-128-6-4G",
@@ -1411,7 +1295,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A17-256-8-4G",
@@ -1437,7 +1322,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -1456,7 +1342,7 @@
   {
     "id": "samsung-galaxy-a25",
     "slug": "galaxy-a25",
-    "status": "published",
+    "status": "archived",
     "brand": "Samsung",
     "title": "Galaxy A25",
     "content": {
@@ -1473,7 +1359,7 @@
     },
     "category": "phones",
     "media": null,
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -1488,7 +1374,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 1450000,
@@ -1497,15 +1383,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "favorites",
-        "order": 6
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -1561,7 +1443,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A26-256-8-5G",
@@ -1587,7 +1470,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -1638,7 +1522,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 2050000,
@@ -1647,7 +1531,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       },
       {
         "sku": "SAM-A36-128-8-5G",
@@ -1673,7 +1558,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A36-256-8-5G",
@@ -1699,7 +1585,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -1763,7 +1650,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A37-256-8-5G",
@@ -1789,7 +1677,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -1853,7 +1742,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A56-256-8-5G",
@@ -1879,7 +1769,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -1943,7 +1834,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "SAM-A57-128-8-5G",
@@ -1956,7 +1848,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 3100000,
@@ -1965,7 +1857,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       },
       {
         "sku": "SAM-A57-256-8-5G",
@@ -1991,7 +1884,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -2010,7 +1904,7 @@
   {
     "id": "apple-iphone-xr",
     "slug": "iphone-xr",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone XR",
     "content": {
@@ -2038,7 +1932,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2053,7 +1947,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 1280000,
@@ -2062,7 +1956,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       },
       {
         "sku": "APL-IPXR-128",
@@ -2075,7 +1970,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 1400000,
@@ -2084,15 +1979,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 0
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2103,7 +1994,7 @@
   {
     "id": "apple-iphone-11",
     "slug": "iphone-11",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 11",
     "content": {
@@ -2131,7 +2022,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2146,7 +2037,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 1600000,
@@ -2155,7 +2046,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       },
       {
         "sku": "APL-IP11-128",
@@ -2168,7 +2060,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 1740000,
@@ -2177,15 +2069,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 1
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2196,7 +2084,7 @@
   {
     "id": "apple-iphone-12",
     "slug": "iphone-12",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 12",
     "content": {
@@ -2224,7 +2112,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2239,7 +2127,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 1980000,
@@ -2248,15 +2136,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 2
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2267,7 +2151,7 @@
   {
     "id": "apple-iphone-12-pro",
     "slug": "iphone-12-pro",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 12 Pro",
     "content": {
@@ -2295,7 +2179,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2310,7 +2194,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 2550000,
@@ -2319,15 +2203,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 3
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2338,7 +2218,7 @@
   {
     "id": "apple-iphone-12-pro-max",
     "slug": "iphone-12-pro-max",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 12 Pro Max",
     "content": {
@@ -2366,7 +2246,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2381,7 +2261,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 3200000,
@@ -2390,15 +2270,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 4
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2409,7 +2285,7 @@
   {
     "id": "apple-iphone-13",
     "slug": "iphone-13",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 13",
     "content": {
@@ -2437,7 +2313,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2452,7 +2328,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 2580000,
@@ -2461,15 +2337,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 5
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2480,7 +2352,7 @@
   {
     "id": "apple-iphone-13-pro",
     "slug": "iphone-13-pro",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 13 Pro",
     "content": {
@@ -2508,7 +2380,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2523,7 +2395,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 3600000,
@@ -2532,15 +2404,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 6
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2551,7 +2419,7 @@
   {
     "id": "apple-iphone-13-pro-max",
     "slug": "iphone-13-pro-max",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 13 Pro Max",
     "content": {
@@ -2579,7 +2447,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2594,7 +2462,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 4100000,
@@ -2603,15 +2471,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 7
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2622,7 +2486,7 @@
   {
     "id": "apple-iphone-14-pro",
     "slug": "iphone-14-pro",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 14 Pro",
     "content": {
@@ -2650,7 +2514,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2665,7 +2529,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 4200000,
@@ -2674,15 +2538,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 8
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2693,7 +2553,7 @@
   {
     "id": "apple-iphone-14-pro-max",
     "slug": "iphone-14-pro-max",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 14 Pro Max",
     "content": {
@@ -2721,7 +2581,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2736,7 +2596,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 4600000,
@@ -2745,15 +2605,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 9
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2764,7 +2620,7 @@
   {
     "id": "apple-iphone-15-pro-max",
     "slug": "iphone-15-pro-max",
-    "status": "published",
+    "status": "archived",
     "brand": "Apple",
     "title": "iPhone 15 Pro Max",
     "content": {
@@ -2792,7 +2648,7 @@
         }
       ]
     },
-    "availability": null,
+    "availability": "discontinued",
     "pricing": null,
     "scheduledPrices": [],
     "variants": [
@@ -2807,7 +2663,7 @@
         "merchandising": {
           "isPromotion": false
         },
-        "availability": null,
+        "availability": "discontinued",
         "pricing": {
           "currency": "MZN",
           "amountMinor": 5950000,
@@ -2816,15 +2672,11 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "archived"
       }
     ],
-    "placements": [
-      {
-        "section": "more-to-love",
-        "order": 10
-      }
-    ],
+    "placements": [],
     "navigation": {
       "featured": false,
       "order": null
@@ -2880,7 +2732,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "RED-A5-128-4",
@@ -2906,7 +2759,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -2970,7 +2824,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3034,7 +2889,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3098,7 +2954,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3162,7 +3019,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "RED-15C-256-8",
@@ -3188,7 +3046,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3252,7 +3111,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "RED-15-256-8",
@@ -3278,7 +3138,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3342,7 +3203,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3406,7 +3268,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3470,7 +3333,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3534,7 +3398,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3598,7 +3463,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3662,7 +3528,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "RED-N14-256-8",
@@ -3688,7 +3555,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3752,7 +3620,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "RED-N14S-256-8",
@@ -3778,7 +3647,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3842,7 +3712,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3910,7 +3781,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -3978,7 +3850,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4046,7 +3919,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4114,7 +3988,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4182,7 +4057,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4250,7 +4126,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4318,7 +4195,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4386,7 +4264,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4454,7 +4333,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4522,7 +4402,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4590,7 +4471,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4658,7 +4540,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4726,7 +4609,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4794,7 +4678,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4862,7 +4747,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-HP-HP-15-c49af8",
@@ -4892,7 +4778,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -4960,7 +4847,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5028,7 +4916,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5096,7 +4985,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5164,7 +5054,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5232,7 +5123,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5300,7 +5192,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5368,7 +5261,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5436,7 +5330,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5504,7 +5399,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5572,7 +5468,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5640,7 +5537,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5708,7 +5606,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5776,7 +5675,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5844,7 +5744,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5912,7 +5813,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -5980,7 +5882,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6048,7 +5951,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6116,7 +6020,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6184,7 +6089,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-DEL-VOSTRO-3520-95e1a4",
@@ -6214,7 +6120,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6282,7 +6189,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6350,7 +6258,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6418,7 +6327,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6486,7 +6396,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6554,7 +6465,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-DEL-INSPIRON-14-7440-PLUS-ea7287",
@@ -6584,7 +6496,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6652,7 +6565,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6720,7 +6634,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6788,7 +6703,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6856,7 +6772,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6924,7 +6841,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -6992,7 +6910,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7060,7 +6979,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7128,7 +7048,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-HP-290-G4-MT-9da948",
@@ -7158,7 +7079,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-HP-290-G4-MT-646205",
@@ -7188,7 +7110,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7256,7 +7179,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-HP-290-G9-PRO-TOWER-497822",
@@ -7286,7 +7210,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-HP-290-G9-PRO-TOWER-2df18a",
@@ -7316,7 +7241,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-HP-290-G9-PRO-TOWER-42f0b2",
@@ -7346,7 +7272,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7414,7 +7341,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7482,7 +7410,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-HP-PRODESK-400-G9-SFF-ca3835",
@@ -7512,7 +7441,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       },
       {
         "sku": "TMP-HP-PRODESK-400-G9-SFF-65aeaa",
@@ -7542,7 +7472,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7610,7 +7541,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7678,7 +7610,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7746,7 +7679,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7814,7 +7748,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7882,7 +7817,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -7942,7 +7878,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -8002,7 +7939,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -8062,7 +8000,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [
@@ -8122,7 +8061,8 @@
           "effectiveFrom": null,
           "effectiveUntil": null
         },
-        "scheduledPrices": []
+        "scheduledPrices": [],
+        "status": "active"
       }
     ],
     "placements": [

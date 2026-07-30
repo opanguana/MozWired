@@ -1,5 +1,6 @@
 import catalogSource from '@/data/catalog-source.json';
 
+import { getCatalog } from './load';
 import { validateCatalogMedia } from './media-validation';
 import {
   getLocalizedProductContent,
@@ -22,6 +23,22 @@ describe('validated product catalogue', () => {
     expect(result.issues).toEqual([]);
     expect(result.products).toHaveLength(116);
     expect(result.products.flatMap(({ variants }) => variants)).toHaveLength(124);
+  });
+
+  it('excludes archived products and variants from the public catalogue', () => {
+    const active = getCatalog();
+    const historical = getCatalog({ includeArchived: true });
+
+    expect(active).toHaveLength(82);
+    expect(active.flatMap(({ variants }) => variants)).toHaveLength(106);
+    expect(historical).toHaveLength(116);
+    expect(historical.flatMap(({ variants }) => variants)).toHaveLength(124);
+    expect(active.some(({ slug }) => slug === 'macbook-air')).toBe(false);
+    expect(
+      active
+        .find(({ slug }) => slug === 'galaxy-a36')
+        ?.variants.some(({ sku }) => sku === 'SAM-A36-128-6-5G')
+    ).toBe(false);
   });
 
   it('rejects duplicate stable identifiers and SKUs', () => {
@@ -73,7 +90,8 @@ describe('validated product catalogue', () => {
   });
 
   it('normalizes optional commerce metadata without changing older records', () => {
-    expect(baseProduct.navigation).toEqual({ featured: true, order: 0 });
+    expect(baseProduct.status).toBe('archived');
+    expect(baseProduct.navigation).toEqual({ featured: false, order: null });
     expect(baseProduct.variants[0]?.warranty ?? null).toBeNull();
     expect(baseProduct.variants[0]?.condition ?? null).toBeNull();
   });

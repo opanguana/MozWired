@@ -149,6 +149,7 @@ function smartphoneVariant([brand, model, storage, ram, network, amount, warrant
   };
   const redmiSku = `RED-${redmiCodes[model]}-${storage.replace('GB', '')}-${ram.replace('GB', '')}${network ? `-${network}` : ''}`;
   return {
+    status: 'active',
     sku: existingSku ?? redmiSku,
     storage,
     ram,
@@ -264,6 +265,7 @@ for (const [, rows] of computerGroups) {
     first.category === 'accessory' ? 'Targus' : computerBrand(first.sectionBrand, first.model);
   const category = first.category === 'accessory' ? 'accessories' : 'computers';
   const variants = rows.map(({ model, specification, amount }) => ({
+    status: 'active',
     sku: internalSku(brand, model, specification),
     storage: specification.match(/(\d+(?:GB|TB)) SSD/i)?.[1] ?? null,
     ram: specification.match(/(\d+GB) RAM/i)?.[1] ?? null,
@@ -302,10 +304,6 @@ for (const [, rows] of computerGroups) {
 }
 
 const featuredIds = [
-  'apple-macbook-air',
-  'apple-macbook-pro',
-  'apple-imac',
-  'apple-mac-mini',
   'lenovo-thinkpad-x1-carbon-gen-13',
   'hp-zbook-firefly-14-g11',
   'dell-alienware-16x-aurora-ac16251',
@@ -317,35 +315,54 @@ const featuredIds = [
   'apple-iphone',
   'redmi-a5',
   'redmi-note-14-pro',
-  'apple-ipad-pro',
-  'apple-ipad-air',
-  'apple-watch',
-  'apple-vision-pro',
-  'apple-airpods-pro',
-  'apple-airpods',
-  'apple-tv-4k',
-  'apple-homepod',
-  'apple-airtag',
-  'accessories-cases-and-bands',
-  'apple-gift-card',
   'targus-tbb565gl-74',
 ];
 const featuredOrder = new Map(featuredIds.map((id, index) => [id, index]));
+const incomingSamsungSkus = new Set(incomingSamsung.map((row) => smartphoneVariant(row).sku));
+
 for (const product of catalog) {
+  const archived = product.updatedAt !== updatedAt;
+
+  if (archived) {
+    product.status = 'archived';
+    product.availability = 'discontinued';
+    product.placements = [];
+  }
+
+  product.variants = product.variants.map((variant) => {
+    const variantArchived =
+      archived || (product.brand === 'Samsung' && !incomingSamsungSkus.has(variant.sku));
+
+    return {
+      ...variant,
+      status: variantArchived ? 'archived' : 'active',
+      availability: variantArchived ? 'discontinued' : variant.availability,
+    };
+  });
+
   product.navigation = {
-    featured: featuredOrder.has(product.id),
-    order: featuredOrder.get(product.id) ?? null,
+    featured: !archived && featuredOrder.has(product.id),
+    order: !archived ? (featuredOrder.get(product.id) ?? null) : null,
   };
 }
 
 const variantCount = catalog.flatMap(({ variants }) => variants).length;
+const activeProducts = catalog.filter(({ status }) => status === 'published');
+const activeVariantCount = activeProducts.flatMap(({ variants }) =>
+  variants.filter(({ status }) => status === 'active')
+).length;
 if (catalog.length !== 116 || variantCount !== 124) {
   throw new Error(
     `Unexpected candidate totals: ${catalog.length} products and ${variantCount} variants.`
   );
 }
+if (activeProducts.length !== 82 || activeVariantCount !== 106) {
+  throw new Error(
+    `Unexpected active totals: ${activeProducts.length} products and ${activeVariantCount} variants.`
+  );
+}
 
 await writeFile(outputPath, `${JSON.stringify(catalog, null, 2)}\n`);
 console.log(
-  `Candidate written: ${catalog.length} products, ${variantCount} variants, ${computerRows.length + smartphoneRows.length} incoming rows, 1 incomplete row quarantined.`
+  `Candidate written: ${activeProducts.length} active products, ${activeVariantCount} active variants, ${catalog.length - activeProducts.length} archived products, ${computerRows.length + smartphoneRows.length} incoming rows, 1 incomplete row quarantined.`
 );

@@ -17,7 +17,8 @@ describe('dynamic product page', () => {
 
   it('prebuilds a route for every catalog product', () => {
     expect(generateStaticParams()).toEqual(
-      expect.arrayContaining([{ slug: 'macbook-air' }, { slug: 'iphone-15-pro-max' }])
+      expect.arrayContaining([{ slug: 'galaxy-a06' }, { slug: 'thinkpad-x1-carbon-gen-13' }])
     );
+    expect(generateStaticParams()).not.toContainEqual({ slug: 'macbook-air' });
   });
 });

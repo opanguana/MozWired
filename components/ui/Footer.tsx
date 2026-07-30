@@ -4,7 +4,7 @@ import Link from 'next/link';
 const footerGroups = [
   {
     title: 'Shop',
-    links: ['Mac', 'iPad', 'iPhone', 'Apple Watch', 'Audio', 'Accessories'],
+    links: ['Computers', 'Smartphones', 'Desktops & All-in-Ones', 'Accessories'],
   },
   {
     title: 'Account',
