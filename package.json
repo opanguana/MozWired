@@ -12,6 +12,8 @@
     "catalog:validate": "tsx scripts/catalog/validate.ts",
     "catalog:health": "npm run catalog:validate",
     "catalog:import": "tsx scripts/catalog/import-json.ts",
+    "rates:check": "tsx scripts/rates/check.ts",
+    "rates:update": "tsx scripts/rates/update.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

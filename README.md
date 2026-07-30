@@ -84,9 +84,32 @@ MZN is the authoritative store currency. Prices use integer minor units, so `1_0
 prices from foreign retail prices.
 
 Customers can view verified prices in MZN, USD, ZAR, or EUR. Foreign values are estimates produced
-from the fixed, dated Banco de Moçambique sell rates in `config/currencies.ts`; they never replace
-the stored MZN amount. Update the rates and `ratesUpdatedAt` together. The project uses ordinary
-mathematical rounding and does not apply commercial `.99` endings.
+from the fixed, dated Banco de Moçambique sell rates in `data/exchange-rates.json`; they never
+replace the stored MZN amount. The project uses ordinary mathematical rounding and does not apply
+commercial `.99` endings.
+
+Check the reviewed rate history with:
+
+```bash
+npm run rates:check
+```
+
+Prepare a dry-run update using decimal MZN required to buy one major foreign unit:
+
+```bash
+npm run rates:update -- \
+  --effective-at="2026-07-30T15:30:00+02:00" \
+  --reviewed-at="2026-07-30T16:00:00+02:00" \
+  --source="Banco de Moçambique" \
+  --source-url="https://www.bancomoc.mz/en/areas-of-expertise/markets/foreign-exchange-market/" \
+  --usd="64.55" --zar="3.94" --eur="73.59"
+```
+
+Review the printed changes, then repeat with `--apply`. A movement above 15% is rejected unless the
+reviewer also supplies `--allow-large-change`. Applying an update appends a complete record
+atomically so previous rates remain auditable. Rates older than 7 days produce an operational
+warning; rates older than 30 days fail the health check and converted-currency suggestions stop,
+while the authoritative MZN storefront remains available.
 
 Currency selection follows the store localization priority used by modern international
 storefronts:

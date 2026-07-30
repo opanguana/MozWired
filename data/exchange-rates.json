@@ -1,0 +1,16 @@
+{
+  "baseCurrency": "MZN",
+  "records": [
+    {
+      "source": "Banco de Moçambique",
+      "sourceUrl": "https://www.bancomoc.mz/en/areas-of-expertise/markets/foreign-exchange-market/",
+      "effectiveAt": "2026-07-08T15:30:00+02:00",
+      "reviewedAt": "2026-07-08T15:30:00+02:00",
+      "mznMinorPerForeignMajor": {
+        "USD": 6455,
+        "ZAR": 394,
+        "EUR": 7359
+      }
+    }
+  ]
+}
