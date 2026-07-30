@@ -181,6 +181,23 @@ requires `--allow-removals`. Review and commit the JSON diff; CI validates the c
 lint, tests, and build. A failed deployment leaves the previously deployed Git revision intact.
 Rollback is a normal `git revert <catalog-commit>`.
 
+The reviewed July 2026 inventory can be rebuilt reproducibly from the current catalogue and its
+computer-inventory Markdown source:
+
+```bash
+node scripts/catalog/build-july-candidate.mjs \
+  data/catalog-source.json \
+  /path/to/july-2026-computer-inventory.md \
+  /tmp/moz-wired-july-2026-candidate.json
+npm run catalog:import -- /tmp/moz-wired-july-2026-candidate.json
+```
+
+The builder contains the reviewed smartphone rows, updates matching stable Samsung SKUs, upserts
+new products idempotently, and rejects unexpected source totals. The incomplete trailing Redmi row
+is deliberately quarantined. Repeat the import with `--apply` only after reviewing the dry run and
+candidate diff. Generated `TMP-` computer SKUs are internal identifiers pending authoritative
+supplier SKUs.
+
 Use `status: "draft"` to keep a record out of customer-facing selectors. Scheduled prices belong in
 `scheduledPrices` with explicit timezone-bearing `effectiveFrom` and `effectiveUntil` values.
 Because this site is statically deployed, a scheduled boundary becomes visible on the next build;

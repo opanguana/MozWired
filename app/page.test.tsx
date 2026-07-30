@@ -25,7 +25,9 @@ describe('MozWired Store homepage', () => {
 
     const storeHero = document.querySelector('#store');
 
-    expect(storeHero).toContainElement(screen.getByText('MacBook Pro'));
+    expect(storeHero).toContainElement(
+      screen.getAllByText('MacBook Pro').find((element) => storeHero?.contains(element)) ?? null
+    );
     expect(storeHero).not.toContainElement(screen.getAllByText('Galaxy A57')[0]);
   });
 

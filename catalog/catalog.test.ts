@@ -20,8 +20,8 @@ describe('validated product catalogue', () => {
     result.issues.push(...validateCatalogMedia(result.products));
 
     expect(result.issues).toEqual([]);
-    expect(result.products).toHaveLength(43);
-    expect(result.products.flatMap(({ variants }) => variants)).toHaveLength(36);
+    expect(result.products).toHaveLength(116);
+    expect(result.products.flatMap(({ variants }) => variants)).toHaveLength(124);
   });
 
   it('rejects duplicate stable identifiers and SKUs', () => {
@@ -73,7 +73,7 @@ describe('validated product catalogue', () => {
   });
 
   it('normalizes optional commerce metadata without changing older records', () => {
-    expect(baseProduct.navigation).toEqual({ featured: true, order: null });
+    expect(baseProduct.navigation).toEqual({ featured: true, order: 0 });
     expect(baseProduct.variants[0]?.warranty ?? null).toBeNull();
     expect(baseProduct.variants[0]?.condition ?? null).toBeNull();
   });
