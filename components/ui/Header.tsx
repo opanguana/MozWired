@@ -26,12 +26,19 @@ type NavItem = {
 };
 
 function productLinks(products: CatalogProduct[]): NonNullable<NavItem['children']> {
-  return products.map(({ card, slug }) => ({
-    eyebrow: card.eyebrow,
-    title: card.title,
-    description: card.description,
-    href: `/products/${slug}`,
-  }));
+  return products
+    .filter(({ navigation }) => navigation.featured)
+    .sort(
+      (left, right) =>
+        (left.navigation.order ?? Number.MAX_SAFE_INTEGER) -
+        (right.navigation.order ?? Number.MAX_SAFE_INTEGER)
+    )
+    .map(({ card, slug }) => ({
+      eyebrow: card.eyebrow,
+      title: card.title,
+      description: card.description,
+      href: `/products/${slug}`,
+    }));
 }
 
 const productGroups = {

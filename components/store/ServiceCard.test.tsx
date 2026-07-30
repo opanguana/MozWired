@@ -23,6 +23,24 @@ describe('ServiceCard', () => {
     );
   });
 
+  it('discloses refurbished condition and promotions', () => {
+    render(
+      <ServiceCard
+        card={{
+          eyebrow: 'Refurbished value',
+          title: 'Redmi Note 7 Pro',
+          description: 'A refurbished smartphone with 128GB of storage and 6GB of RAM.',
+          price: mznPrice(620_000),
+          condition: 'refurbished',
+          promotion: true,
+        }}
+      />
+    );
+
+    expect(screen.getByText('Refurbished')).toBeInTheDocument();
+    expect(screen.getByText('Promotion')).toBeInTheDocument();
+  });
+
   it('separates dark cards from dark section backgrounds', () => {
     render(
       <ServiceCard
@@ -36,13 +54,8 @@ describe('ServiceCard', () => {
       />
     );
 
-    expect(screen.getByRole('article')).toHaveClass(
-      'border-white/15',
-      'bg-[#151517]'
-    );
-    expect(screen.getByRole('article')).not.toHaveClass(
-      'shadow-[0_18px_50px_rgb(0_0_0/0.35)]'
-    );
+    expect(screen.getByRole('article')).toHaveClass('border-white/15', 'bg-[#151517]');
+    expect(screen.getByRole('article')).not.toHaveClass('shadow-[0_18px_50px_rgb(0_0_0/0.35)]');
   });
 
   it('applies the warm charcoal treatment without changing card structure', () => {

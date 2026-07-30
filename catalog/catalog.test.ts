@@ -72,6 +72,12 @@ describe('validated product catalogue', () => {
     );
   });
 
+  it('normalizes optional commerce metadata without changing older records', () => {
+    expect(baseProduct.navigation).toEqual({ featured: true, order: null });
+    expect(baseProduct.variants[0]?.warranty ?? null).toBeNull();
+    expect(baseProduct.variants[0]?.condition ?? null).toBeNull();
+  });
+
   it('rejects invalid primary references and duplicate media identifiers', () => {
     const product = clone(baseProduct);
     if (!product.media) throw new Error('Fixture must contain media.');

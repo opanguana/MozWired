@@ -13,6 +13,8 @@ export type ServiceCardData = {
   description: string;
   price: ProductPriceValue | null;
   image?: string;
+  condition?: 'new' | 'refurbished' | null;
+  promotion?: boolean;
   dark?: boolean;
   warmDark?: boolean;
   accent?: boolean;
@@ -48,11 +50,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
         <BadgePercent
           aria-hidden="true"
           className={
-            card.warmDark
-              ? 'text-store-orange'
-              : card.dark
-                ? 'text-store-cyan'
-                : 'text-store-teal'
+            card.warmDark ? 'text-store-orange' : card.dark ? 'text-store-cyan' : 'text-store-teal'
           }
           size={18}
           strokeWidth={2.2}
@@ -61,6 +59,20 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
       <h3 className="max-w-[15rem] text-[1.35rem] font-bold leading-[1.05] tracking-[-0.03em]">
         {card.title}
       </h3>
+      {(card.condition || card.promotion) && (
+        <div className="mt-2 flex flex-wrap gap-1.5" aria-label="Product details">
+          {card.condition && (
+            <span className="rounded-full border border-current/15 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide">
+              {card.condition === 'refurbished' ? 'Refurbished' : 'New'}
+            </span>
+          )}
+          {card.promotion && (
+            <span className="rounded-full bg-store-orange px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white">
+              Promotion
+            </span>
+          )}
+        </div>
+      )}
       <p
         className={cn(
           'mt-2 text-xs leading-relaxed',

@@ -91,20 +91,45 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {variants.length > 0 && (
               <ul className="mt-6 grid gap-3" aria-label={`${card.title} available configurations`}>
-                {variants.map(({ sku, network, storage, ram, price }) => (
-                  <li
-                    key={sku}
-                    className="flex min-h-16 items-center justify-between gap-5 rounded-xl border border-white/30 bg-black/20 px-4 py-3 transition hover:border-store-cyan"
-                  >
-                    <span className="text-sm font-semibold">
-                      {[storage, ram ? `${ram} RAM` : null, network].filter(Boolean).join(' · ')}
-                    </span>
-                    <ProductPrice
-                      price={price}
-                      className="shrink-0 text-right text-xs font-semibold"
-                    />
-                  </li>
-                ))}
+                {variants.map(
+                  ({
+                    sku,
+                    network,
+                    storage,
+                    ram,
+                    price,
+                    warranty,
+                    condition,
+                    specifications,
+                    promotion,
+                  }) => (
+                    <li
+                      key={sku}
+                      className="grid min-h-16 gap-3 rounded-xl border border-white/30 bg-black/20 px-4 py-3 transition hover:border-store-cyan sm:grid-cols-[1fr_auto] sm:items-center"
+                    >
+                      <div>
+                        <span className="text-sm font-semibold">
+                          {[storage, ram ? `${ram} RAM` : null, network, specifications?.processor]
+                            .filter(Boolean)
+                            .join(' · ')}
+                        </span>
+                        <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-white/55">
+                          {condition && (
+                            <span>
+                              {condition === 'refurbished' ? 'Refurbished' : 'New condition'}
+                            </span>
+                          )}
+                          {promotion && <span className="text-store-orange">Promotion</span>}
+                          {warranty && <span>Warranty: {warranty.sourceLabel}</span>}
+                        </div>
+                      </div>
+                      <ProductPrice
+                        price={price}
+                        className="shrink-0 text-right text-xs font-semibold"
+                      />
+                    </li>
+                  )
+                )}
               </ul>
             )}
 

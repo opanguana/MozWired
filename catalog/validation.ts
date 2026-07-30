@@ -108,7 +108,12 @@ export function validateCatalog(input: unknown) {
       }
       seenSkus.add(variant.sku);
 
-      const axes = [variant.storage, variant.ram, variant.network].join('|');
+      const axes = [
+        variant.storage,
+        variant.ram,
+        variant.network,
+        JSON.stringify(variant.specifications),
+      ].join('|');
       if (variantAxes.has(axes)) {
         issues.push({
           product: product.id,

@@ -8,6 +8,7 @@ export type CatalogProduct = {
   slug: string;
   brand: string;
   category: CatalogCategory;
+  navigation: CatalogRecord['navigation'];
   variants: ReturnType<typeof toDisplayVariant>[];
 };
 
@@ -17,6 +18,7 @@ export const catalogProducts: CatalogProduct[] = getCatalog().map((product) => (
   slug: product.slug,
   brand: product.brand,
   category: product.category,
+  navigation: product.navigation,
   variants: product.variants.map((variant) => toDisplayVariant(variant)),
 }));
 

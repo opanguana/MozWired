@@ -47,6 +47,32 @@ export const catalogVariantSchema = z.object({
   storage: z.string().trim().min(1).nullable(),
   ram: z.string().trim().min(1).nullable(),
   network: z.enum(['4G', '5G']).nullable(),
+  warranty: z
+    .object({
+      duration: z.number().int().positive(),
+      unit: z.enum(['days', 'months']),
+      sourceLabel: z.string().trim().min(1),
+    })
+    .nullable()
+    .default(null),
+  condition: z.enum(['new', 'refurbished']).nullable().default(null),
+  specifications: z
+    .object({
+      processor: z.string().trim().min(1).nullable(),
+      display: z.string().trim().min(1).nullable(),
+      operatingSystem: z.string().trim().min(1).nullable(),
+      graphics: z.string().trim().min(1).nullable(),
+      colour: z.string().trim().min(1).nullable(),
+      keyboard: z.string().trim().min(1).nullable(),
+      includedItems: z.array(z.string().trim().min(1)).default([]),
+    })
+    .nullable()
+    .default(null),
+  merchandising: z
+    .object({
+      isPromotion: z.boolean(),
+    })
+    .default({ isPromotion: false }),
   availability: availabilitySchema,
   pricing: catalogPriceSchema.nullable(),
   scheduledPrices: z.array(catalogPriceSchema).default([]),
@@ -157,6 +183,12 @@ export const catalogProductSchema = z.object({
   scheduledPrices: z.array(catalogPriceSchema).default([]),
   variants: z.array(catalogVariantSchema),
   placements: z.array(catalogPlacementSchema),
+  navigation: z
+    .object({
+      featured: z.boolean(),
+      order: z.number().int().nonnegative().nullable(),
+    })
+    .default({ featured: true, order: null }),
   cardTone: z.enum(['default', 'dark', 'warm']),
   updatedAt: isoDateWithTimezone,
 });

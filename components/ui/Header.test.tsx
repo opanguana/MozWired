@@ -26,7 +26,7 @@ describe('Header', () => {
     expect(screen.getByRole('link', { name: /MacBook Pro/ })).toBeInTheDocument();
   });
 
-  it('provides a desktop navigation option for every catalog product', () => {
+  it('provides desktop navigation options only for curated catalog products', () => {
     render(<Header />);
 
     const productHrefs = new Set(
@@ -38,8 +38,9 @@ describe('Header', () => {
       )
     );
 
-    expect(productHrefs.size).toBe(catalogProducts.length);
-    catalogProducts.forEach(({ slug }) => {
+    const featuredProducts = catalogProducts.filter(({ navigation }) => navigation.featured);
+    expect(productHrefs.size).toBe(featuredProducts.length);
+    featuredProducts.forEach(({ slug }) => {
       expect(productHrefs).toContain(`/products/${slug}`);
     });
   });

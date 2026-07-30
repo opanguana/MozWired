@@ -50,6 +50,12 @@ export function toServiceCard(
     description: content.description,
     price: toDisplayPrice(resolveProductPrice(product, now)),
     image: primaryImage?.src,
+    condition: product.variants.some(({ condition }) => condition === 'refurbished')
+      ? 'refurbished'
+      : product.variants.some(({ condition }) => condition === 'new')
+        ? 'new'
+        : null,
+    promotion: product.variants.some(({ merchandising }) => merchandising.isPromotion),
     dark: product.cardTone === 'dark',
     warmDark: product.cardTone === 'warm',
   };
@@ -62,6 +68,10 @@ export function toDisplayVariant(variant: CatalogVariant, now = new Date()) {
     ram: variant.ram,
     network: variant.network,
     availability: variant.availability,
+    warranty: variant.warranty,
+    condition: variant.condition,
+    specifications: variant.specifications,
+    promotion: variant.merchandising.isPromotion,
     price: toDisplayPrice(resolveVariantPrice(variant, now)),
   };
 }
