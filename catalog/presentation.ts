@@ -50,12 +50,16 @@ export function toServiceCard(
     description: content.description,
     price: toDisplayPrice(resolveProductPrice(product, now)),
     image: primaryImage?.src,
-    condition: product.variants.some(({ condition }) => condition === 'refurbished')
+    condition: product.variants.some(
+      ({ status, condition }) => status === 'active' && condition === 'refurbished'
+    )
       ? 'refurbished'
-      : product.variants.some(({ condition }) => condition === 'new')
+      : product.variants.some(({ status, condition }) => status === 'active' && condition === 'new')
         ? 'new'
         : null,
-    promotion: product.variants.some(({ merchandising }) => merchandising.isPromotion),
+    promotion: product.variants.some(
+      ({ status, merchandising }) => status === 'active' && merchandising.isPromotion
+    ),
     dark: product.cardTone === 'dark',
     warmDark: product.cardTone === 'warm',
   };

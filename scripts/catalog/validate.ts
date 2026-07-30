@@ -12,5 +12,13 @@ if (result.issues.length) {
   process.exitCode = 1;
 } else {
   const variants = result.products.reduce((total, product) => total + product.variants.length, 0);
-  console.log(`Catalogue valid: ${result.products.length} products, ${variants} variants.`);
+  const activeProducts = result.products.filter(({ status }) => status === 'published');
+  const activeVariants = activeProducts.flatMap(({ variants: productVariants }) =>
+    productVariants.filter(({ status }) => status === 'active')
+  );
+  console.log(
+    `Catalogue valid: ${activeProducts.length} active products, ${activeVariants.length} active variants; ` +
+      `${result.products.length - activeProducts.length} archived products, ` +
+      `${variants - activeVariants.length} archived variants.`
+  );
 }

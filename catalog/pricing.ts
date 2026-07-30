@@ -25,6 +25,7 @@ export function resolveProductPrice(product: CatalogProduct, now = new Date()) {
   if (directPrice) return directPrice;
 
   const variantPrices = product.variants
+    .filter(({ status }) => status === 'active')
     .map((variant) => resolveVariantPrice(variant, now))
     .filter((price): price is CatalogPrice => Boolean(price));
 

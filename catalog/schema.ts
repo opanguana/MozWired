@@ -43,6 +43,7 @@ export const catalogPriceSchema = z
   });
 
 export const catalogVariantSchema = z.object({
+  status: z.enum(['active', 'archived']).default('active'),
   sku: z.string().trim().min(1),
   storage: z.string().trim().min(1).nullable(),
   ram: z.string().trim().min(1).nullable(),
@@ -172,7 +173,7 @@ export const catalogLocalizedContentSchema = z.object({
 export const catalogProductSchema = z.object({
   id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
-  status: z.enum(['draft', 'published']),
+  status: z.enum(['draft', 'published', 'archived']),
   brand: z.string().trim().min(1),
   title: z.string().trim().min(1),
   content: catalogLocalizedContentSchema,

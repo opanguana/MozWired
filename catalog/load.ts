@@ -17,13 +17,30 @@ const validCatalog = validation.products.filter((product) => !invalidProductIds.
 
 export function getCatalog({
   includeDrafts = false,
+  includeArchived = false,
 }: {
   includeDrafts?: boolean;
+  includeArchived?: boolean;
 } = {}): CatalogProduct[] {
-  return validCatalog.filter((product) => includeDrafts || product.status === 'published');
+  return validCatalog
+    .filter(
+      (product) =>
+        product.status === 'published' ||
+        (includeDrafts && product.status === 'draft') ||
+        (includeArchived && product.status === 'archived')
+    )
+    .map((product) => ({
+      ...product,
+      variants: includeArchived
+        ? product.variants
+        : product.variants.filter(({ status }) => status === 'active'),
+    }));
 }
 
-export function getCatalogProduct(slug: string, options?: { includeDrafts?: boolean }) {
+export function getCatalogProduct(
+  slug: string,
+  options?: { includeDrafts?: boolean; includeArchived?: boolean }
+) {
   return getCatalog(options).find((product) => product.slug === slug);
 }
 

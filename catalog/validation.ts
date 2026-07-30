@@ -132,6 +132,31 @@ export function validateCatalog(input: unknown) {
       );
     });
 
+    if (
+      product.status === 'archived' &&
+      (product.availability !== 'discontinued' ||
+        product.placements.length > 0 ||
+        product.navigation.featured ||
+        product.navigation.order !== null)
+    ) {
+      issues.push({
+        product: product.id,
+        path: 'status',
+        message:
+          'Archived products must be discontinued and excluded from placements and navigation.',
+      });
+    }
+
+    product.variants.forEach((variant, index) => {
+      if (variant.status === 'archived' && variant.availability !== 'discontinued') {
+        issues.push({
+          product: product.id,
+          path: `variants.${index}.availability`,
+          message: 'Archived variants must use discontinued availability.',
+        });
+      }
+    });
+
     const placementKeys = new Set<string>();
     product.placements.forEach((placement, index) => {
       const key = `${placement.section}:${placement.order}`;
@@ -148,7 +173,7 @@ export function validateCatalog(input: unknown) {
     if (
       product.status === 'published' &&
       !product.pricing &&
-      !product.variants.some(({ pricing }) => pricing) &&
+      !product.variants.some(({ status, pricing }) => status === 'active' && pricing) &&
       product.availability !== 'price_on_request'
     ) {
       issues.push({
