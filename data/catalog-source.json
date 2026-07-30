@@ -5,8 +5,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "MacBook Air",
-    "eyebrow": "Customer favorite",
-    "description": "Thin, fast, and ready for work or study wherever the day takes you.",
     "category": "computers",
     "media": {
       "primaryImageId": "apple-macbook-air-main",
@@ -35,7 +33,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Customer favorite",
+        "description": "Thin, fast, and ready for work or study wherever the day takes you.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-macbook-pro",
@@ -43,8 +53,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "MacBook Pro",
-    "eyebrow": "Power to spare",
-    "description": "Serious performance for demanding creative and professional workflows.",
     "category": "computers",
     "media": {
       "primaryImageId": "apple-macbook-pro-main",
@@ -69,7 +77,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Power to spare",
+        "description": "Serious performance for demanding creative and professional workflows.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-imac",
@@ -77,8 +97,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iMac",
-    "eyebrow": "All in one",
-    "description": "A vivid desktop experience with everything built beautifully together.",
     "category": "computers",
     "media": {
       "primaryImageId": "apple-imac-main",
@@ -103,7 +121,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "All in one",
+        "description": "A vivid desktop experience with everything built beautifully together.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-mac-mini",
@@ -111,8 +141,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "Mac mini",
-    "eyebrow": "Small footprint",
-    "description": "A compact desktop with impressive performance and flexible connectivity.",
     "category": "computers",
     "media": {
       "primaryImageId": "apple-mac-mini-main",
@@ -137,7 +165,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Small footprint",
+        "description": "A compact desktop with impressive performance and flexible connectivity.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-ipad-pro",
@@ -145,8 +185,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPad Pro",
-    "eyebrow": "Remarkably capable",
-    "description": "A powerful, portable canvas for creativity, entertainment, and productivity.",
     "category": "mobile",
     "media": {
       "primaryImageId": "apple-ipad-pro-main",
@@ -171,7 +209,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Remarkably capable",
+        "description": "A powerful, portable canvas for creativity, entertainment, and productivity.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-ipad-air",
@@ -179,8 +229,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPad Air",
-    "eyebrow": "Offer eligible",
-    "description": "Versatile performance in a light design with room for every idea.",
     "category": "mobile",
     "media": {
       "primaryImageId": "apple-ipad-air-main",
@@ -205,7 +253,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Offer eligible",
+        "description": "Versatile performance in a light design with room for every idea.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-ipad-mini",
@@ -213,8 +273,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPad mini",
-    "eyebrow": "Made to travel",
-    "description": "Full iPad capability in an ultraportable size that goes everywhere.",
     "category": "mobile",
     "media": {
       "primaryImageId": "apple-ipad-mini-main",
@@ -239,7 +297,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Made to travel",
+        "description": "Full iPad capability in an ultraportable size that goes everywhere.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-pro",
@@ -247,8 +317,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone Pro",
-    "eyebrow": "New",
-    "description": "Advanced cameras, premium materials, and all-day performance.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-pro-main",
@@ -273,7 +341,19 @@
       }
     ],
     "cardTone": "dark",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "New",
+        "description": "Advanced cameras, premium materials, and all-day performance.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone",
@@ -281,8 +361,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone",
-    "eyebrow": "Everyday favorite",
-    "description": "A brilliant display, dependable battery life, and an effortless camera.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-main",
@@ -307,7 +385,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Everyday favorite",
+        "description": "A brilliant display, dependable battery life, and an effortless camera.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-essential",
@@ -315,8 +405,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone Essential",
-    "eyebrow": "Great value",
-    "description": "The features you use most in a durable, colorful design.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-essential-main",
@@ -341,7 +429,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Great value",
+        "description": "The features you use most in a durable, colorful design.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-watch",
@@ -349,8 +449,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "Apple Watch",
-    "eyebrow": "Fitness companion",
-    "description": "Stay active, connected, and informed right from your wrist.",
     "category": "mobile",
     "media": {
       "primaryImageId": "apple-watch-main",
@@ -370,7 +468,19 @@
     "variants": [],
     "placements": [],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Fitness companion",
+        "description": "Stay active, connected, and informed right from your wrist.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-watch-ultra",
@@ -378,8 +488,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "Apple Watch Ultra",
-    "eyebrow": "Built for adventure",
-    "description": "A rugged watch for endurance, exploration, and everyday life.",
     "category": "mobile",
     "media": {
       "primaryImageId": "apple-watch-ultra-main",
@@ -399,7 +507,19 @@
     "variants": [],
     "placements": [],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Built for adventure",
+        "description": "A rugged watch for endurance, exploration, and everyday life.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-vision-pro",
@@ -407,8 +527,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "Apple Vision Pro",
-    "eyebrow": "Spatial computing",
-    "description": "Experience entertainment, work, and connection in an entirely new way.",
     "category": "mobile",
     "media": {
       "primaryImageId": "apple-vision-pro-main",
@@ -433,7 +551,19 @@
       }
     ],
     "cardTone": "dark",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Spatial computing",
+        "description": "Experience entertainment, work, and connection in an entirely new way.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-airpods-pro",
@@ -441,8 +571,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "AirPods Pro",
-    "eyebrow": "Free engraving",
-    "description": "Immersive sound and intelligent noise control in a pocket-ready design.",
     "category": "audio",
     "media": {
       "primaryImageId": "apple-airpods-pro-main",
@@ -471,7 +599,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Free engraving",
+        "description": "Immersive sound and intelligent noise control in a pocket-ready design.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-airpods",
@@ -479,8 +619,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "AirPods",
-    "eyebrow": "Listen all day",
-    "description": "Comfortable wireless audio with effortless pairing across your devices.",
     "category": "audio",
     "media": {
       "primaryImageId": "apple-airpods-main",
@@ -505,7 +643,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Listen all day",
+        "description": "Comfortable wireless audio with effortless pairing across your devices.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-airtag",
@@ -513,8 +663,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "AirTag",
-    "eyebrow": "Keep track",
-    "description": "A simple way to keep an eye on keys, bags, and everyday essentials.",
     "category": "accessories",
     "media": {
       "primaryImageId": "apple-airtag-main",
@@ -539,7 +687,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Keep track",
+        "description": "A simple way to keep an eye on keys, bags, and everyday essentials.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-tv-4k",
@@ -547,8 +707,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "Apple TV 4K",
-    "eyebrow": "Big-screen entertainment",
-    "description": "Bring movies, shows, music, and games together in stunning quality.",
     "category": "audio",
     "media": {
       "primaryImageId": "apple-tv-4k-main",
@@ -577,7 +735,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Big-screen entertainment",
+        "description": "Bring movies, shows, music, and games together in stunning quality.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-homepod",
@@ -585,8 +755,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "HomePod",
-    "eyebrow": "Room-filling sound",
-    "description": "Rich home audio with intelligent control in a compact design.",
     "category": "audio",
     "media": {
       "primaryImageId": "apple-homepod-main",
@@ -615,7 +783,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Room-filling sound",
+        "description": "Rich home audio with intelligent control in a compact design.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "accessories-cases-and-bands",
@@ -623,8 +803,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "Cases and bands",
-    "eyebrow": "Complete your setup",
-    "description": "Protection, color, and everyday utility for the devices you love.",
     "category": "accessories",
     "media": {
       "primaryImageId": "accessories-cases-and-bands-main",
@@ -649,7 +827,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Complete your setup",
+        "description": "Protection, color, and everyday utility for the devices you love.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-gift-card",
@@ -657,8 +847,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "Gift Card",
-    "eyebrow": "Always the right fit",
-    "description": "Let them choose the device, accessory, app, or experience they want.",
     "category": "accessories",
     "media": {
       "primaryImageId": "apple-gift-card-main",
@@ -691,7 +879,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Always the right fit",
+        "description": "Let them choose the device, accessory, app, or experience they want.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a04e",
@@ -699,8 +899,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A04e",
-    "eyebrow": "Simple and practical",
-    "description": "A practical Samsung 4G smartphone with 32GB of storage and 3GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -731,7 +929,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Simple and practical",
+        "description": "A practical Samsung 4G smartphone with 32GB of storage and 3GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a05s",
@@ -739,8 +949,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A05s",
-    "eyebrow": "Reliable everyday performance",
-    "description": "A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -771,7 +979,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Reliable everyday performance",
+        "description": "A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a06",
@@ -779,8 +999,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A06",
-    "eyebrow": "Made for the essentials",
-    "description": "A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -827,7 +1045,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Made for the essentials",
+        "description": "A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a07",
@@ -835,8 +1065,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A07",
-    "eyebrow": "Everyday value",
-    "description": "A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -883,7 +1111,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Everyday value",
+        "description": "A practical Samsung 4G smartphone available with 64GB or 128GB of storage and 4GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a16",
@@ -891,8 +1131,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A16",
-    "eyebrow": "Ready for every day",
-    "description": "A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -923,7 +1161,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Ready for every day",
+        "description": "A practical Samsung 4G smartphone with 128GB of storage and 4GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a17",
@@ -931,8 +1181,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A17",
-    "eyebrow": "More ways to choose",
-    "description": "A practical Samsung 4G smartphone available with 128GB or 256GB of storage and 4GB, 6GB, or 8GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -995,7 +1243,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "More ways to choose",
+        "description": "A practical Samsung 4G smartphone available with 128GB or 256GB of storage and 4GB, 6GB, or 8GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a25",
@@ -1003,8 +1263,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A25",
-    "eyebrow": "Step into 5G",
-    "description": "A practical Samsung 5G smartphone with 128GB of storage and 6GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -1035,7 +1293,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Step into 5G",
+        "description": "A practical Samsung 5G smartphone with 128GB of storage and 6GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a26",
@@ -1043,8 +1313,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A26",
-    "eyebrow": "Versatile 5G value",
-    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -1091,7 +1359,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Versatile 5G value",
+        "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a36",
@@ -1099,8 +1379,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A36",
-    "eyebrow": "More room for more",
-    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -1163,7 +1441,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "More room for more",
+        "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a37",
@@ -1171,8 +1461,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A37",
-    "eyebrow": "Built for daily life",
-    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 8GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -1219,7 +1507,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Built for daily life",
+        "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 8GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a56",
@@ -1227,8 +1527,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A56",
-    "eyebrow": "A capable 5G choice",
-    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 8GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -1275,7 +1573,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "A capable 5G choice",
+        "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 8GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "samsung-galaxy-a57",
@@ -1283,8 +1593,6 @@
     "status": "published",
     "brand": "Samsung",
     "title": "Galaxy A57",
-    "eyebrow": "Flexible 5G options",
-    "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
     "category": "phones",
     "media": null,
     "availability": null,
@@ -1347,7 +1655,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Flexible 5G options",
+        "description": "A practical Samsung 5G smartphone available with 128GB or 256GB of storage and 6GB or 8GB of RAM for everyday use.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-xr",
@@ -1355,8 +1675,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone XR",
-    "eyebrow": "A familiar favorite",
-    "description": "An Apple smartphone with 64GB or 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-xr-main",
@@ -1414,7 +1732,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "A familiar favorite",
+        "description": "An Apple smartphone with 64GB or 128GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-11",
@@ -1422,8 +1752,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 11",
-    "eyebrow": "Everyday iPhone value",
-    "description": "An Apple smartphone with 64GB or 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-11-main",
@@ -1481,7 +1809,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Everyday iPhone value",
+        "description": "An Apple smartphone with 64GB or 128GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-12",
@@ -1489,8 +1829,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 12",
-    "eyebrow": "A modern essential",
-    "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-12-main",
@@ -1532,7 +1870,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "A modern essential",
+        "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-12-pro",
@@ -1540,8 +1890,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 12 Pro",
-    "eyebrow": "A step up to Pro",
-    "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-12-pro-main",
@@ -1583,7 +1931,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "A step up to Pro",
+        "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-12-pro-max",
@@ -1591,8 +1951,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 12 Pro Max",
-    "eyebrow": "More room to go Pro",
-    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-12-pro-max-main",
@@ -1634,7 +1992,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "More room to go Pro",
+        "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-13",
@@ -1642,8 +2012,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 13",
-    "eyebrow": "A dependable favorite",
-    "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-13-main",
@@ -1685,7 +2053,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "A dependable favorite",
+        "description": "An Apple smartphone with 128GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-13-pro",
@@ -1693,8 +2073,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 13 Pro",
-    "eyebrow": "Pro with more storage",
-    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-13-pro-main",
@@ -1736,7 +2114,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Pro with more storage",
+        "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-13-pro-max",
@@ -1744,8 +2134,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 13 Pro Max",
-    "eyebrow": "A larger Pro choice",
-    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-13-pro-max-main",
@@ -1787,7 +2175,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "A larger Pro choice",
+        "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-14-pro",
@@ -1795,8 +2195,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 14 Pro",
-    "eyebrow": "Designed for Pro",
-    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-14-pro-main",
@@ -1838,7 +2236,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Designed for Pro",
+        "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-14-pro-max",
@@ -1846,8 +2256,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 14 Pro Max",
-    "eyebrow": "The bigger Pro option",
-    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-14-pro-max-main",
@@ -1889,7 +2297,19 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "The bigger Pro option",
+        "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   },
   {
     "id": "apple-iphone-15-pro-max",
@@ -1897,8 +2317,6 @@
     "status": "published",
     "brand": "Apple",
     "title": "iPhone 15 Pro Max",
-    "eyebrow": "Premium iPhone choice",
-    "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
     "category": "phones",
     "media": {
       "primaryImageId": "apple-iphone-15-pro-max-main",
@@ -1940,6 +2358,18 @@
       }
     ],
     "cardTone": "default",
-    "updatedAt": "2026-07-28T00:00:00+02:00"
+    "updatedAt": "2026-07-28T00:00:00+02:00",
+    "content": {
+      "en": {
+        "eyebrow": "Premium iPhone choice",
+        "description": "An Apple smartphone with 256GB of storage for everyday communication, apps and entertainment.",
+        "status": "approved"
+      },
+      "pt-MZ": {
+        "eyebrow": null,
+        "description": null,
+        "status": "draft"
+      }
+    }
   }
 ]

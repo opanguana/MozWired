@@ -26,16 +26,20 @@ describe('locale preferences', () => {
   it('validates complete preference payloads', () => {
     expect(
       isValidLocalePreferences({
-        language: 'pt',
+        language: 'pt-MZ',
         market: 'MZ',
         currency: 'USD',
       })
     ).toBe(true);
-    expect(isValidLocalePreferences({ language: 'pt', market: 'MZ' })).toBe(false);
+    expect(isValidLocalePreferences({ language: 'pt-MZ', market: 'MZ' })).toBe(false);
   });
 
   it('keeps the document language truthful until Portuguese content exists', () => {
     expect(effectiveDocumentLanguage('en')).toBe('en');
-    expect(effectiveDocumentLanguage('pt')).toBe('en');
+    expect(effectiveDocumentLanguage('pt-MZ')).toBe('en');
+  });
+
+  it('migrates the legacy Portuguese preference to pt-MZ', () => {
+    expect(resolveLocalePreferences({ language: 'pt' }).language).toBe('pt-MZ');
   });
 });

@@ -1,0 +1,17 @@
+{
+  "accessibility": {
+    "skipToMain": "Skip to main content"
+  },
+  "preferences": {
+    "triggerLabel": "Language, country and currency settings",
+    "title": "Language, country and currency",
+    "description": "Shopping location is a display preference, not a shipping or availability guarantee.",
+    "translationPending": "Portuguese support is in preparation; untranslated content remains in English.",
+    "applied": "Preferences applied: {{language}}, {{market}}, {{currency}}."
+  },
+  "commerce": {
+    "approximate": "Approx.",
+    "from": "From",
+    "vatExclusive": "Excl. VAT"
+  }
+}

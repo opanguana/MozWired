@@ -1,7 +1,11 @@
 import catalogSource from '@/data/catalog-source.json';
 
 import { validateCatalogMedia } from './media-validation';
-import { getPrimaryProductImage, getProductImages } from './presentation';
+import {
+  getLocalizedProductContent,
+  getPrimaryProductImage,
+  getProductImages,
+} from './presentation';
 import { resolveProductPrice } from './pricing';
 import type { CatalogProduct } from './schema';
 import { validateCatalog } from './validation';
@@ -46,6 +50,25 @@ describe('validated product catalogue', () => {
     expect(primary?.role).toBe('main');
     expect(getProductImages(product)).toEqual(
       [...(product.media?.images ?? [])].sort((left, right) => left.sortOrder - right.sortOrder)
+    );
+  });
+
+  it('falls back to approved English content while Portuguese is in editorial review', () => {
+    expect(getLocalizedProductContent(baseProduct, 'pt-MZ')).toBe(baseProduct.content.en);
+  });
+
+  it('rejects approved localized content with missing copy', () => {
+    const product = clone(baseProduct);
+    product.content['pt-MZ'].status = 'approved';
+    const result = validateCatalog([product]);
+
+    expect(result.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          path: 'content.pt-MZ',
+          message: 'Approved localized content requires an eyebrow and description.',
+        }),
+      ])
     );
   });
 

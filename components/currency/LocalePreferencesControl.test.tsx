@@ -55,7 +55,7 @@ describe('LocalePreferencesControl', () => {
     fireEvent.click(trigger);
     const dialog = screen.getByRole('dialog');
     const [language, market] = within(dialog).getAllByRole('combobox');
-    fireEvent.change(language, { target: { value: 'pt' } });
+    fireEvent.change(language, { target: { value: 'pt-MZ' } });
     fireEvent.change(market, { target: { value: 'ZA' } });
 
     expect(trigger).toHaveTextContent('EN');

@@ -111,6 +111,17 @@ selected currency. Clicking **Apply preferences** validates and persists all thr
 `mw_language`, `mw_market`, and `mw_currency` cookies; Cancel, Escape, and backdrop dismissal discard
 the staged changes.
 
+Interface translation resources live under `locales/`. English is the required fallback and
+Mozambican Portuguese uses the BCP 47 tag `pt-MZ`. Missing Portuguese messages fall back to English
+and emit a development warning; a translation key is never shown to customers. Keep Portuguese
+marked incomplete in `config/locales.ts` until the rendered routes, metadata, disclosures, and
+accessibility text have all been reviewed.
+
+Product names, brands, and SKUs remain language-neutral. Editorial card copy lives in each
+catalogue product's `content` object. English content must be approved. Portuguese starts as a draft
+with nullable copy and becomes customer-visible only after both fields are reviewed and its status
+is changed to `approved`; otherwise presentation falls back to English.
+
 Products without an approved MZN amount deliberately use `"pricing": null` and
 `"availability": "price_on_request"`, which displays `Contact for MZN price`. Add a verified price
 only after an authoritative local amount is approved:

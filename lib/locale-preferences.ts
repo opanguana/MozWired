@@ -17,6 +17,11 @@ export function isSupportedLanguage(value: unknown): value is SupportedLanguage 
   return typeof value === 'string' && supportedLanguages.includes(value as SupportedLanguage);
 }
 
+export function normalizeLanguage(value: unknown): SupportedLanguage | undefined {
+  if (value === 'pt') return 'pt-MZ';
+  return isSupportedLanguage(value) ? value : undefined;
+}
+
 export function isSupportedMarket(value: unknown): value is MarketCode {
   return typeof value === 'string' && supportedMarkets.includes(value as MarketCode);
 }
@@ -26,8 +31,9 @@ export function resolveLocalePreferences(values: {
   market?: unknown;
   currency?: unknown;
 }): LocalePreferences {
+  const language = normalizeLanguage(values.language);
   return {
-    language: isSupportedLanguage(values.language) ? values.language : localeConfig.defaultLanguage,
+    language: language ?? localeConfig.defaultLanguage,
     market: isSupportedMarket(values.market) ? values.market : localeConfig.defaultMarket,
     currency: resolveSavedCurrency(values.currency),
   };

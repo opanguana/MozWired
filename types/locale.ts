@@ -1,4 +1,4 @@
-export const supportedLanguages = ['en', 'pt'] as const;
+export const supportedLanguages = ['en', 'pt-MZ'] as const;
 export type SupportedLanguage = (typeof supportedLanguages)[number];
 
 export const supportedMarkets = ['MZ', 'ZA', 'US', 'EU'] as const;

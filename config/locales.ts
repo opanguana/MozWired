@@ -6,7 +6,7 @@ export const localeConfig = {
   defaultMarket: 'MZ',
   languages: [
     { code: 'en', label: 'English', complete: true },
-    { code: 'pt', label: 'Português', complete: false },
+    { code: 'pt-MZ', label: 'Português (Moçambique)', complete: false },
   ],
   markets: [
     { code: 'MZ', label: 'Mozambique', recommendedCurrency: 'MZN' },

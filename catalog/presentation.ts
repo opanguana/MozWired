@@ -1,5 +1,6 @@
 import type { ServiceCardData } from '@/components/store/ServiceCard';
 import type { ProductPrice } from '@/types/money';
+import type { SupportedLanguage } from '@/types/locale';
 
 import { resolveProductPrice, resolveVariantPrice } from './pricing';
 import type { CatalogPrice, CatalogProduct, CatalogVariant } from './schema';
@@ -25,13 +26,28 @@ export function toDisplayPrice(price: CatalogPrice | null): ProductPrice | null 
   };
 }
 
-export function toServiceCard(product: CatalogProduct, now = new Date()): ServiceCardData {
+export function getLocalizedProductContent(
+  product: CatalogProduct,
+  language: SupportedLanguage = 'en'
+) {
+  const localized = product.content[language];
+  return localized.status === 'approved' && localized.eyebrow && localized.description
+    ? { eyebrow: localized.eyebrow, description: localized.description }
+    : product.content.en;
+}
+
+export function toServiceCard(
+  product: CatalogProduct,
+  now = new Date(),
+  language: SupportedLanguage = 'en'
+): ServiceCardData {
   const primaryImage = getPrimaryProductImage(product);
+  const content = getLocalizedProductContent(product, language);
 
   return {
-    eyebrow: product.eyebrow,
+    eyebrow: content.eyebrow,
     title: product.title,
-    description: product.description,
+    description: content.description,
     price: toDisplayPrice(resolveProductPrice(product, now)),
     image: primaryImage?.src,
     dark: product.cardTone === 'dark',

@@ -65,7 +65,7 @@ export function LocalePreferencesControl({ compact = false }: { compact?: boolea
   function applyPreferences() {
     setPreferences(draft);
     setAnnouncement(
-      `Preferences applied: ${draft.language.toUpperCase()}, ${draft.market}, ${draft.currency}.`
+      `Preferences applied: ${draft.language === 'pt-MZ' ? 'PT' : draft.language.toUpperCase()}, ${draft.market}, ${draft.currency}.`
     );
     closeDialog();
   }
@@ -81,7 +81,7 @@ export function LocalePreferencesControl({ compact = false }: { compact?: boolea
         className="focus-ring inline-flex min-h-8 items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-2.5 text-[11px] font-semibold text-white transition hover:bg-white/[0.11]"
       >
         <Globe2 aria-hidden="true" className="size-3.5" />
-        <span>{language.toUpperCase()}</span>
+        <span>{language === 'pt-MZ' ? 'PT' : language.toUpperCase()}</span>
         {!compact && (
           <>
             <span aria-hidden="true" className="hidden text-white/35 lg:inline">

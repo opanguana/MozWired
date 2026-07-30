@@ -119,14 +119,37 @@ export const catalogMediaSchema = z
     }
   });
 
+const localizedEditorialContentSchema = z
+  .object({
+    eyebrow: z.string().trim().min(1).nullable(),
+    description: z.string().trim().min(1).nullable(),
+    status: z.enum(['draft', 'approved']),
+  })
+  .superRefine((content, context) => {
+    if (content.status === 'approved' && (!content.eyebrow || !content.description)) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Approved localized content requires an eyebrow and description.',
+      });
+    }
+  });
+
+export const catalogLocalizedContentSchema = z.object({
+  en: z.object({
+    eyebrow: z.string().trim().min(1),
+    description: z.string().trim().min(1),
+    status: z.literal('approved'),
+  }),
+  'pt-MZ': localizedEditorialContentSchema,
+});
+
 export const catalogProductSchema = z.object({
   id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   status: z.enum(['draft', 'published']),
   brand: z.string().trim().min(1),
   title: z.string().trim().min(1),
-  eyebrow: z.string().trim().min(1),
-  description: z.string().trim().min(1),
+  content: catalogLocalizedContentSchema,
   category: catalogCategorySchema,
   media: catalogMediaSchema.nullable(),
   availability: availabilitySchema,
@@ -147,4 +170,5 @@ export type CatalogVariant = z.infer<typeof catalogVariantSchema>;
 export type CatalogPlacement = z.infer<typeof catalogPlacementSchema>;
 export type CatalogImage = z.infer<typeof catalogImageSchema>;
 export type CatalogMedia = z.infer<typeof catalogMediaSchema>;
+export type CatalogLocalizedContent = z.infer<typeof catalogLocalizedContentSchema>;
 export type CatalogProduct = z.infer<typeof catalogProductSchema>;

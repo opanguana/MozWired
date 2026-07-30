@@ -8,12 +8,13 @@ import { CurrencySuggestion } from '@/components/currency/CurrencySuggestion';
 import { Footer } from '@/components/ui/Footer';
 import { Header } from '@/components/ui/Header';
 import { CURRENCY_COOKIE, isSupportedCurrency } from '@/lib/currency-resolution';
+import { translate } from '@/lib/i18n/dictionaries';
 import {
   effectiveDocumentLanguage,
-  isSupportedLanguage,
   isSupportedMarket,
   LANGUAGE_COOKIE,
   MARKET_COOKIE,
+  normalizeLanguage,
   resolveLocalePreferences,
 } from '@/lib/locale-preferences';
 
@@ -41,7 +42,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     currency: savedCurrency,
   });
   const hasSavedPreferences =
-    isSupportedLanguage(savedLanguage) ||
+    Boolean(normalizeLanguage(savedLanguage)) ||
     isSupportedMarket(savedMarket) ||
     isSupportedCurrency(savedCurrency);
 
@@ -52,7 +53,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           href="#main-content"
           className="sr-only fixed left-4 top-4 z-[100] rounded-full bg-white px-4 py-2 text-sm font-semibold text-black focus:not-sr-only"
         >
-          Skip to main content
+          {translate(preferences.language, 'accessibility.skipToMain')}
         </a>
         <CurrencyProvider
           initialLanguage={preferences.language}
