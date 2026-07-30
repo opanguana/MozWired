@@ -129,7 +129,7 @@ export default function HomePage() {
           <div className="mx-auto grid min-h-[14rem] max-w-store items-center gap-8 px-5 py-8 md:min-h-[16rem] md:grid-cols-[1fr_auto] md:px-8">
             <div>
               <h1 className="text-[clamp(3rem,5vw,4rem)] font-medium leading-none tracking-[-0.045em]">
-                Your Trusted <span className="bg-[#f15a24] px-[0.06em] text-white">Store</span>
+                Your Trusted <span className="bg-[#f15a24] px-[0.06em] text-white">Partner.</span>
               </h1>
             </div>
 
