@@ -88,6 +88,20 @@ from the fixed, dated Banco de Moçambique sell rates in `config/currencies.ts`;
 the stored MZN amount. Update the rates and `ratesUpdatedAt` together. The project uses ordinary
 mathematical rounding and does not apply commercial `.99` endings.
 
+Currency selection follows the store localization priority used by modern international
+storefronts:
+
+1. A valid customer-selected currency saved in the `mw_currency` cookie.
+2. A legacy valid `localStorage` preference, migrated to that cookie.
+3. MZN as the safe fallback.
+
+Supported edge country headers may produce a dismissible currency suggestion, but never switch the
+customer automatically. Mozambique maps to MZN, the United States to USD, South Africa and the
+rand monetary area to ZAR, and euro-area markets to EUR. Unmapped countries remain in MZN. Explicit
+selection always wins. Suggestions are suppressed when the configured rates are older than
+`maximumSuggestionRateAgeDays`; update the rates, source date, and accessibility disclosure together.
+The location endpoint neither stores nor returns an IP address.
+
 Products without an approved MZN amount deliberately use `"pricing": null` and
 `"availability": "price_on_request"`, which displays `Contact for MZN price`. Add a verified price
 only after an authoritative local amount is approved:

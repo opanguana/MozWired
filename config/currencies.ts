@@ -5,6 +5,7 @@ export const currencyConfig = {
   defaultCurrency: 'MZN',
   supportedCurrencies: ['MZN', 'USD', 'ZAR', 'EUR'],
   ratesUpdatedAt: '2026-07-08T15:30:00+02:00',
+  maximumSuggestionRateAgeDays: 30,
   sourceName: 'Banco de Moçambique',
   sourceUrl: 'https://www.bancomoc.mz/en/',
   vatIncluded: false,
@@ -23,6 +24,7 @@ export const currencyConfig = {
   defaultCurrency: SupportedCurrency;
   supportedCurrencies: readonly SupportedCurrency[];
   ratesUpdatedAt: string;
+  maximumSuggestionRateAgeDays: number;
   sourceName: string;
   sourceUrl: string;
   vatIncluded: boolean;

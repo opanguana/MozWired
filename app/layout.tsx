@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { cookies } from 'next/headers';
 import type { ReactNode } from 'react';
 
 import { CurrencyProvider } from '@/components/currency/CurrencyProvider';
+import { CurrencySuggestion } from '@/components/currency/CurrencySuggestion';
 import { Footer } from '@/components/ui/Footer';
 import { Header } from '@/components/ui/Header';
+import {
+  CURRENCY_COOKIE,
+  isSupportedCurrency,
+  resolveSavedCurrency,
+} from '@/lib/currency-resolution';
 
 import './globals.css';
 
@@ -19,7 +26,12 @@ export const metadata: Metadata = {
   description: 'Technology services and secure infrastructure for growing teams.',
 };
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+  const cookieStore = await cookies();
+  const savedCurrency = cookieStore.get(CURRENCY_COOKIE)?.value;
+  const initialCurrency = resolveSavedCurrency(savedCurrency);
+  const hasSavedCurrency = isSupportedCurrency(savedCurrency);
+
   return (
     <html lang="en">
       <body className={`${inter.variable} bg-store-canvas font-sans text-store-ink antialiased`}>
@@ -29,8 +41,9 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         >
           Skip to main content
         </a>
-        <CurrencyProvider>
+        <CurrencyProvider initialCurrency={initialCurrency} hasSavedCurrency={hasSavedCurrency}>
           <Header />
+          <CurrencySuggestion />
           {children}
           <Footer />
         </CurrencyProvider>

@@ -29,7 +29,8 @@ export function CurrencySelector() {
       </select>
       <span id="store-currency-note" className="sr-only">
         MZN is the base currency. Converted prices are estimates using Banco de Moçambique rates
-        updated 8 July 2026. Prices exclude VAT.
+        updated {new Date(currencyConfig.ratesUpdatedAt).toLocaleDateString('en-MZ')}. Prices
+        exclude VAT.
       </span>
     </div>
   );
