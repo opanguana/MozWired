@@ -8,7 +8,9 @@ describe('CurrencySuggestion', () => {
     window.localStorage.clear();
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
-      json: async () => ({ suggestion: { country: 'ZA', currency: 'ZAR' } }),
+      json: async () => ({
+        suggestion: { country: 'ZA', market: 'ZA', currency: 'ZAR' },
+      }),
     });
   });
 
@@ -31,7 +33,7 @@ describe('CurrencySuggestion', () => {
 
   it('does not request a suggestion when an explicit preference exists', async () => {
     render(
-      <CurrencyProvider initialCurrency="EUR" hasSavedCurrency>
+      <CurrencyProvider initialCurrency="EUR" hasSavedPreferences>
         <CurrencySuggestion />
       </CurrencyProvider>
     );

@@ -5,6 +5,7 @@ import {
   canSuggestConvertedCurrency,
   CURRENCY_COOKIE,
   suggestedCurrencyForCountry,
+  suggestedMarketForCountry,
 } from '@/lib/currency-resolution';
 
 export async function GET() {
@@ -19,11 +20,12 @@ export async function GET() {
     requestHeaders.get('cf-ipcountry') ??
     requestHeaders.get('x-country-code');
   const suggestion = suggestedCurrencyForCountry(country);
+  const market = suggestedMarketForCountry(country);
 
   return response({
     suggestion:
-      suggestion && suggestion !== 'MZN'
-        ? { country: country?.toUpperCase(), currency: suggestion }
+      suggestion && market && suggestion !== 'MZN'
+        ? { country: country?.toUpperCase(), market, currency: suggestion }
         : null,
   });
 }

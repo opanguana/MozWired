@@ -1,4 +1,5 @@
 import { currencyConfig } from '@/config/currencies';
+import type { MarketCode } from '@/types/locale';
 import { supportedCurrencies, type SupportedCurrency } from '@/types/money';
 
 export const CURRENCY_COOKIE = 'mw_currency';
@@ -45,6 +46,18 @@ export function suggestedCurrencyForCountry(
   if (country === 'US') return 'USD';
   if (randMarkets.has(country)) return 'ZAR';
   if (euroMarkets.has(country)) return 'EUR';
+  return null;
+}
+
+export function suggestedMarketForCountry(
+  countryCode: string | null | undefined
+): MarketCode | null {
+  const country = countryCode?.trim().toUpperCase();
+  if (!country) return null;
+  if (country === 'MZ') return 'MZ';
+  if (country === 'US') return 'US';
+  if (randMarkets.has(country)) return 'ZA';
+  if (euroMarkets.has(country)) return 'EU';
   return null;
 }
 

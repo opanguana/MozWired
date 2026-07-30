@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 
 import { catalogProducts } from '@/data/catalog';
 
@@ -53,7 +53,13 @@ describe('Header', () => {
       'aria-expanded',
       'true'
     );
-    expect(screen.getByRole('navigation', { name: 'Mobile navigation' })).toBeInTheDocument();
+    const mobileNavigation = screen.getByRole('navigation', { name: 'Mobile navigation' });
+    expect(mobileNavigation).toBeInTheDocument();
+    expect(
+      within(mobileNavigation).getByRole('button', {
+        name: 'Language, country and currency settings',
+      })
+    ).toBeInTheDocument();
     expect(screen.getAllByText('Galaxy A57')).not.toHaveLength(0);
   });
 });

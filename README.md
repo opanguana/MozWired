@@ -102,6 +102,15 @@ selection always wins. Suggestions are suppressed when the configured rates are 
 `maximumSuggestionRateAgeDays`; update the rates, source date, and accessibility disclosure together.
 The location endpoint neither stores nor returns an IP address.
 
+The navbar combines language, shopping market, and display currency in one staged preferences
+dialog. English and Portuguese preferences are supported, but Portuguese is explicitly marked as
+translation-in-progress and the document remains tagged as English until translated page content is
+available. Supported shopping markets are Mozambique, South Africa, the United States, and the euro
+area. A market recommends its common configured currency without silently replacing a separately
+selected currency. Clicking **Apply preferences** validates and persists all three values in the
+`mw_language`, `mw_market`, and `mw_currency` cookies; Cancel, Escape, and backdrop dismissal discard
+the staged changes.
+
 Products without an approved MZN amount deliberately use `"pricing": null` and
 `"availability": "price_on_request"`, which displays `Contact for MZN price`. Add a verified price
 only after an authoritative local amount is approved:

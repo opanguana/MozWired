@@ -3,6 +3,7 @@ import {
   isSupportedCurrency,
   resolveSavedCurrency,
   suggestedCurrencyForCountry,
+  suggestedMarketForCountry,
 } from './currency-resolution';
 
 describe('currency and market resolution', () => {
@@ -19,6 +20,8 @@ describe('currency and market resolution', () => {
     expect(suggestedCurrencyForCountry('DE')).toBe('EUR');
     expect(suggestedCurrencyForCountry('US')).toBe('USD');
     expect(suggestedCurrencyForCountry('AO')).toBeNull();
+    expect(suggestedMarketForCountry('ZA')).toBe('ZA');
+    expect(suggestedMarketForCountry('DE')).toBe('EU');
   });
 
   it('suppresses foreign suggestions when rates are stale', () => {

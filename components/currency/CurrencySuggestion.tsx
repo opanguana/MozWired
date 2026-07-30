@@ -3,16 +3,18 @@
 import { useEffect, useState } from 'react';
 
 import type { SupportedCurrency } from '@/types/money';
+import type { MarketCode } from '@/types/locale';
 
 import { useCurrency } from './CurrencyProvider';
 
 type Suggestion = {
   country: string;
+  market: MarketCode;
   currency: SupportedCurrency;
 };
 
 export function CurrencySuggestion() {
-  const { setCurrency, preferenceReady, hasExplicitPreference } = useCurrency();
+  const { language, setPreferences, preferenceReady, hasExplicitPreference } = useCurrency();
   const [suggestion, setSuggestion] = useState<Suggestion | null>(null);
   const [dismissed, setDismissed] = useState(false);
 
@@ -43,7 +45,13 @@ export function CurrencySuggestion() {
       <button
         type="button"
         className="focus-ring rounded-sm font-semibold text-store-cyan hover:underline"
-        onClick={() => setCurrency(suggestion.currency)}
+        onClick={() =>
+          setPreferences({
+            language,
+            market: suggestion.market,
+            currency: suggestion.currency,
+          })
+        }
       >
         Use {suggestion.currency}
       </button>{' '}
