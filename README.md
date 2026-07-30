@@ -44,12 +44,12 @@ gitleaks git --redact
 ## Site announcement
 
 The optional banner below the navigation is controlled in `config/announcement.ts`. It is currently
-deactivated:
+active:
 
 ```ts
 export const siteAnnouncement = {
   id: 'workplace-specialist',
-  enabled: false,
+  enabled: true,
   message: 'Build a safer, faster workplace with one technology partner.',
   linkLabel: 'Talk to a specialist',
   linkHref: '#support',

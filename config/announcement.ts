@@ -8,7 +8,7 @@ import type { Announcement } from '@/components/ui/AnnouncementBanner';
  */
 export const siteAnnouncement: Announcement = {
   id: 'workplace-specialist',
-  enabled: false,
+  enabled: true,
   message: 'Build a safer, faster workplace with one technology partner.',
   linkLabel: 'Talk to a specialist',
   linkHref: '#support',
