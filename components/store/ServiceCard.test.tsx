@@ -144,6 +144,28 @@ describe('ServiceCard', () => {
     );
   });
 
+  it('compensates for tightly cropped Redmi phone artwork', () => {
+    render(
+      <ServiceCard
+        card={{
+          eyebrow: 'Everyday smartphone value',
+          title: 'Note 14S',
+          description: 'A Redmi smartphone for everyday use.',
+          price: mznPrice(1_512_000),
+          image: '/images/products/redmi/redmi-note-14s/main.png',
+          brand: 'Redmi',
+          category: 'phones',
+        }}
+      />
+    );
+
+    expect(screen.getByRole('img', { name: 'Note 14S' })).toHaveClass(
+      'object-contain',
+      'scale-[0.82]',
+      'group-hover:scale-[0.86]'
+    );
+  });
+
   it('keeps the same fixed outer height when optional metadata is present', () => {
     const { rerender } = render(
       <ServiceCard

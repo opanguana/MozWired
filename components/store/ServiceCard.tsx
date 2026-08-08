@@ -29,6 +29,13 @@ export type ServiceCardData = {
 };
 
 export function ServiceCard({ card }: { card: ServiceCardData }) {
+  const productImageScale =
+    card.category === 'computers'
+      ? 'scale-[0.92] group-hover:scale-[0.96]'
+      : card.category === 'phones' && card.brand === 'Redmi'
+        ? 'scale-[0.82] group-hover:scale-[0.86]'
+        : 'scale-[1.5] group-hover:scale-[1.56]';
+
   return (
     <article
       className={cn(
@@ -118,9 +125,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
             sizes="(min-width: 768px) 320px, 296px"
             className={cn(
               'object-contain transition-transform duration-300',
-              card.category === 'computers'
-                ? 'scale-[0.92] group-hover:scale-[0.96]'
-                : 'scale-[1.5] group-hover:scale-[1.56]'
+              productImageScale
             )}
           />
         ) : (
