@@ -1,8 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Keep development and production output isolated so a production build
-  // cannot replace chunks underneath a running development server.
+  // Local development uses .next-dev; production keeps Next.js' standard
+  // .next output so deployment adapters such as Vercel can discover it.
   distDir: process.env.NEXT_DIST_DIR ?? '.next',
 };
 
