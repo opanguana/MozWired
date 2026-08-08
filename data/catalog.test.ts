@@ -27,7 +27,7 @@ describe('product catalog routes', () => {
       card: {
         title: 'IdeaPad 1',
         price: {
-          amount: { amountMinor: 4_700_000, currency: 'MZN' },
+          amount: { amountMinor: 4_935_000, currency: 'MZN' },
           label: 'from',
         },
       },

@@ -11,7 +11,7 @@ describe('dynamic product page', () => {
       screen.getByRole('group', { name: 'Galaxy A06 available configurations' })
     ).toBeInTheDocument();
     expect(screen.getByText('64GB · 4GB RAM · 4G')).toBeInTheDocument();
-    expect(screen.getAllByText(/8,550/)).not.toHaveLength(0);
+    expect(screen.getAllByText(/8,978/)).not.toHaveLength(0);
     expect(screen.queryByRole('link', { name: '← Back to the store' })).not.toBeInTheDocument();
     expect(screen.queryByText('Made for the essentials')).not.toBeInTheDocument();
   });
@@ -22,7 +22,7 @@ describe('dynamic product page', () => {
     expect(screen.getByRole('heading', { level: 1, name: 'Buy IdeaPad 1' })).toBeInTheDocument();
     const options = screen.getAllByRole('radio');
     expect(options).toHaveLength(2);
-    expect(screen.getByText('From MZN 47,000')).toBeInTheDocument();
+    expect(screen.getByText('From MZN 49,350')).toBeInTheDocument();
     expect(screen.getAllByText('Contact us for availability')).toHaveLength(2);
     const initialLink = screen.getByRole('link', { name: 'Talk to a specialist' });
     const initialMessage = new URL(initialLink.getAttribute('href')!).searchParams.get('text');

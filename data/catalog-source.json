@@ -1024,7 +1024,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 855000,
+          "amountMinor": 897800,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1051,7 +1051,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 930000,
+          "amountMinor": 976500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1072,7 +1072,7 @@
       "order": 7
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "samsung-galaxy-a07",
@@ -1127,7 +1127,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 855000,
+          "amountMinor": 897800,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1154,7 +1154,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 960000,
+          "amountMinor": 1008000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1175,7 +1175,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -1230,7 +1230,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1080000,
+          "amountMinor": 1134000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1251,7 +1251,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "samsung-galaxy-a17",
@@ -1306,7 +1306,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1240000,
+          "amountMinor": 1302000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1333,7 +1333,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1370000,
+          "amountMinor": 1438500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1360,7 +1360,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1510000,
+          "amountMinor": 1585500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1381,7 +1381,7 @@
       "order": 8
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "samsung-galaxy-a25",
@@ -1492,7 +1492,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1640000,
+          "amountMinor": 1722000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1519,7 +1519,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1880000,
+          "amountMinor": 1974000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1540,7 +1540,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "samsung-galaxy-a36",
@@ -1618,7 +1618,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 2030000,
+          "amountMinor": 2131500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1645,7 +1645,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 2280000,
+          "amountMinor": 2394000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1666,7 +1666,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "samsung-galaxy-a37",
@@ -1721,7 +1721,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 2480000,
+          "amountMinor": 2604000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1748,7 +1748,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 2630000,
+          "amountMinor": 2761500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1769,7 +1769,7 @@
       "order": 9
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "samsung-galaxy-a56",
@@ -1824,7 +1824,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 2530000,
+          "amountMinor": 2656500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1851,7 +1851,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 2730000,
+          "amountMinor": 2866500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1872,7 +1872,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "samsung-galaxy-a57",
@@ -1927,7 +1927,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 2830000,
+          "amountMinor": 2971500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1977,7 +1977,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 3030000,
+          "amountMinor": 3181500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -1998,7 +1998,7 @@
       "order": 10
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "apple-iphone-xr",
@@ -2825,7 +2825,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 730000,
+          "amountMinor": 766500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -2852,7 +2852,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 785000,
+          "amountMinor": 824300,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -2873,7 +2873,7 @@
       "order": 13
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-a7",
@@ -2917,7 +2917,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 770000,
+          "amountMinor": 808500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -2938,7 +2938,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-a7-pro",
@@ -2982,7 +2982,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 800000,
+          "amountMinor": 840000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3003,7 +3003,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-9t",
@@ -3047,7 +3047,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 710000,
+          "amountMinor": 745500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3068,7 +3068,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-15c",
@@ -3112,7 +3112,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 940000,
+          "amountMinor": 987000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3139,7 +3139,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1070000,
+          "amountMinor": 1123500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3160,7 +3160,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-15",
@@ -3204,7 +3204,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1090000,
+          "amountMinor": 1144500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3231,7 +3231,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1220000,
+          "amountMinor": 1281000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3252,7 +3252,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-note-7-pro",
@@ -3296,7 +3296,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 620000,
+          "amountMinor": 651000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3317,7 +3317,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-note-10-5g",
@@ -3361,7 +3361,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 820000,
+          "amountMinor": 861000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3382,7 +3382,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-note-11e",
@@ -3426,7 +3426,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 780000,
+          "amountMinor": 819000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3447,7 +3447,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-note-12-pro-5g",
@@ -3491,7 +3491,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1360000,
+          "amountMinor": 1428000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3512,7 +3512,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-note-13-pro",
@@ -3556,7 +3556,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1680000,
+          "amountMinor": 1764000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3577,7 +3577,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-note-14",
@@ -3621,7 +3621,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1230000,
+          "amountMinor": 1291500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3648,7 +3648,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1410000,
+          "amountMinor": 1480500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3669,7 +3669,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-note-14s",
@@ -3713,7 +3713,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1440000,
+          "amountMinor": 1512000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3740,7 +3740,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1550000,
+          "amountMinor": 1627500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3761,7 +3761,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "redmi-note-14-pro",
@@ -3805,7 +3805,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1780000,
+          "amountMinor": 1869000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3826,7 +3826,7 @@
       "order": 14
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-ideapad-1-15iau7",
@@ -3887,7 +3887,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 4700000,
+          "amountMinor": 4935000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3908,7 +3908,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-ideapad-1-15iru7",
@@ -3958,7 +3958,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5000000,
+          "amountMinor": 5250000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -3979,7 +3979,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-ideapad-slim-3-15irh8",
@@ -4038,7 +4038,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6000000,
+          "amountMinor": 6300000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4118,7 +4118,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6500000,
+          "amountMinor": 6825000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4139,7 +4139,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-thinkbook-14-g8-ial",
@@ -4198,7 +4198,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5500000,
+          "amountMinor": 5775000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4219,7 +4219,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-thinkbook-16-g8-irl",
@@ -4278,7 +4278,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6200000,
+          "amountMinor": 6510000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4299,7 +4299,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-thinkpad-e16",
@@ -4358,7 +4358,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 7800000,
+          "amountMinor": 8190000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4379,7 +4379,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-thinkpad-x1-carbon-gen-13",
@@ -4438,7 +4438,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 15000000,
+          "amountMinor": 15750000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4459,7 +4459,7 @@
       "order": 4
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-yoga-7i",
@@ -4518,7 +4518,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8000000,
+          "amountMinor": 8400000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4539,7 +4539,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "lenovo-yoga-2-in-1-16iml9",
@@ -4598,7 +4598,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8000000,
+          "amountMinor": 8400000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4619,7 +4619,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-15-fd0460",
@@ -4678,7 +4678,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 3350000,
+          "amountMinor": 3517500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4699,7 +4699,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-15-fd0130wm",
@@ -4758,7 +4758,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 3900000,
+          "amountMinor": 4095000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4779,7 +4779,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-15-fd0250wm",
@@ -4838,7 +4838,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5200000,
+          "amountMinor": 5460000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4859,7 +4859,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-250r-g10",
@@ -4918,7 +4918,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5200000,
+          "amountMinor": 5460000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -4939,7 +4939,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-15",
@@ -4998,7 +4998,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5500000,
+          "amountMinor": 5775000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5029,7 +5029,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6000000,
+          "amountMinor": 6300000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5050,7 +5050,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-probook-445-g10",
@@ -5109,7 +5109,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5300000,
+          "amountMinor": 5565000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5130,7 +5130,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-probook-455-g10",
@@ -5189,7 +5189,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5000000,
+          "amountMinor": 5250000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5210,7 +5210,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-probook-440-g10",
@@ -5269,7 +5269,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 7000000,
+          "amountMinor": 7350000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5290,7 +5290,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-probook-440-g11",
@@ -5349,7 +5349,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5800000,
+          "amountMinor": 6090000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5370,7 +5370,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-probook-460-g11",
@@ -5429,7 +5429,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8000000,
+          "amountMinor": 8400000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5450,7 +5450,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-probook-465-g11",
@@ -5509,7 +5509,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 7500000,
+          "amountMinor": 7875000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5530,7 +5530,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-probook-4-g1i-16",
@@ -5589,7 +5589,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 7000000,
+          "amountMinor": 7350000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5610,7 +5610,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-elitebook-660-g11",
@@ -5669,7 +5669,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6900000,
+          "amountMinor": 7245000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5690,7 +5690,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-elitebook-860-g11",
@@ -5749,7 +5749,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 7800000,
+          "amountMinor": 8190000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5770,7 +5770,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-elitebook-1040-g10",
@@ -5829,7 +5829,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 10000000,
+          "amountMinor": 10500000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5850,7 +5850,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-omnibook-5-flip-14-fp0023dx",
@@ -5909,7 +5909,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8000000,
+          "amountMinor": 8400000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -5930,7 +5930,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-omnibook-x-flip-16-as0023dx",
@@ -5989,7 +5989,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 9000000,
+          "amountMinor": 9450000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6010,7 +6010,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-omnibook-x-flip-16-as0043dx",
@@ -6069,7 +6069,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 14500000,
+          "amountMinor": 15225000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6090,7 +6090,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-omnibook-x-flip-14-fm0023dx",
@@ -6149,7 +6149,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 11000000,
+          "amountMinor": 11550000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6170,7 +6170,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-envy-14-es1023dx",
@@ -6229,7 +6229,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8000000,
+          "amountMinor": 8400000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6250,7 +6250,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-zbook-firefly-14-g11",
@@ -6309,7 +6309,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 12000000,
+          "amountMinor": 12600000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6330,7 +6330,7 @@
       "order": 5
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-zbook-firefly-16-g11",
@@ -6389,7 +6389,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 16000000,
+          "amountMinor": 16800000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6410,7 +6410,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-zbook-fury-16-g11",
@@ -6469,7 +6469,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 14000000,
+          "amountMinor": 14700000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6490,7 +6490,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-vostro-3520",
@@ -6549,7 +6549,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 3700000,
+          "amountMinor": 3885000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6580,7 +6580,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 4200000,
+          "amountMinor": 4410000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6601,7 +6601,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-dc15250",
@@ -6660,7 +6660,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5000000,
+          "amountMinor": 5250000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6681,7 +6681,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-pro-15-essential-pv15250",
@@ -6740,7 +6740,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6000000,
+          "amountMinor": 6300000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6761,7 +6761,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-latitude-3450",
@@ -6820,7 +6820,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6500000,
+          "amountMinor": 6825000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6841,7 +6841,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-latitude-3550",
@@ -6900,7 +6900,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 7000000,
+          "amountMinor": 7350000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -6921,7 +6921,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-inspiron-14-7440-plus",
@@ -6980,7 +6980,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8500000,
+          "amountMinor": 8925000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7011,7 +7011,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 9000000,
+          "amountMinor": 9450000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7032,7 +7032,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-14-plus-2-in-1-db04250",
@@ -7091,7 +7091,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 9000000,
+          "amountMinor": 9450000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7112,7 +7112,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-precision-3591",
@@ -7171,7 +7171,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 12500000,
+          "amountMinor": 13125000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7192,7 +7192,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "dell-alienware-16x-aurora-ac16251",
@@ -7251,7 +7251,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 24000000,
+          "amountMinor": 25200000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7272,7 +7272,7 @@
       "order": 6
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "connex-horizon-x",
@@ -7331,7 +7331,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 1500000,
+          "amountMinor": 1575000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7352,7 +7352,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "asus-x1404",
@@ -7411,7 +7411,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 4350000,
+          "amountMinor": 4567500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7432,7 +7432,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "msi-14-f13mxg",
@@ -7491,7 +7491,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5200000,
+          "amountMinor": 5460000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7512,7 +7512,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "msi-14-f1mxg",
@@ -7571,7 +7571,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6550000,
+          "amountMinor": 6877500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7592,7 +7592,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-290-g4-mt",
@@ -7653,7 +7653,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 4900000,
+          "amountMinor": 5145000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7684,7 +7684,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 4700000,
+          "amountMinor": 4935000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7717,7 +7717,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5600000,
+          "amountMinor": 5880000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7738,7 +7738,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:18:40.218Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-290-g9-pro-tower",
@@ -7797,7 +7797,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 4500000,
+          "amountMinor": 4725000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7830,7 +7830,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5350000,
+          "amountMinor": 5617500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7861,7 +7861,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5500000,
+          "amountMinor": 5775000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7892,7 +7892,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6500000,
+          "amountMinor": 6825000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7913,7 +7913,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:20:24.467Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-290-g9",
@@ -7972,7 +7972,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6850000,
+          "amountMinor": 7192500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -7993,7 +7993,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:37:08.651Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-prodesk-400-g9-sff",
@@ -8054,7 +8054,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5850000,
+          "amountMinor": 6142500,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8085,7 +8085,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6800000,
+          "amountMinor": 7140000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8116,7 +8116,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8000000,
+          "amountMinor": 8400000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8137,7 +8137,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:37:09.511Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-prodesk-4-sff-g1",
@@ -8196,7 +8196,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6000000,
+          "amountMinor": 6300000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8217,7 +8217,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:37:10.297Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-prodesk-4-twr-g1i",
@@ -8276,7 +8276,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8000000,
+          "amountMinor": 8400000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8297,7 +8297,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:37:11.152Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-200-g4",
@@ -8356,7 +8356,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 5500000,
+          "amountMinor": 5775000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8377,7 +8377,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:37:12.053Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-27cr0028",
@@ -8436,7 +8436,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 8500000,
+          "amountMinor": 8925000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8457,7 +8457,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:39:50.584Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "hp-cr0342nh",
@@ -8516,7 +8516,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 6500000,
+          "amountMinor": 6825000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8537,7 +8537,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-08-08T18:37:13.749Z"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "targus-tbb565gl-74",
@@ -8588,7 +8588,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 320000,
+          "amountMinor": 336000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8609,7 +8609,7 @@
       "order": 26
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "targus-cn600gl-70",
@@ -8660,7 +8660,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 400000,
+          "amountMinor": 420000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8681,7 +8681,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "targus-tbb943gl",
@@ -8732,7 +8732,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 400000,
+          "amountMinor": 420000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8753,7 +8753,7 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   },
   {
     "id": "targus-tbb013eu-74-eco-spruce",
@@ -8804,7 +8804,7 @@
         "availability": null,
         "pricing": {
           "currency": "MZN",
-          "amountMinor": 600000,
+          "amountMinor": 630000,
           "label": "exact",
           "vatIncluded": false,
           "effectiveFrom": null,
@@ -8825,6 +8825,6 @@
       "order": null
     },
     "cardTone": "default",
-    "updatedAt": "2026-07-30T00:00:00+02:00"
+    "updatedAt": "2026-08-08T00:00:00+02:00"
   }
 ]
