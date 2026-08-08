@@ -79,6 +79,23 @@ detail pages, variants, availability, media, and pricing. Every record has a sta
 `slug`; every variant has a stable `sku`; every image has a stable media ID. Published and draft
 records use the same schema in `catalog/schema.ts`.
 
+### Choosing the first homepage cards
+
+Homepage collections use each product's `placements` entry. The section selects the carousel and
+its numeric `order` controls which cards appear first. Promote products safely by slug with a dry
+run:
+
+```bash
+npm run homepage:arrange -- \
+  --section favorites \
+  --products redmi-note-14s,galaxy-a06,galaxy-a07,redmi-note-14-pro
+```
+
+The listed products become the leading cards in exactly that order. Products not listed remain in
+the carousel after them in their existing relative order. Review the printed before/after list,
+then repeat with `--apply`, run `npm run catalog:validate`, and commit the catalogue diff. Supported
+homepage sections are `services`, `favorites`, `accessories`, and `possibilities`.
+
 MZN is the authoritative store currency. Prices use integer minor units, so `1_055_000` represents
 `10,550.00 MZN`. Prices exclude VAT. Do not store formatted price strings or derive local product
 prices from foreign retail prices.

@@ -13,6 +13,7 @@
     "catalog:health": "npm run catalog:validate",
     "catalog:import": "tsx scripts/catalog/import-json.ts",
     "images:update": "tsx scripts/catalog/update-product-image.ts",
+    "homepage:arrange": "tsx scripts/catalog/arrange-homepage.ts",
     "rates:check": "tsx scripts/rates/check.ts",
     "rates:update": "tsx scripts/rates/update.ts",
     "format": "prettier --write .",
