@@ -64,4 +64,17 @@ describe('product catalog routes', () => {
       expect(card.image).toMatch(new RegExp(`/hp/${slug}/main-clean\\.png$`));
     });
   });
+
+  it('uses PNG product cutouts throughout Smartphones for every budget', () => {
+    const smartphones = catalogProducts.filter(({ product }) =>
+      product.placements.some(({ section }) => section === 'favorites')
+    );
+
+    expect(smartphones).toHaveLength(23);
+    smartphones.forEach(({ card }) => {
+      expect(card.image).toMatch(
+        /\/images\/products\/(?:redmi|samsung)\/[^/]+\/main\.png$/
+      );
+    });
+  });
 });
