@@ -101,8 +101,8 @@ export function CardCarousel({
         ref={scrollerRef}
         className={cn(
           'card-scroll flex snap-x snap-mandatory gap-3 overflow-x-auto pb-5',
-          fullBleed ? 'card-scroll-full-bleed' : 'px-5 md:px-8',
-          fullBleed && hasCarouselControls && 'card-scroll-content-window'
+          fullBleed ? 'card-scroll-full-bleed' : 'safe-page-padding',
+          fullBleed && 'card-scroll-content-window'
         )}
         role="list"
         aria-label={label}

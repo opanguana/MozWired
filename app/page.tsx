@@ -13,6 +13,7 @@ const storeCollections: {
   highlight: string;
   title: string;
   cards: ServiceCardData[];
+  fullBleed?: boolean;
 }[] = [
   {
     id: 'services',
@@ -31,6 +32,7 @@ const storeCollections: {
     highlight: 'Accessories.',
     title: 'The finishing touches for every setup.',
     cards: getProductsForSection('accessories').map((product) => toServiceCard(product)),
+    fullBleed: true,
   },
   {
     id: 'possibilities',
@@ -45,26 +47,39 @@ function CardCollection({
   highlight,
   title,
   cards,
+  fullBleed = false,
   darkHeading = false,
 }: {
   id: string;
   highlight: string;
   title: string;
   cards: ServiceCardData[];
+  fullBleed?: boolean;
   darkHeading?: boolean;
 }) {
   return (
     <section id={id} className="scroll-mt-28 py-7 md:py-10" aria-labelledby={`${id}-title`}>
       <h2
         id={`${id}-title`}
-        className={`mx-auto max-w-store px-5 text-2xl font-bold tracking-[-0.04em] md:px-8 md:text-[1.75rem] ${
+        className={`safe-page-padding mx-auto max-w-store text-2xl font-bold tracking-[-0.04em] md:text-[1.75rem] ${
           darkHeading ? 'text-white' : 'text-store-ink'
         }`}
       >
-        <span className={`marker-highlight ${darkHeading ? 'text-black' : ''}`}>{highlight}</span>{' '}
-        <span className={darkHeading ? 'text-white/55' : 'text-black/55'}>{title}</span>
+        <span
+          className="flex flex-wrap items-baseline gap-x-[0.25em] gap-y-1 leading-tight"
+          data-collection-heading-content
+        >
+          <span className={`marker-highlight ${darkHeading ? 'text-black' : ''}`}>
+            {highlight}
+          </span>
+          <span className={darkHeading ? 'text-white/55' : 'text-black/55'}>{title}</span>
+        </span>
       </h2>
-      <CardCarousel cards={cards} label={`${highlight} ${title}`} fullBleed={cards.length > 4} />
+      <CardCarousel
+        cards={cards}
+        label={`${highlight} ${title}`}
+        fullBleed={fullBleed || cards.length > 4}
+      />
     </section>
   );
 }
@@ -72,10 +87,10 @@ function CardCollection({
 export default function HomePage() {
   const activeCollections = storeCollections.filter(({ cards }) => cards.length > 0);
   const featuredCollection = activeCollections.find(({ id }) => id === 'services');
-  const backgroundCollections = activeCollections.filter(({ id }) => id === 'favorites');
-  const middleCollections = activeCollections.filter(({ id }) =>
-    ['accessories', 'possibilities'].includes(id)
+  const backgroundCollections = activeCollections.filter(({ id }) =>
+    ['favorites', 'accessories'].includes(id)
   );
+  const middleCollections = activeCollections.filter(({ id }) => id === 'possibilities');
 
   return (
     <main id="main-content">
@@ -91,29 +106,33 @@ export default function HomePage() {
         />
 
         <div className="relative z-10">
-          <div className="mx-auto grid min-h-[14rem] max-w-store items-center gap-8 px-5 py-8 md:min-h-[16rem] md:grid-cols-[1fr_auto] md:px-8">
+          <div className="safe-page-padding mx-auto grid min-h-[14rem] max-w-store items-center gap-8 py-8 md:min-h-[16rem] md:grid-cols-[1fr_auto]">
             <div>
-              <h1 className="text-[clamp(3rem,5vw,4rem)] font-medium leading-none tracking-[-0.045em]">
-                Your Trusted <span className="bg-[#f15a24] px-[0.06em] text-white">Partner.</span>
+              <h1 className="text-[clamp(2.5rem,12vw,3rem)] font-bold leading-[0.98] tracking-[-0.045em] sm:text-[clamp(3rem,5vw,4rem)] sm:leading-none">
+                Your Trusted
+                {' '}
+                <span className="mt-2 block w-fit bg-[#f15a24] px-[0.06em] text-white sm:ml-[0.12em] sm:mt-0 sm:inline">
+                  Partner.
+                </span>
               </h1>
             </div>
 
             <div className="md:min-w-60 md:text-right">
               <p className="text-[1.75rem] font-normal leading-none tracking-[-0.035em]">
-                Life, sorted.
+                Technology, sorted.
               </p>
               <div className="mt-4 grid justify-items-start gap-2 text-[13px] md:justify-items-end">
                 <Link
                   href="#support"
                   className="rounded-sm text-[rgb(247_248_248)] hover:underline focus-ring"
                 >
-                  Connect with a Specialist ↗
+                  Get expert buying advice ↗
                 </Link>
                 <Link
                   href="#services"
                   className="rounded-sm text-[rgb(139_143_152)] transition hover:text-[rgb(247_248_248)] hover:underline focus-ring"
                 >
-                  Find a MozWired Store ↗
+                  Shop all electronics ↗
                 </Link>
               </div>
             </div>
@@ -140,7 +159,23 @@ export default function HomePage() {
         </div>
 
         {middleCollections.map((collection) => (
-          <CardCollection key={collection.id} {...collection} />
+          <div
+            key={collection.id}
+            className="relative isolate overflow-hidden bg-[#08090a]"
+            data-section-background="store-hero"
+          >
+            <Image
+              src="/images/store/store-hero-glow.webp"
+              alt=""
+              fill
+              sizes="100vw"
+              className="-z-10 object-cover object-bottom"
+              aria-hidden="true"
+            />
+            <div className="relative z-10">
+              <CardCollection {...collection} darkHeading />
+            </div>
+          </div>
         ))}
       </div>
     </main>

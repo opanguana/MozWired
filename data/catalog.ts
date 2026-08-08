@@ -1,4 +1,4 @@
-import { getCatalog } from '@/catalog/load';
+import { getCatalog, groupCatalogProducts } from '@/catalog/load';
 import { toDisplayVariant, toServiceCard } from '@/catalog/presentation';
 import type { CatalogCategory, CatalogProduct as CatalogRecord } from '@/catalog/schema';
 
@@ -12,7 +12,9 @@ export type CatalogProduct = {
   variants: ReturnType<typeof toDisplayVariant>[];
 };
 
-export const catalogProducts: CatalogProduct[] = getCatalog().map((product) => ({
+const sourceProducts = getCatalog();
+
+export const catalogProducts: CatalogProduct[] = groupCatalogProducts(sourceProducts).map((product) => ({
   product,
   card: toServiceCard(product),
   slug: product.slug,
@@ -23,5 +25,12 @@ export const catalogProducts: CatalogProduct[] = getCatalog().map((product) => (
 }));
 
 export function getCatalogProduct(slug: string) {
-  return catalogProducts.find((product) => product.slug === slug);
+  const source = sourceProducts.find((product) => product.slug === slug);
+  if (!source) return undefined;
+
+  return catalogProducts.find(
+    ({ product }) =>
+      product.id === source.id ||
+      (source.productGroupId !== null && product.productGroupId === source.productGroupId)
+  );
 }

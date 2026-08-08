@@ -3,11 +3,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { ProductPrice } from '@/components/currency/ProductPrice';
+import type { CatalogCategory } from '@/catalog/schema';
 import { cn } from '@/lib/utils';
 import { toProductSlug } from '@/lib/product-slug';
 import type { ProductPrice as ProductPriceValue } from '@/types/money';
 
+import { BrandMark } from './BrandMark';
+
+export const SHOW_PRODUCT_STATUS_LABELS = false;
+
 export type ServiceCardData = {
+  href?: string;
+  brand?: string;
+  category?: CatalogCategory;
   eyebrow: string;
   title: string;
   description: string;
@@ -24,7 +32,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
   return (
     <article
       className={cn(
-        'group relative flex min-h-[31rem] w-[18.5rem] shrink-0 snap-start flex-col overflow-hidden p-4 md:w-[20rem]',
+        'group relative flex h-[31rem] min-h-[31rem] w-[18.5rem] shrink-0 snap-start flex-col overflow-hidden p-4 md:w-[20rem]',
         card.warmDark
           ? 'border border-[#2a2821] bg-[#1b1a15] text-white shadow-[0_18px_50px_rgb(0_0_0/0.3)]'
           : card.dark
@@ -34,7 +42,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
       )}
     >
       <Link
-        href={`/products/${toProductSlug(card.title)}`}
+        href={card.href ?? `/products/${toProductSlug(card.title)}`}
         aria-label={`View ${card.title} details`}
         className="focus-ring absolute inset-0 z-10"
       />
@@ -47,19 +55,27 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
         >
           {card.eyebrow}
         </p>
-        <BadgePercent
-          aria-hidden="true"
-          className={
-            card.warmDark ? 'text-store-orange' : card.dark ? 'text-store-cyan' : 'text-store-teal'
-          }
-          size={18}
-          strokeWidth={2.2}
-        />
+        {card.brand ? (
+          <BrandMark brand={card.brand} inverse={card.dark || card.warmDark} />
+        ) : (
+          <BadgePercent
+            aria-hidden="true"
+            className={
+              card.warmDark
+                ? 'text-store-orange'
+                : card.dark
+                  ? 'text-store-cyan'
+                  : 'text-store-teal'
+            }
+            size={18}
+            strokeWidth={2.2}
+          />
+        )}
       </div>
       <h3 className="max-w-[15rem] text-[1.35rem] font-bold leading-[1.05] tracking-[-0.03em]">
         {card.title}
       </h3>
-      {(card.condition || card.promotion) && (
+      {SHOW_PRODUCT_STATUS_LABELS && (card.condition || card.promotion) && (
         <div className="mt-2 flex flex-wrap gap-1.5" aria-label="Product details">
           {card.condition && (
             <span className="rounded-full border border-current/15 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide">
@@ -90,7 +106,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
       />
       <div
         className={cn(
-          'relative mt-auto h-48 overflow-hidden',
+          'relative mt-auto h-80 shrink-0 overflow-hidden',
           card.warmDark ? 'border border-[#353229] bg-[#292720]' : 'bg-white/65'
         )}
       >
@@ -100,7 +116,12 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
             alt={card.title}
             fill
             sizes="(min-width: 768px) 320px, 296px"
-            className="object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            className={cn(
+              'object-contain transition-transform duration-300',
+              card.category === 'computers'
+                ? 'scale-[0.92] group-hover:scale-[0.96]'
+                : 'scale-[1.5] group-hover:scale-[1.56]'
+            )}
           />
         ) : (
           <div

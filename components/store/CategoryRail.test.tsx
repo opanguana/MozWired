@@ -12,5 +12,6 @@ describe('CategoryRail', () => {
     expect(screen.getByText('Smartphones')).toBeInTheDocument();
     expect(screen.getByText('Accessories')).toBeInTheDocument();
     expect(screen.queryByText('Apple Gift Card')).not.toBeInTheDocument();
+    expect(screen.getByRole('list')).toHaveClass('safe-page-padding');
   });
 });

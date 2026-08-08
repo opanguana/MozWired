@@ -45,7 +45,7 @@ export function getCatalogProduct(
 }
 
 export function getProductsForSection(section: string) {
-  return getCatalog()
+  return groupCatalogProducts(getCatalog())
     .flatMap((product) =>
       product.placements
         .filter((placement) => placement.section === section)
@@ -53,6 +53,41 @@ export function getProductsForSection(section: string) {
     )
     .sort((left, right) => left.order - right.order)
     .map(({ product }) => product);
+}
+
+/**
+ * Builds storefront products without changing the inventory records in the source catalogue.
+ * Records with the same explicit group ID become one presentation product whose variants remain
+ * independently identifiable by SKU.
+ */
+export function groupCatalogProducts(products: CatalogProduct[]) {
+  const groups = new Map<string, CatalogProduct[]>();
+
+  products.forEach((product) => {
+    const key = product.productGroupId ? `group:${product.productGroupId}` : `product:${product.id}`;
+    groups.set(key, [...(groups.get(key) ?? []), product]);
+  });
+
+  return [...groups.values()].map((members) => {
+    const representative = members[0];
+    if (members.length === 1 || !representative.productGroupId) return representative;
+
+    const placements = [...members.flatMap(({ placements }) => placements)]
+      .sort((left, right) => left.order - right.order)
+      .filter(
+        (placement, index, all) =>
+          all.findIndex(({ section }) => section === placement.section) === index
+      );
+
+    return {
+      ...representative,
+      title: representative.productGroupTitle ?? representative.title,
+      pricing: null,
+      scheduledPrices: [],
+      variants: members.flatMap(({ variants }) => variants),
+      placements,
+    };
+  });
 }
 
 export function getResolvedProductPrice(product: CatalogProduct, now = new Date()) {

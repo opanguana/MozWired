@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react';
 
+import { siteAnnouncement } from '@/config/announcement';
+
 import { AnnouncementBanner, type Announcement, isAnnouncementActive } from './AnnouncementBanner';
 
 const activeAnnouncement: Announcement = {
@@ -12,6 +14,18 @@ const activeAnnouncement: Announcement = {
 };
 
 describe('AnnouncementBanner', () => {
+  it('uses electronics-store messaging for the active site announcement', () => {
+    render(<AnnouncementBanner announcement={siteAnnouncement} />);
+
+    expect(
+      screen.getByText('Find the right electronics for work, home, and everyday life.')
+    ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Shop all electronics' })).toHaveAttribute(
+      'href',
+      '#services'
+    );
+  });
+
   it('renders an enabled announcement', () => {
     render(<AnnouncementBanner announcement={activeAnnouncement} />);
 

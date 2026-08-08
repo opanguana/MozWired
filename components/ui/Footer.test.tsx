@@ -23,5 +23,8 @@ describe('Footer', () => {
 
     expect(screen.getByRole('contentinfo', { name: 'Site footer' })).toHaveClass('bg-[#08090a]');
     expect(screen.getByRole('navigation', { name: 'Legal' })).toBeInTheDocument();
+    expect(screen.getByRole('contentinfo').firstElementChild).toHaveClass('safe-page-padding');
+    expect(screen.getByRole('textbox', { name: 'Email address' })).toHaveClass('min-h-11');
+    expect(screen.getByRole('button', { name: 'Join' })).toHaveClass('min-h-11');
   });
 });

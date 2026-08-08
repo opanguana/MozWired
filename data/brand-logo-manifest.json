@@ -1,0 +1,65 @@
+[
+  {
+    "brand": "ASUS",
+    "sourcePage": "https://press.asus.com/media/corporate-assets/2/albums/47/",
+    "sourceAsset": "https://www.asus.com/media/img/2017/images/n-logo-asus.svg",
+    "localPath": "/images/brands/asus.svg",
+    "status": "installed"
+  },
+  {
+    "brand": "Connex",
+    "sourcePage": "https://connexdevices.co.za/",
+    "sourceAsset": "https://connexdevices.co.za/wp-content/uploads/2026/05/connex-logo-200x55-a.png",
+    "localPath": "/images/brands/connex.png",
+    "status": "installed"
+  },
+  {
+    "brand": "Dell",
+    "sourcePage": "https://www.dell.com/en-us/lp/dt/our-brand",
+    "sourceAsset": "https://i.dell.com/is/image/DellContent/content/dam/images/logos/dell-technologies/stacked/digital/delltech-logo-stk-blue-rgb.png?wid=1346&hei=710&fit=fit",
+    "localPath": "/images/brands/dell.png",
+    "status": "installed"
+  },
+  {
+    "brand": "HP",
+    "sourcePage": "https://www.hp.com/us-en/hp-information/brandcentral/resource-library.html",
+    "sourceAsset": null,
+    "localPath": null,
+    "status": "authorized-download-required"
+  },
+  {
+    "brand": "Lenovo",
+    "sourcePage": "https://www.lenovo.com/us/en/",
+    "sourceAsset": "https://p3-ofp.static.pub/fes/cms/2023/03/22/8hjmcte754uauw07ypikjkjtx0m5ib450914.svg",
+    "localPath": "/images/brands/lenovo.svg",
+    "status": "installed"
+  },
+  {
+    "brand": "MSI",
+    "sourcePage": "https://www.msi.com/page/msi-logos",
+    "sourceAsset": "https://download-2.msi.com/archive/mnu_exe/corp/msi-logos.zip",
+    "localPath": "/images/brands/msi.png",
+    "status": "installed"
+  },
+  {
+    "brand": "Redmi",
+    "sourcePage": "https://www.mi.com/global/",
+    "sourceAsset": null,
+    "localPath": null,
+    "status": "approved-redmi-asset-required"
+  },
+  {
+    "brand": "Samsung",
+    "sourcePage": "https://news.samsung.com/es/imagenes-logotipo-samsung",
+    "sourceAsset": "https://img.global.news.samsung.com/es/wp-content/uploads/2017/12/Lettermark-Samsung-01-300x43.png",
+    "localPath": "/images/brands/samsung.png",
+    "status": "installed"
+  },
+  {
+    "brand": "Targus",
+    "sourcePage": "https://www.targus.com/",
+    "sourceAsset": "https://www.targus.com/Themes/TargusRegional2018/Content/images/targus-logo.png",
+    "localPath": "/images/brands/targus.png",
+    "status": "installed"
+  }
+]

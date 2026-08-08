@@ -25,7 +25,9 @@ describe('CardCarousel', () => {
       'w-full'
     );
     expect(screen.getByRole('list', { name: 'Featured devices' })).toHaveClass(
-      'card-scroll-full-bleed',
+      'card-scroll-full-bleed'
+    );
+    expect(screen.getByRole('list', { name: 'Featured devices' })).toHaveClass(
       'card-scroll-content-window'
     );
     expect(document.querySelectorAll('[data-carousel-copy]')).toHaveLength(15);
@@ -57,6 +59,20 @@ describe('CardCarousel', () => {
     expect(screen.getByRole('list', { name: 'Featured devices' })).not.toHaveClass(
       'card-scroll-full-bleed'
     );
+    expect(screen.getByRole('list', { name: 'Featured devices' })).toHaveClass(
+      'safe-page-padding'
+    );
+    expect(document.querySelectorAll('[data-carousel-copy]')).toHaveLength(4);
+  });
+
+  it('uses the same full-bleed geometry for a four-card collection', () => {
+    render(<CardCarousel cards={cards.slice(0, 4)} label="Featured devices" fullBleed />);
+
+    const scroller = screen.getByRole('list', { name: 'Featured devices' });
+
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    expect(scroller.parentElement).toHaveClass('card-carousel-full-bleed', 'w-full');
+    expect(scroller).toHaveClass('card-scroll-full-bleed', 'card-scroll-content-window', 'gap-3');
     expect(document.querySelectorAll('[data-carousel-copy]')).toHaveLength(4);
   });
 
@@ -74,6 +90,7 @@ describe('CardCarousel', () => {
     scroller.scrollLeft = 400;
     fireEvent.scroll(scroller);
     expect(scroller.scrollLeft).toBe(400);
+    expect(scroller).toHaveClass('card-scroll-content-window');
     act(() => jest.advanceTimersByTime(140));
     expect(scroller.scrollLeft).toBe(1400);
 
@@ -102,9 +119,25 @@ describe('CardCarousel', () => {
       screen.getByRole('button', { name: 'Show next products in Featured devices' })
     );
 
+    expect(scroller).toHaveClass('card-scroll-content-window');
     expect(scrollBy).toHaveBeenCalledWith({
       left: 1328,
       behavior: 'smooth',
     });
+  });
+
+  it.each([
+    ['touch', (scroller: HTMLElement) => fireEvent.touchStart(scroller)],
+    ['wheel', (scroller: HTMLElement) => fireEvent.wheel(scroller)],
+    ['keyboard', (scroller: HTMLElement) => fireEvent.keyDown(scroller, { key: 'ArrowRight' })],
+  ])('keeps the content window after %s interaction', (_, interact) => {
+    render(<CardCarousel cards={cards} label="Featured devices" fullBleed />);
+
+    const scroller = screen.getByRole('list', { name: 'Featured devices' });
+    expect(scroller).toHaveClass('card-scroll-content-window');
+
+    interact(scroller);
+
+    expect(scroller).toHaveClass('card-scroll-content-window');
   });
 });

@@ -45,6 +45,9 @@ export function toServiceCard(
   const content = getLocalizedProductContent(product, language);
 
   return {
+    href: `/products/${product.slug}`,
+    brand: product.brand,
+    category: product.category,
     eyebrow: content.eyebrow,
     title: product.title,
     description: content.description,

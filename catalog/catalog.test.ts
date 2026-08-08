@@ -92,6 +92,7 @@ describe('validated product catalogue', () => {
   it('normalizes optional commerce metadata without changing older records', () => {
     expect(baseProduct.status).toBe('archived');
     expect(baseProduct.navigation).toEqual({ featured: false, order: null });
+    expect(baseProduct.productGroupId).toBeNull();
     expect(baseProduct.variants[0]?.warranty ?? null).toBeNull();
     expect(baseProduct.variants[0]?.condition ?? null).toBeNull();
   });

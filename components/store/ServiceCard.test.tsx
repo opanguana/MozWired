@@ -5,6 +5,41 @@ import { mznPrice } from '@/types/money';
 import { ServiceCard } from './ServiceCard';
 
 describe('ServiceCard', () => {
+  it('renders the OEM brand mark supplied by catalogue presentation data', () => {
+    render(
+      <ServiceCard
+        card={{
+          brand: 'Samsung',
+          eyebrow: 'Made for the essentials',
+          title: 'Galaxy A06',
+          description: 'A practical smartphone for everyday use.',
+          price: mznPrice(855_000),
+        }}
+      />
+    );
+
+    const mark = screen.getByRole('img', { name: 'Samsung brand' });
+    expect(decodeURIComponent(mark.querySelector('img')?.getAttribute('src') ?? '')).toContain(
+      '/images/brands/samsung.png'
+    );
+  });
+
+  it('uses a readable brand-name fallback when an approved logo file is unavailable', () => {
+    render(
+      <ServiceCard
+        card={{
+          brand: 'HP',
+          eyebrow: 'Configured for your needs',
+          title: 'HP 15',
+          description: 'A practical laptop for everyday use.',
+          price: mznPrice(4_700_000),
+        }}
+      />
+    );
+
+    expect(screen.getByRole('img', { name: 'HP brand' })).toHaveTextContent('HP');
+  });
+
   it('links the card to its dynamic product page', () => {
     render(
       <ServiceCard
@@ -23,7 +58,26 @@ describe('ServiceCard', () => {
     );
   });
 
-  it('discloses refurbished condition and promotions', () => {
+  it('keeps navigation stable when a merchandising title differs from the product slug', () => {
+    render(
+      <ServiceCard
+        card={{
+          href: '/products/targus-tbb565gl-74',
+          eyebrow: 'Carry your technology',
+          title: 'Targus Intellect',
+          description: 'A practical laptop backpack.',
+          price: mznPrice(320_000),
+        }}
+      />
+    );
+
+    expect(screen.getByRole('link', { name: 'View Targus Intellect details' })).toHaveAttribute(
+      'href',
+      '/products/targus-tbb565gl-74'
+    );
+  });
+
+  it('keeps new, refurbished and promotion labels hidden while they are disabled', () => {
     render(
       <ServiceCard
         card={{
@@ -37,8 +91,89 @@ describe('ServiceCard', () => {
       />
     );
 
-    expect(screen.getByText('Refurbished')).toBeInTheDocument();
-    expect(screen.getByText('Promotion')).toBeInTheDocument();
+    expect(screen.queryByText('New')).not.toBeInTheDocument();
+    expect(screen.queryByText('Refurbished')).not.toBeInTheDocument();
+    expect(screen.queryByText('Promotion')).not.toBeInTheDocument();
+  });
+
+  it('uses a fixed product-media height without changing card dimensions', () => {
+    render(
+      <ServiceCard
+        card={{
+          eyebrow: 'Made for the essentials',
+          title: 'Galaxy A06',
+          description: 'A practical smartphone for everyday use.',
+          price: mznPrice(855_000),
+          image: '/images/products/samsung/galaxy-a06/main.png',
+          category: 'phones',
+        }}
+      />
+    );
+
+    expect(screen.getByRole('article')).toHaveClass(
+      'h-[31rem]',
+      'min-h-[31rem]',
+      'w-[18.5rem]',
+      'md:w-[20rem]'
+    );
+    const image = screen.getByRole('img', { name: 'Galaxy A06' });
+    expect(image).toHaveClass('object-contain', 'scale-[1.5]', 'group-hover:scale-[1.56]');
+    expect(image.getAttribute('src')).toContain('main.png');
+    expect(image.parentElement).toHaveClass('mt-auto', 'h-80', 'shrink-0', 'overflow-hidden');
+    expect(image.parentElement).not.toHaveClass('flex-1', 'min-h-32', 'h-48', 'h-56');
+  });
+
+  it('preserves the laptop artwork scale used as the catalog reference', () => {
+    render(
+      <ServiceCard
+        card={{
+          eyebrow: 'Everyday performance',
+          title: 'IdeaPad 1',
+          description: 'A practical laptop for everyday work.',
+          price: mznPrice(4_700_000),
+          image: '/images/products/lenovo/ideapad-1-15iau7/main.png',
+          category: 'computers',
+        }}
+      />
+    );
+
+    expect(screen.getByRole('img', { name: 'IdeaPad 1' })).toHaveClass(
+      'object-contain',
+      'scale-[0.92]',
+      'group-hover:scale-[0.96]'
+    );
+  });
+
+  it('keeps the same fixed outer height when optional metadata is present', () => {
+    const { rerender } = render(
+      <ServiceCard
+        card={{
+          eyebrow: 'Made for the essentials',
+          title: 'Galaxy A06',
+          description: 'A practical smartphone for everyday use.',
+          price: mznPrice(855_000),
+        }}
+      />
+    );
+
+    expect(screen.getByRole('article')).toHaveClass('h-[31rem]');
+
+    rerender(
+      <ServiceCard
+        card={{
+          eyebrow: 'Made for the essentials',
+          title: 'Galaxy A06',
+          description: 'A practical smartphone for everyday use.',
+          price: mznPrice(855_000),
+          condition: 'new',
+          promotion: true,
+        }}
+      />
+    );
+
+    expect(screen.getByRole('article')).toHaveClass('h-[31rem]');
+    expect(screen.queryByText('New')).not.toBeInTheDocument();
+    expect(screen.queryByText('Promotion')).not.toBeInTheDocument();
   });
 
   it('separates dark cards from dark section backgrounds', () => {

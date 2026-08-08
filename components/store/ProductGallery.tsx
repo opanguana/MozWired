@@ -20,7 +20,7 @@ export function ProductGallery({
   const selectedImage = images.find(({ id }) => id === selectedId) ?? images[0];
 
   return (
-    <div className="relative min-h-[30rem] overflow-hidden rounded-2xl bg-[#f5f5f7]/95 text-store-ink shadow-2xl shadow-black/25 md:min-h-[46rem]">
+    <div className="relative min-h-[clamp(24rem,75svh,30rem)] overflow-hidden rounded-2xl bg-[#f5f5f7]/95 text-store-ink shadow-2xl shadow-black/25 md:min-h-[46rem]">
       <p className="relative z-[1] max-w-md p-6 text-sm font-semibold leading-relaxed text-black/60 md:p-8">
         {description}
       </p>
@@ -58,11 +58,16 @@ export function ProductGallery({
               onClick={() => setSelectedId(image.id)}
               aria-label={`Show image ${index + 1}: ${image.alt}`}
               aria-pressed={image.id === selectedImage?.id}
-              className={cn(
-                'focus-ring size-3 rounded-full border border-black/30 transition',
-                image.id === selectedImage?.id ? 'bg-black' : 'bg-white/80 hover:bg-black/25'
-              )}
-            />
+              className="focus-ring inline-flex size-11 items-center justify-center rounded-full"
+            >
+              <span
+                aria-hidden="true"
+                className={cn(
+                  'size-3 rounded-full border border-black/30 transition',
+                  image.id === selectedImage?.id ? 'bg-black' : 'bg-white/80 hover:bg-black/25'
+                )}
+              />
+            </button>
           ))}
         </div>
       )}

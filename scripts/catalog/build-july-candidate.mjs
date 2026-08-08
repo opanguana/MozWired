@@ -98,6 +98,11 @@ function groupBy(values, keyForValue) {
   return groups;
 }
 
+function withoutBrandPrefix(brand, title) {
+  const prefix = `${brand} `;
+  return title.toLowerCase().startsWith(prefix.toLowerCase()) ? title.slice(prefix.length) : title;
+}
+
 function baseProduct({ brand, title, category, content, placements, variants }) {
   const titleSlug = slug(title);
   return {
@@ -105,7 +110,7 @@ function baseProduct({ brand, title, category, content, placements, variants }) 
     slug: titleSlug,
     status: 'published',
     brand,
-    title,
+    title: withoutBrandPrefix(brand, title),
     content,
     category,
     media: null,
@@ -319,8 +324,33 @@ const featuredIds = [
 ];
 const featuredOrder = new Map(featuredIds.map((id, index) => [id, index]));
 const incomingSamsungSkus = new Set(incomingSamsung.map((row) => smartphoneVariant(row).sku));
+const accessoryMerchandising = {
+  'targus-tbb565gl-74': {
+    title: 'Intellect',
+    description: 'A lightweight laptop backpack with padded protection and quick-access storage.',
+  },
+  'targus-cn600gl-70': {
+    title: 'EcoSmart',
+    description:
+      'A water-resistant laptop backpack with recycled materials and everyday organization.',
+  },
+  'targus-tbb943gl': {
+    title: 'Modern Classic',
+    description: 'A structured laptop backpack with padded protection and practical organization.',
+  },
+  'targus-tbb013eu-74-eco-spruce': {
+    title: 'EcoSpruce',
+    description: 'A recycled-material laptop backpack with organized storage for everyday travel.',
+  },
+};
 
 for (const product of catalog) {
+  const merchandising = accessoryMerchandising[product.id];
+  if (merchandising) {
+    product.title = merchandising.title;
+    product.content.en.description = merchandising.description;
+  }
+
   const archived = product.updatedAt !== updatedAt;
 
   if (archived) {

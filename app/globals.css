@@ -50,6 +50,10 @@
 }
 
 :root {
+  --page-gutter: 1.25rem;
+  --page-inset-start: max(var(--page-gutter), env(safe-area-inset-left));
+  --page-inset-end: max(var(--page-gutter), env(safe-area-inset-right));
+  --store-content-max-width: 88rem;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);
@@ -139,6 +143,41 @@ body {
   min-width: 20rem;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.safe-page-padding {
+  padding-left: var(--page-inset-start);
+  padding-right: var(--page-inset-end);
+}
+
+.safe-overlay-padding {
+  padding-top: max(4rem, calc(env(safe-area-inset-top) + 1rem));
+  padding-right: var(--page-inset-end);
+  padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+  padding-left: var(--page-inset-start);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --page-gutter: 2rem;
+  }
+
+  .safe-overlay-padding {
+    padding-top: max(5rem, calc(env(safe-area-inset-top) + 1rem));
+  }
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
@@ -149,7 +188,7 @@ a {
 }
 
 @utility icon-button {
-  @apply focus-ring inline-flex size-9 items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white;
+  @apply focus-ring inline-flex size-11 items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white;
 }
 
 @utility nav-pill {
@@ -293,35 +332,36 @@ a {
 }
 
 .card-carousel-full-bleed {
-  --carousel-content-max-width: 88rem;
-  --carousel-page-padding: 1.25rem;
-  --carousel-inset: max(
-    var(--carousel-page-padding),
-    calc((100vw - var(--carousel-content-max-width)) / 2 + var(--carousel-page-padding))
+  --carousel-content-max-width: var(--store-content-max-width);
+  --carousel-page-padding-start: var(--page-inset-start);
+  --carousel-page-padding-end: var(--page-inset-end);
+  --carousel-inset-start: max(
+    var(--carousel-page-padding-start),
+    calc((100vw - var(--carousel-content-max-width)) / 2 + var(--carousel-page-padding-start))
+  );
+  --carousel-inset-end: max(
+    var(--carousel-page-padding-end),
+    calc((100vw - var(--carousel-content-max-width)) / 2 + var(--carousel-page-padding-end))
   );
 }
 
 .card-scroll-full-bleed {
-  padding-inline: var(--carousel-inset);
-  scroll-padding-inline: var(--carousel-inset);
+  padding-inline-start: var(--carousel-inset-start);
+  padding-inline-end: var(--carousel-inset-end);
+  scroll-padding-inline-start: var(--carousel-inset-start);
+  scroll-padding-inline-end: var(--carousel-inset-end);
 }
 
 .card-scroll-content-window {
-  clip-path: inset(0 var(--carousel-inset));
+  clip-path: inset(0 var(--carousel-inset-end) 0 var(--carousel-inset-start));
 }
 
 .card-carousel-control-start {
-  left: calc(var(--carousel-inset) + 0.75rem);
+  left: calc(var(--carousel-inset-start) + 0.75rem);
 }
 
 .card-carousel-control-end {
-  right: calc(var(--carousel-inset) + 0.75rem);
-}
-
-@media (min-width: 48rem) {
-  .card-carousel-full-bleed {
-    --carousel-page-padding: 2rem;
-  }
+  right: calc(var(--carousel-inset-end) + 0.75rem);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -28,6 +28,8 @@ describe('ProductGallery', () => {
     const nextImage = screen.getByRole('button', {
       name: 'Show image 2: Phone rear view',
     });
+    expect(nextImage).toHaveClass('size-11');
+    expect(nextImage.closest('.relative')).toHaveClass('min-h-[clamp(24rem,75svh,30rem)]');
     fireEvent.click(nextImage);
 
     expect(nextImage).toHaveAttribute('aria-pressed', 'true');

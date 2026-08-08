@@ -35,7 +35,7 @@ const footerLinkClass =
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#08090a] text-white" aria-label="Site footer">
-      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-6 md:py-16 lg:px-8">
+      <div className="safe-page-padding mx-auto max-w-7xl py-14 md:py-16">
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3 lg:grid-cols-[8rem_repeat(5,minmax(0,1fr))]">
           <Link
             href="/"
@@ -88,11 +88,11 @@ export function Footer() {
               id="footer-email"
               type="email"
               placeholder="Enter your email"
-              className="min-w-0 flex-1 rounded-lg border border-white/15 bg-white/[0.06] px-3 py-2.5 text-sm text-white placeholder:text-white/30 focus:border-store-cyan focus:outline-none"
+              className="min-h-11 min-w-0 flex-1 rounded-lg border border-white/15 bg-white/[0.06] px-3 py-2.5 text-sm text-white placeholder:text-white/30 focus:border-store-cyan focus:outline-none"
             />
             <button
               type="button"
-              className="focus-ring rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-store-cyan"
+              className="focus-ring min-h-11 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-store-cyan"
             >
               Join
             </button>

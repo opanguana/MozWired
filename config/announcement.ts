@@ -7,11 +7,11 @@ import type { Announcement } from '@/components/ui/AnnouncementBanner';
  * ISO 8601 values and are evaluated in the timezone included in each value.
  */
 export const siteAnnouncement: Announcement = {
-  id: 'workplace-specialist',
+  id: 'electronics-store',
   enabled: true,
-  message: 'Build a safer, faster workplace with one technology partner.',
-  linkLabel: 'Talk to a specialist',
-  linkHref: '#support',
+  message: 'Find the right electronics for work, home, and everyday life.',
+  linkLabel: 'Shop all electronics',
+  linkHref: '#services',
   tone: 'promotion',
   startsAt: null,
   endsAt: null,

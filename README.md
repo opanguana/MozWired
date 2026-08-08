@@ -235,6 +235,33 @@ Image IDs and sort orders must be unique within each product, the primary image 
 the `main` role, all assets are checked during catalogue validation, and every image requires useful
 alternative text. Use `"media": null` to retain the accessible “Image coming soon” placeholder.
 
+### Updating a product image
+
+Use the image workflow instead of manually moving files and editing nested catalogue media:
+
+```bash
+npm run images:update -- \
+  --product galaxy-a06 \
+  --file ~/Downloads/galaxy-a06.webp \
+  --alt "Samsung Galaxy A06 shown from the front"
+```
+
+This is a dry run: it resolves the product by its stable slug, derives the standard
+`public/images/products/<brand>/<product>/` destination, previews the media ID and accessible alt
+text, and changes nothing. Apply the reviewed plan with:
+
+```bash
+npm run images:update -- \
+  --product galaxy-a06 \
+  --file ~/Downloads/galaxy-a06.webp \
+  --alt "Samsung Galaxy A06 shown from the front" \
+  --apply
+```
+
+Use `--role gallery` to append an ordered gallery image. Existing destination files are protected;
+an intentional overwrite additionally requires `--replace`. After applying, review the image and
+catalogue diff, then run `npm run catalog:validate` and `npm run build`.
+
 ## Git workflow
 
 Create a focused branch from the current default branch:

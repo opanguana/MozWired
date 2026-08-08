@@ -173,6 +173,8 @@ export const catalogLocalizedContentSchema = z.object({
 export const catalogProductSchema = z.object({
   id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  productGroupId: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).nullable().default(null),
+  productGroupTitle: z.string().trim().min(1).nullable().default(null),
   status: z.enum(['draft', 'published', 'archived']),
   brand: z.string().trim().min(1),
   title: z.string().trim().min(1),

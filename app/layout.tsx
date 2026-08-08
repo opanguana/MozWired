@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { cookies } from 'next/headers';
 import type { ReactNode } from 'react';
@@ -29,6 +29,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'MozWired Store',
   description: 'Technology services and secure infrastructure for growing teams.',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

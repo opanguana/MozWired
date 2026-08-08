@@ -4,26 +4,80 @@ import { catalogProducts } from '@/data/catalog';
 
 import { Header } from './Header';
 
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({ push: jest.fn() }),
+}));
+
 describe('Header', () => {
   it('renders the linked company logo and primary navigation', () => {
     render(<Header />);
 
-    expect(screen.getByRole('link', { name: 'MozWired home' })).toBeInTheDocument();
-    expect(screen.getByRole('navigation', { name: 'Primary navigation' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Get support' })).toBeInTheDocument();
+    const homeLink = screen.getByRole('link', { name: 'MozWired home' });
+    expect(homeLink).not.toHaveClass('px-1');
+    expect(homeLink).toHaveClass(
+      'inline-flex',
+      'size-11',
+      'items-center',
+      'justify-center',
+      'lg:size-auto',
+      'lg:justify-start'
+    );
+    expect(homeLink.querySelector('img')).toHaveClass('h-5', 'w-auto');
+    expect(screen.getByRole('navigation', { name: 'Primary navigation' })).toHaveClass(
+      'grid-cols-[auto_1fr]',
+      'lg:grid-cols-[1fr_auto_1fr]'
+    );
+    expect(screen.getByRole('link', { name: 'Get support' })).toHaveClass(
+      'min-h-8',
+      'px-3',
+      'text-xs'
+    );
+    expect(screen.getByRole('navigation', { name: 'Primary navigation' })).toHaveClass(
+      'safe-page-padding'
+    );
+    expect(screen.getByRole('button', { name: 'Open navigation' })).toHaveClass(
+      'icon-button',
+      'lg:hidden'
+    );
+    const headerActions = screen.getByTestId('header-actions');
+    expect(headerActions).toHaveClass('gap-1', 'sm:gap-1.5');
+    expect(screen.getByRole('button', { name: 'Search products' })).toHaveClass('icon-button');
+    expect(screen.getByTestId('mobile-menu-icon-wrap')).toHaveClass('inline-flex');
+    expect(screen.getByTestId('mobile-menu-icon-wrap')).not.toHaveClass('ml-auto');
   });
 
   it('provides accessible desktop mega-menu triggers and links', () => {
     render(<Header />);
 
-    expect(screen.getByRole('button', { name: 'Computers' })).toHaveAttribute(
-      'aria-haspopup',
-      'true'
+    expect(screen.getByRole('link', { name: 'Computers' })).toHaveAttribute('href', '/#services');
+    expect(screen.getByRole('link', { name: 'Phones' })).toHaveAttribute('href', '/#favorites');
+    expect(screen.queryByRole('link', { name: 'Mobile' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'Audio' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'View all computers' })).toHaveAttribute(
+      'href',
+      '/#services'
     );
-    expect(screen.getByRole('button', { name: 'Phones' })).toHaveAttribute('aria-haspopup', 'true');
-    expect(screen.queryByRole('button', { name: 'Mobile' })).not.toBeInTheDocument();
-    expect(screen.queryByRole('button', { name: 'Audio' })).not.toBeInTheDocument();
     expect(screen.getByRole('link', { name: /ThinkPad X1 Carbon Gen 13/ })).toBeInTheDocument();
+  });
+
+  it('keeps every published catalog category reachable from primary navigation', () => {
+    render(<Header />);
+    const navigation = screen.getByRole('navigation', { name: 'Primary navigation' });
+    const expectedCategoryLinks = new Map([
+      ['computers', '/#services'],
+      ['phones', '/#favorites'],
+      ['accessories', '/#accessories'],
+      ['mobile', '/#possibilities'],
+      ['audio', '/#possibilities'],
+    ]);
+
+    new Set(catalogProducts.map(({ category }) => category)).forEach((category) => {
+      expect(
+        within(navigation).getByRole('link', {
+          name: new RegExp(`^${category === 'phones' ? 'Phones' : category}$`, 'i'),
+        })
+      ).toHaveAttribute('href', expectedCategoryLinks.get(category));
+    });
   });
 
   it('provides desktop navigation options only for curated catalog products', () => {
@@ -55,12 +109,25 @@ describe('Header', () => {
       'true'
     );
     const mobileNavigation = screen.getByRole('navigation', { name: 'Mobile navigation' });
-    expect(mobileNavigation).toBeInTheDocument();
+    expect(mobileNavigation).toHaveClass('safe-page-padding', 'lg:hidden');
+    expect(screen.getByRole('button', { name: 'Close navigation' })).toHaveClass('lg:hidden');
     expect(
       within(mobileNavigation).getByRole('button', {
         name: 'Language, country and currency settings',
       })
     ).toBeInTheDocument();
-    expect(screen.getAllByText('Galaxy A57')).not.toHaveLength(0);
+    const computersLink = within(mobileNavigation).getByRole('link', { name: 'Computers' });
+    expect(computersLink).toHaveAttribute('href', '/#services');
+    const showComputers = within(mobileNavigation).getByRole('button', {
+      name: 'Show Computers featured products',
+    });
+    fireEvent.click(showComputers);
+    expect(showComputers).toHaveAttribute('aria-expanded', 'true');
+    expect(
+      within(mobileNavigation).getByText('Dell Alienware 16X Aurora AC16251')
+    ).toBeInTheDocument();
+    expect(
+      within(mobileNavigation).getByRole('link', { name: 'View all computers' })
+    ).toHaveAttribute('href', '/#services');
   });
 });
