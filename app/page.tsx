@@ -3,12 +3,10 @@ import Link from 'next/link';
 
 import { CardCarousel } from '@/components/store/CardCarousel';
 import { CategoryRail } from '@/components/store/CategoryRail';
-import { NewArrivalsSection } from '@/components/store/NewArrivalsSection';
 import type { ServiceCardData } from '@/components/store/ServiceCard';
 import { getProductsForSection } from '@/catalog/load';
 import { toServiceCard } from '@/catalog/presentation';
 import { storeConfig } from '@/config/store';
-import { newArrivalCards } from '@/data/new-arrivals';
 
 const storeCollections: {
   id: string;
@@ -146,8 +144,6 @@ export default function HomePage() {
       </section>
 
       <div className="bg-store-canvas">
-        <NewArrivalsSection cards={newArrivalCards} />
-
         <div className="relative isolate overflow-hidden bg-[#111315]">
           <Image
             src="/images/store/store-section-2.avif"
