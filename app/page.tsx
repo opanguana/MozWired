@@ -12,6 +12,8 @@ const storeCollections: {
   id: string;
   highlight: string;
   title: string;
+  viewAllHref: string;
+  viewAllLabel: string;
   cards: ServiceCardData[];
   fullBleed?: boolean;
 }[] = [
@@ -19,18 +21,24 @@ const storeCollections: {
     id: 'services',
     highlight: 'Computers.',
     title: 'Find the configuration that fits.',
+    viewAllHref: '/products?category=computers',
+    viewAllLabel: 'View all computers',
     cards: getProductsForSection('services').map((product) => toServiceCard(product)),
   },
   {
     id: 'favorites',
     highlight: 'Smartphones.',
     title: 'Smartphones for every budget.',
+    viewAllHref: '/products?category=phones',
+    viewAllLabel: 'View all smartphones',
     cards: getProductsForSection('favorites').map((product) => toServiceCard(product)),
   },
   {
     id: 'accessories',
     highlight: 'Accessories.',
     title: 'The finishing touches for every setup.',
+    viewAllHref: '/products?category=accessories',
+    viewAllLabel: 'View all accessories',
     cards: getProductsForSection('accessories').map((product) => toServiceCard(product)),
     fullBleed: true,
   },
@@ -38,6 +46,8 @@ const storeCollections: {
     id: 'possibilities',
     highlight: 'Endless possibilities.',
     title: 'Technology for work, creativity, and play.',
+    viewAllHref: '/products?category=computers',
+    viewAllLabel: 'View all endless possibilities products',
     cards: getProductsForSection('possibilities').map((product) => toServiceCard(product)),
   },
 ];
@@ -46,6 +56,8 @@ function CardCollection({
   id,
   highlight,
   title,
+  viewAllHref,
+  viewAllLabel,
   cards,
   fullBleed = false,
   darkHeading = false,
@@ -53,28 +65,48 @@ function CardCollection({
   id: string;
   highlight: string;
   title: string;
+  viewAllHref: string;
+  viewAllLabel: string;
   cards: ServiceCardData[];
   fullBleed?: boolean;
   darkHeading?: boolean;
 }) {
   return (
     <section id={id} className="scroll-mt-28 py-7 md:py-10" aria-labelledby={`${id}-title`}>
-      <h2
-        id={`${id}-title`}
-        className={`safe-page-padding mx-auto max-w-store text-2xl font-bold tracking-[-0.04em] md:text-[1.75rem] ${
-          darkHeading ? 'text-white' : 'text-store-ink'
-        }`}
+      <div
+        className="safe-page-padding mx-auto flex max-w-store flex-wrap items-start gap-x-6 gap-y-2"
+        data-collection-header
       >
-        <span
-          className="flex flex-wrap items-baseline gap-x-[0.25em] gap-y-1 leading-tight"
-          data-collection-heading-content
+        <h2
+          id={`${id}-title`}
+          className={`min-w-[min(100%,20rem)] flex-1 text-2xl font-bold tracking-[-0.04em] md:text-[1.75rem] ${
+            darkHeading ? 'text-white' : 'text-store-ink'
+          }`}
         >
-          <span className={`marker-highlight ${darkHeading ? 'text-black' : ''}`}>
-            {highlight}
+          <span
+            className="flex flex-wrap items-baseline gap-x-[0.25em] gap-y-1 leading-tight"
+            data-collection-heading-content
+          >
+            <span className={`marker-highlight ${darkHeading ? 'text-black' : ''}`}>
+              {highlight}
+            </span>
+            <span className={darkHeading ? 'text-white/55' : 'text-black/55'}>{title}</span>
           </span>
-          <span className={darkHeading ? 'text-white/55' : 'text-black/55'}>{title}</span>
-        </span>
-      </h2>
+        </h2>
+        <Link
+          href={viewAllHref}
+          aria-label={viewAllLabel}
+          data-collection-view-all
+          data-contrast={darkHeading ? 'light' : 'dark'}
+          className={`focus-ring ml-auto inline-flex min-h-11 shrink-0 items-center rounded-sm px-1 text-sm font-medium transition hover:underline ${
+            darkHeading
+              ? 'text-white/65 visited:text-white/65 hover:text-white'
+              : 'text-black/65 visited:text-black/65 hover:text-black'
+          }`}
+        >
+          View all →
+        </Link>
+      </div>
       <CardCarousel
         cards={cards}
         label={`${highlight} ${title}`}

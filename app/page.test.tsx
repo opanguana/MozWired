@@ -67,7 +67,11 @@ describe('MozWired Store homepage', () => {
     const smartphonesCarousel = within(smartphonesSection as HTMLElement).getByRole('list');
     const accessoriesCarousel = within(accessoriesSection as HTMLElement).getByRole('list');
 
-    expect(accessoriesHeading).toHaveClass('safe-page-padding', 'mx-auto', 'max-w-store');
+    expect(accessoriesHeading.parentElement).toHaveClass(
+      'safe-page-padding',
+      'mx-auto',
+      'max-w-store'
+    );
     expect(smartphonesCarousel).toHaveClass(
       'card-scroll-full-bleed',
       'card-scroll-content-window',
@@ -79,6 +83,36 @@ describe('MozWired Store homepage', () => {
       'gap-3'
     );
     expect(accessoriesCarousel.parentElement).toHaveClass('card-carousel-full-bleed', 'w-full');
+  });
+
+  it('renders one accessible catalogue link for every collection', () => {
+    render(<HomePage />);
+
+    const destinations = [
+      ['View all computers', '/products?category=computers'],
+      ['View all smartphones', '/products?category=phones'],
+      ['View all accessories', '/products?category=accessories'],
+      ['View all endless possibilities products', '/products?category=computers'],
+    ];
+
+    expect(document.querySelectorAll('[data-collection-view-all]')).toHaveLength(4);
+    destinations.forEach(([name, href]) => {
+      const link = screen.getByRole('link', { name });
+      expect(link).toHaveAttribute('href', href);
+      expect(link).toHaveAttribute('data-contrast', 'light');
+      expect(link).toHaveClass('min-h-11', 'focus-ring', 'text-white/65', 'hover:text-white');
+      expect(link).not.toHaveAttribute('tabindex', '-1');
+    });
+  });
+
+  it('uses a wrapping section-header row without absolute positioning or fixed width', () => {
+    render(<HomePage />);
+
+    document.querySelectorAll('[data-collection-header]').forEach((header) => {
+      expect(header).toHaveClass('flex', 'flex-wrap', 'gap-y-2');
+      expect(header.className).not.toContain('absolute');
+      expect(header.className).not.toMatch(/\bw-screen\b/);
+    });
   });
 
   it('renders the Endless possibilities cards with a consistent light tone', () => {
