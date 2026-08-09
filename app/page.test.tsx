@@ -6,12 +6,24 @@ describe('MozWired Store homepage', () => {
   it('renders only collections backed by the active inventory', () => {
     render(<HomePage />);
 
-    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(4);
+    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(5);
     expect(screen.getAllByText('IdeaPad 1')).not.toHaveLength(0);
     expect(screen.queryByText('IdeaPad 1 15IRU7')).not.toBeInTheDocument();
     expect(screen.getAllByText('Galaxy A57')).not.toHaveLength(0);
     expect(screen.getAllByText('A5')).not.toHaveLength(0);
     expect(screen.queryByText('MacBook Pro')).not.toBeInTheDocument();
+  });
+
+  it('places New arrivals immediately before Smartphones without changing either collection', () => {
+    render(<HomePage />);
+
+    const arrivals = document.querySelector('#new-arrivals');
+    const smartphones = document.querySelector('#favorites');
+
+    expect(arrivals).toBeInTheDocument();
+    expect(arrivals?.nextElementSibling).toContainElement(smartphones);
+    expect(within(arrivals as HTMLElement).getAllByRole('listitem')).toHaveLength(8);
+    expect(within(smartphones as HTMLElement).getAllByText('Galaxy A57')).not.toHaveLength(0);
   });
 
   it('does not present the catalog as managed IT services', () => {
