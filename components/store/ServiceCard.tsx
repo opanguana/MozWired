@@ -28,7 +28,13 @@ export type ServiceCardData = {
   accent?: boolean;
 };
 
-export function ServiceCard({ card }: { card: ServiceCardData }) {
+export function ServiceCard({
+  card,
+  linkTabIndex,
+}: {
+  card: ServiceCardData;
+  linkTabIndex?: number;
+}) {
   const productImageScale =
     card.category === 'computers'
       ? 'scale-[0.92] group-hover:scale-[0.96]'
@@ -51,6 +57,7 @@ export function ServiceCard({ card }: { card: ServiceCardData }) {
       <Link
         href={card.href ?? `/products/${toProductSlug(card.title)}`}
         aria-label={`View ${card.title} details`}
+        tabIndex={linkTabIndex}
         className="focus-ring absolute inset-0 z-10"
       />
       <div className="mb-2 flex items-start justify-between gap-4">

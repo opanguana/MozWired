@@ -39,6 +39,18 @@ describe('product catalog routes', () => {
     expect(getCatalogProduct('ideapad-1-15iru7')).toBe(grouped);
   });
 
+  it.each([
+    ['Lenovo', 'ideapad-1-15iau7'],
+    ['ASUS', 'asus-x1404'],
+    ['HP', 'probook-445-g10'],
+  ])('generates a valid homepage detail link for %s products', (_, slug) => {
+    const product = getCatalogProduct(slug);
+
+    expect(product?.product.placements.length).toBeGreaterThan(0);
+    expect(product?.card.href).toBe(`/products/${slug}`);
+    expect(getCatalogProduct(slug)?.slug).toBe(slug);
+  });
+
   it('keeps manufacturer identity separate from public model titles', () => {
     const duplicatedBrandTitles = catalogProducts.filter(({ brand, card }) =>
       card.title.toLowerCase().startsWith(`${brand.toLowerCase()} `)

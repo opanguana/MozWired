@@ -36,6 +36,20 @@ describe('CardCarousel', () => {
     );
     expect(screen.getAllByRole('listitem')).toHaveLength(5);
 
+    const leadingCopies = document.querySelectorAll<HTMLElement>('[data-carousel-copy="0"]');
+    const accessibleCopies = document.querySelectorAll<HTMLElement>('[data-carousel-copy="1"]');
+    const trailingCopies = document.querySelectorAll<HTMLElement>('[data-carousel-copy="2"]');
+
+    [...leadingCopies, ...trailingCopies].forEach((copy) => {
+      expect(copy).not.toHaveAttribute('inert');
+      expect(copy.querySelector('a')).toHaveAttribute('tabindex', '-1');
+      expect(copy.querySelector('a')).toHaveAttribute('href');
+    });
+    accessibleCopies.forEach((copy) => {
+      expect(copy).not.toHaveAttribute('aria-hidden');
+      expect(copy.querySelector('a')).not.toHaveAttribute('tabindex');
+    });
+
     fireEvent.pointerDown(screen.getByRole('list', { name: 'Featured devices' }));
     expect(screen.getByRole('list', { name: 'Featured devices' })).toHaveClass(
       'card-scroll-content-window'

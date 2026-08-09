@@ -126,10 +126,9 @@ export function CardCarousel({
                 }
                 role={accessible ? 'listitem' : 'presentation'}
                 aria-hidden={!accessible || undefined}
-                inert={!accessible || undefined}
                 data-carousel-copy={copyIndex}
               >
-                <ServiceCard card={card} />
+                <ServiceCard card={card} linkTabIndex={accessible ? undefined : -1} />
               </div>
             );
           })
