@@ -49,13 +49,19 @@ describe('Header', () => {
   it('provides accessible desktop mega-menu triggers and links', () => {
     render(<Header />);
 
-    expect(screen.getByRole('link', { name: 'Computers' })).toHaveAttribute('href', '/#services');
-    expect(screen.getByRole('link', { name: 'Phones' })).toHaveAttribute('href', '/#favorites');
+    expect(screen.getByRole('link', { name: 'Computers' })).toHaveAttribute(
+      'href',
+      '/products?category=computers'
+    );
+    expect(screen.getByRole('link', { name: 'Phones' })).toHaveAttribute(
+      'href',
+      '/products?category=phones'
+    );
     expect(screen.queryByRole('link', { name: 'Mobile' })).not.toBeInTheDocument();
     expect(screen.queryByRole('link', { name: 'Audio' })).not.toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'View all computers' })).toHaveAttribute(
       'href',
-      '/#services'
+      '/products?category=computers'
     );
     expect(screen.getByRole('link', { name: /ThinkPad X1 Carbon Gen 13/ })).toBeInTheDocument();
   });
@@ -64,11 +70,11 @@ describe('Header', () => {
     render(<Header />);
     const navigation = screen.getByRole('navigation', { name: 'Primary navigation' });
     const expectedCategoryLinks = new Map([
-      ['computers', '/#services'],
-      ['phones', '/#favorites'],
-      ['accessories', '/#accessories'],
-      ['mobile', '/#possibilities'],
-      ['audio', '/#possibilities'],
+      ['computers', '/products?category=computers'],
+      ['phones', '/products?category=phones'],
+      ['accessories', '/products?category=accessories'],
+      ['mobile', '/products?category=mobile'],
+      ['audio', '/products?category=audio'],
     ]);
 
     new Set(catalogProducts.map(({ category }) => category)).forEach((category) => {
@@ -117,7 +123,7 @@ describe('Header', () => {
       })
     ).toBeInTheDocument();
     const computersLink = within(mobileNavigation).getByRole('link', { name: 'Computers' });
-    expect(computersLink).toHaveAttribute('href', '/#services');
+    expect(computersLink).toHaveAttribute('href', '/products?category=computers');
     const showComputers = within(mobileNavigation).getByRole('button', {
       name: 'Show Computers featured products',
     });
@@ -128,6 +134,6 @@ describe('Header', () => {
     ).toBeInTheDocument();
     expect(
       within(mobileNavigation).getByRole('link', { name: 'View all computers' })
-    ).toHaveAttribute('href', '/#services');
+    ).toHaveAttribute('href', '/products?category=computers');
   });
 });

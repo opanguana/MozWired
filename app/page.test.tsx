@@ -3,6 +3,15 @@ import { render, screen, within } from '@testing-library/react';
 import HomePage from './page';
 
 describe('MozWired Store homepage', () => {
+  it('routes the hero catalogue action to the all-products page', () => {
+    render(<HomePage />);
+
+    expect(screen.getAllByRole('link', { name: 'Shop all electronics ↗' })[0]).toHaveAttribute(
+      'href',
+      '/products'
+    );
+  });
+
   it('renders only collections backed by the active inventory', () => {
     render(<HomePage />);
 
@@ -92,8 +101,7 @@ describe('MozWired Store homepage', () => {
     const storeHero = document.querySelector('#store');
 
     expect(storeHero).toContainElement(
-      screen.getAllByText('IdeaPad 1').find((element) => storeHero?.contains(element)) ??
-        null
+      screen.getAllByText('IdeaPad 1').find((element) => storeHero?.contains(element)) ?? null
     );
     expect(storeHero).not.toContainElement(screen.getAllByText('Galaxy A57')[0]);
   });

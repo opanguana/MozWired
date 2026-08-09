@@ -129,7 +129,7 @@ export default function HomePage() {
                   Get expert buying advice ↗
                 </Link>
                 <Link
-                  href="#services"
+                  href="/products"
                   className="rounded-sm text-[rgb(139_143_152)] transition hover:text-[rgb(247_248_248)] hover:underline focus-ring"
                 >
                   Shop all electronics ↗

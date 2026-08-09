@@ -11,7 +11,7 @@ export const siteAnnouncement: Announcement = {
   enabled: true,
   message: 'Find the right electronics for work, home, and everyday life.',
   linkLabel: 'Shop all electronics',
-  linkHref: '#services',
+  linkHref: '/products',
   tone: 'promotion',
   startsAt: null,
   endsAt: null,

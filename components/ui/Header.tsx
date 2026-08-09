@@ -30,11 +30,11 @@ type NavItem = {
 
 const categoryNavigation: Record<CatalogCategory, { label: string; href: string; wide?: boolean }> =
   {
-    computers: { label: 'Computers', href: '/#services' },
-    phones: { label: 'Phones', href: '/#favorites', wide: true },
-    accessories: { label: 'Accessories', href: '/#accessories' },
-    mobile: { label: 'Mobile', href: '/#possibilities' },
-    audio: { label: 'Audio', href: '/#possibilities' },
+    computers: { label: 'Computers', href: '/products?category=computers' },
+    phones: { label: 'Phones', href: '/products?category=phones', wide: true },
+    accessories: { label: 'Accessories', href: '/products?category=accessories' },
+    mobile: { label: 'Mobile', href: '/products?category=mobile' },
+    audio: { label: 'Audio', href: '/products?category=audio' },
   };
 
 function productLinks(products: CatalogProduct[]): NonNullable<NavItem['children']> {

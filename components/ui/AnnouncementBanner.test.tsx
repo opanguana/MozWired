@@ -22,7 +22,7 @@ describe('AnnouncementBanner', () => {
     ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Shop all electronics' })).toHaveAttribute(
       'href',
-      '#services'
+      '/products'
     );
   });
 
