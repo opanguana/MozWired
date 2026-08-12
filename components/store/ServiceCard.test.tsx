@@ -123,6 +123,30 @@ describe('ServiceCard', () => {
     expect(image.parentElement).not.toHaveClass('flex-1', 'min-h-32', 'h-48', 'h-56');
   });
 
+  it('uses a pure white surface with a subtle internal edge', () => {
+    render(
+      <ServiceCard
+        card={{
+          eyebrow: 'Configured for your needs',
+          title: 'IdeaPad 1',
+          description: 'A practical laptop for everyday work.',
+          price: mznPrice(4_700_000),
+        }}
+      />
+    );
+
+    expect(screen.getByRole('article')).toHaveClass(
+      'isolate',
+      'bg-white',
+      'after:pointer-events-none',
+      'after:absolute',
+      'after:inset-0',
+      'after:rounded-[inherit]',
+      'after:shadow-[inset_0_0_0_1px_rgb(0_0_0/0.08)]'
+    );
+    expect(screen.getByRole('article')).not.toHaveClass('bg-[#e9e9ec]');
+  });
+
   it('preserves the laptop artwork scale used as the catalog reference', () => {
     render(
       <ServiceCard
