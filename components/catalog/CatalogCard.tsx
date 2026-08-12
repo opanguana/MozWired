@@ -21,7 +21,7 @@ export function CatalogCard({ item }: { item: CatalogListingItem }) {
     .join(' · ');
 
   return (
-    <article className="group relative flex min-h-[25rem] flex-col border border-white/10 bg-[#151517] p-4 text-white transition-colors hover:border-white/30 focus-within:border-store-cyan">
+    <article className="group relative isolate flex min-h-[25rem] flex-col overflow-hidden border border-transparent bg-white p-4 text-store-ink transition-colors after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:shadow-[inset_0_0_0_1px_rgb(0_0_0/0.08)] focus-within:border-store-cyan">
       <Link
         href={item.href}
         aria-label={`View ${item.title} details`}
@@ -31,7 +31,7 @@ export function CatalogCard({ item }: { item: CatalogListingItem }) {
         <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-store-teal">
           {availability || 'View product'}
         </p>
-        <BrandMark brand={item.brand} inverse />
+        <BrandMark brand={item.brand} />
       </div>
       <div className="relative h-52 overflow-hidden bg-[#eeeeef]">
         {item.image ? (
@@ -53,12 +53,12 @@ export function CatalogCard({ item }: { item: CatalogListingItem }) {
         )}
       </div>
       <div className="flex flex-1 flex-col pt-4">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/45">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-black/45">
           {item.category}
         </p>
         <h2 className="mt-1 text-lg font-bold leading-tight tracking-[-0.025em]">{item.title}</h2>
         {item.specification && (
-          <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-white/55">
+          <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-black/55">
             {item.specification}
           </p>
         )}

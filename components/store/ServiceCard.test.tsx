@@ -123,32 +123,6 @@ describe('ServiceCard', () => {
     expect(image.parentElement).not.toHaveClass('flex-1', 'min-h-32', 'h-48', 'h-56');
   });
 
-  it('uses the white card surface with only a subtle internal edge', () => {
-    render(
-      <ServiceCard
-        card={{
-          eyebrow: 'Made for the essentials',
-          title: 'Galaxy A06',
-          description: 'A practical smartphone for everyday use.',
-          price: mznPrice(855_000),
-        }}
-      />
-    );
-
-    expect(screen.getByRole('article')).toHaveClass(
-      'relative',
-      'isolate',
-      'overflow-hidden',
-      'bg-white',
-      'after:pointer-events-none',
-      'after:absolute',
-      'after:inset-0',
-      'after:rounded-[inherit]',
-      'after:shadow-[inset_0_0_0_1px_rgb(0_0_0/0.08)]'
-    );
-    expect(screen.getByRole('article')).not.toHaveClass('bg-[#e9e9ec]', 'shadow-lg');
-  });
-
   it('preserves the laptop artwork scale used as the catalog reference', () => {
     render(
       <ServiceCard

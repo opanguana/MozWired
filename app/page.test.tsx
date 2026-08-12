@@ -124,7 +124,7 @@ describe('MozWired Store homepage', () => {
     );
 
     secondCardTitles.forEach((title) => {
-      expect(title.closest('article')).toHaveClass('bg-white', 'text-store-ink');
+      expect(title.closest('article')).toHaveClass('bg-[#e9e9ec]', 'text-store-ink');
       expect(title.closest('article')).not.toHaveClass('bg-[#151517]', 'text-white');
     });
   });

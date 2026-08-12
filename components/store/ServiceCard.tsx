@@ -50,7 +50,7 @@ export function ServiceCard({
           ? 'border border-[#2a2821] bg-[#1b1a15] text-white shadow-[0_18px_50px_rgb(0_0_0/0.3)]'
           : card.dark
             ? 'border border-white/15 bg-[#151517] text-white'
-            : 'isolate bg-white text-store-ink after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:shadow-[inset_0_0_0_1px_rgb(0_0_0/0.08)]',
+            : 'bg-[#e9e9ec] text-store-ink',
         card.accent && 'bg-white'
       )}
     >
