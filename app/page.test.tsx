@@ -85,24 +85,10 @@ describe('MozWired Store homepage', () => {
     expect(accessoriesCarousel.parentElement).toHaveClass('card-carousel-full-bleed', 'w-full');
   });
 
-  it('renders one accessible catalogue link for every collection', () => {
+  it('omits the collection-level catalogue links', () => {
     render(<HomePage />);
 
-    const destinations = [
-      ['View all computers', '/products?category=computers'],
-      ['View all smartphones', '/products?category=phones'],
-      ['View all accessories', '/products?category=accessories'],
-      ['View all endless possibilities products', '/products?category=computers'],
-    ];
-
-    expect(document.querySelectorAll('[data-collection-view-all]')).toHaveLength(4);
-    destinations.forEach(([name, href]) => {
-      const link = screen.getByRole('link', { name });
-      expect(link).toHaveAttribute('href', href);
-      expect(link).toHaveAttribute('data-contrast', 'light');
-      expect(link).toHaveClass('min-h-11', 'focus-ring', 'text-white/65', 'hover:text-white');
-      expect(link).not.toHaveAttribute('tabindex', '-1');
-    });
+    expect(screen.queryByRole('link', { name: /^view all/i })).not.toBeInTheDocument();
   });
 
   it('uses a wrapping section-header row without absolute positioning or fixed width', () => {

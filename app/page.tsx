@@ -12,8 +12,6 @@ const storeCollections: {
   id: string;
   highlight: string;
   title: string;
-  viewAllHref: string;
-  viewAllLabel: string;
   cards: ServiceCardData[];
   fullBleed?: boolean;
 }[] = [
@@ -21,24 +19,18 @@ const storeCollections: {
     id: 'services',
     highlight: 'Computers.',
     title: 'Find the configuration that fits.',
-    viewAllHref: '/products?category=computers',
-    viewAllLabel: 'View all computers',
     cards: getProductsForSection('services').map((product) => toServiceCard(product)),
   },
   {
     id: 'favorites',
     highlight: 'Smartphones.',
     title: 'Smartphones for every budget.',
-    viewAllHref: '/products?category=phones',
-    viewAllLabel: 'View all smartphones',
     cards: getProductsForSection('favorites').map((product) => toServiceCard(product)),
   },
   {
     id: 'accessories',
     highlight: 'Accessories.',
     title: 'The finishing touches for every setup.',
-    viewAllHref: '/products?category=accessories',
-    viewAllLabel: 'View all accessories',
     cards: getProductsForSection('accessories').map((product) => toServiceCard(product)),
     fullBleed: true,
   },
@@ -46,8 +38,6 @@ const storeCollections: {
     id: 'possibilities',
     highlight: 'Endless possibilities.',
     title: 'Technology for work, creativity, and play.',
-    viewAllHref: '/products?category=computers',
-    viewAllLabel: 'View all endless possibilities products',
     cards: getProductsForSection('possibilities').map((product) => toServiceCard(product)),
   },
 ];
@@ -56,8 +46,6 @@ function CardCollection({
   id,
   highlight,
   title,
-  viewAllHref,
-  viewAllLabel,
   cards,
   fullBleed = false,
   darkHeading = false,
@@ -65,8 +53,6 @@ function CardCollection({
   id: string;
   highlight: string;
   title: string;
-  viewAllHref: string;
-  viewAllLabel: string;
   cards: ServiceCardData[];
   fullBleed?: boolean;
   darkHeading?: boolean;
@@ -93,19 +79,6 @@ function CardCollection({
             <span className={darkHeading ? 'text-white/55' : 'text-black/55'}>{title}</span>
           </span>
         </h2>
-        <Link
-          href={viewAllHref}
-          aria-label={viewAllLabel}
-          data-collection-view-all
-          data-contrast={darkHeading ? 'light' : 'dark'}
-          className={`focus-ring ml-auto inline-flex min-h-11 shrink-0 items-center rounded-sm px-1 text-sm font-medium transition hover:underline ${
-            darkHeading
-              ? 'text-white/65 visited:text-white/65 hover:text-white'
-              : 'text-black/65 visited:text-black/65 hover:text-black'
-          }`}
-        >
-          View all →
-        </Link>
       </div>
       <CardCarousel
         cards={cards}
