@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 
 export function BrandMark({ brand, inverse = false }: { brand: string; inverse?: boolean }) {
   const asset = getBrandAsset(brand);
+  const preserveBrandColors = brand === 'HP';
 
   return (
     <span
@@ -13,16 +14,24 @@ export function BrandMark({ brand, inverse = false }: { brand: string; inverse?:
       className="flex h-5 w-[4.5rem] shrink-0 items-center justify-end"
     >
       {asset ? (
-        <Image
-          src={asset.src}
-          alt=""
-          width={asset.width}
-          height={asset.height}
+        <span
           className={cn(
-            'max-h-5 max-w-full object-contain object-right',
-            inverse && 'brightness-0 invert'
+            inverse &&
+              preserveBrandColors &&
+              'inline-flex size-5 items-center justify-center rounded-full bg-white'
           )}
-        />
+        >
+          <Image
+            src={asset.src}
+            alt=""
+            width={asset.width}
+            height={asset.height}
+            className={cn(
+              'max-h-5 max-w-full object-contain object-right',
+              inverse && !preserveBrandColors && 'brightness-0 invert'
+            )}
+          />
+        </span>
       ) : (
         <span
           className={cn(

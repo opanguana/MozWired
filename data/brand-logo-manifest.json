@@ -24,8 +24,8 @@
     "brand": "HP",
     "sourcePage": "https://www.hp.com/us-en/hp-information/brandcentral/resource-library.html",
     "sourceAsset": null,
-    "localPath": null,
-    "status": "authorized-download-required"
+    "localPath": "/images/brands/hp.png",
+    "status": "installed"
   },
   {
     "brand": "Lenovo",

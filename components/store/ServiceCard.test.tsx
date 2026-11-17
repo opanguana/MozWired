@@ -24,7 +24,7 @@ describe('ServiceCard', () => {
     );
   });
 
-  it('uses a readable brand-name fallback when an approved logo file is unavailable', () => {
+  it('renders the full-color HP logo legibly on dark cards', () => {
     render(
       <ServiceCard
         card={{
@@ -33,11 +33,18 @@ describe('ServiceCard', () => {
           title: 'HP 15',
           description: 'A practical laptop for everyday use.',
           price: mznPrice(4_700_000),
+          dark: true,
         }}
       />
     );
 
-    expect(screen.getByRole('img', { name: 'HP brand' })).toHaveTextContent('HP');
+    const mark = screen.getByRole('img', { name: 'HP brand' });
+    const logo = mark.querySelector('img');
+
+    expect(decodeURIComponent(logo?.getAttribute('src') ?? '')).toContain('/images/brands/hp.png');
+    expect(logo).toHaveClass('object-contain');
+    expect(logo).not.toHaveClass('brightness-0');
+    expect(logo?.parentElement).toHaveClass('bg-white');
   });
 
   it('links the card to its dynamic product page', () => {

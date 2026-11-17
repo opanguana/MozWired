@@ -25,7 +25,11 @@ describe('brand assets', () => {
   });
 
   it('uses an explicit fallback for brands awaiting an approved asset', () => {
-    expect(getBrandAsset('HP')).toBeNull();
+    expect(getBrandAsset('HP')).toEqual({
+      src: '/images/brands/hp.png',
+      width: 1280,
+      height: 1280,
+    });
     expect(getBrandAsset('Redmi')).toBeNull();
   });
 });

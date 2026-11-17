@@ -20,6 +20,11 @@ export const brandAssets: Readonly<Record<string, BrandAsset>> = {
     width: 1223,
     height: 701,
   },
+  HP: {
+    src: '/images/brands/hp.png',
+    width: 1280,
+    height: 1280,
+  },
   Lenovo: {
     src: '/images/brands/lenovo.svg',
     width: 124,
