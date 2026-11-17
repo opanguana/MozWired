@@ -26,9 +26,44 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const metadataBase = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`)
+  : new URL('http://localhost:3000');
+
 export const metadata: Metadata = {
+  metadataBase,
   title: 'MozWired Store',
   description: 'Technology services and secure infrastructure for growing teams.',
+  openGraph: {
+    type: 'website',
+    url: '/',
+    siteName: 'MozWired Store',
+    title: 'MozWired Store',
+    description: 'Technology services and secure infrastructure for growing teams.',
+    images: [
+      {
+        url: '/LinkPreviewImage.png',
+        width: 1200,
+        height: 630,
+        alt: 'MozWired',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MozWired Store',
+    description: 'Technology services and secure infrastructure for growing teams.',
+    images: ['/LinkPreviewImage.png'],
+  },
+  icons: {
+    icon: [
+      {
+        url: '/favicon.png',
+        type: 'image/png',
+        sizes: '512x512',
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
