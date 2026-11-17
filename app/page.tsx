@@ -99,10 +99,7 @@ export default function HomePage() {
 
   return (
     <main id="main-content">
-      <section
-        id="store"
-        className="store-hero-copy relative isolate min-h-svh overflow-hidden bg-[#08090a]"
-      >
+      <section id="store" className="store-hero-copy relative isolate overflow-hidden bg-[#08090a]">
         <Image
           src="/images/store/store-hero-glow.webp"
           alt=""
